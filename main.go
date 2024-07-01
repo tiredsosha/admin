@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	fmt.Println("!oG ,olleH")
+	fmt.Println("dev")
 }
