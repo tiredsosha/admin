@@ -5,7 +5,7 @@ import (
 	"github.com/tiredsosha/admin/tools/logger"
 )
 
-func sendOsc(ip string, port int, address, data string) {
+func SendOsc(ip string, port int, address, data string) {
 	client := osc.NewClient(ip, port)
 	msg := osc.NewMessage(address)
 	msg.Append(data)

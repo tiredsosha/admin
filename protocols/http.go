@@ -13,7 +13,7 @@ type User struct {
 	req string
 }
 
-func sendGet(url string) {
+func SendGet(url string) {
 	resp, err := http.Get(url)
 	if err != nil {
 		logger.Error.Println(err)
@@ -25,7 +25,7 @@ func sendGet(url string) {
 	logger.Debug.Printf("responce - %q to post req from %q\n", string(body), url)
 }
 
-func sendPost(reqData User, url string) {
+func SendPost(reqData User, url string) {
 	postBody, _ := json.Marshal(reqData)
 	responseBody := bytes.NewBuffer(postBody)
 	resp, err := http.Post(url, "application/json", responseBody)
