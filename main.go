@@ -1,24 +1,15 @@
 package main
 
 import (
-	"github.com/tiredsosha/warden/mosquitto"
-	config "github.com/tiredsosha/warden/tools/configurator"
-	"github.com/tiredsosha/warden/tools/logger"
-	"github.com/tiredsosha/warden/tray"
+	"github.com/tiredsosha/admin/mosquitto"
+	config "github.com/tiredsosha/admin/tools/configurator"
+	"github.com/tiredsosha/admin/tools/logger"
+	"github.com/tiredsosha/admin/tray"
 )
 
 const (
 	version = "0.0.1.beta"
 )
-
-// func getHostname() (hostname string) {
-// 	hostname, err := os.Hostname()
-// 	if err != nil {
-// 		logger.Warn.Printf("can't get hostname - %s\n", err)
-// 		hostname = "default"
-// 	}
-// 	return
-// }
 
 func main() {
 
@@ -54,6 +45,15 @@ func main() {
 	// дальше нам надо инициализировать http сервак на 8080 порту.
 
 }
+
+// func getHostname() (hostname string) {
+// 	hostname, err := os.Hostname()
+// 	if err != nil {
+// 		logger.Warn.Printf("can't get hostname - %s\n", err)
+// 		hostname = "default"
+// 	}
+// 	return
+// }
 
 // func main() {
 // 	// Это отвечает за то, чтобы получать аргументы из командной строки. Нам не надо. Можно удалять

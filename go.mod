@@ -29,6 +29,7 @@ require (
 require (
 	github.com/getlantern/systray v1.2.1
 	github.com/gorilla/websocket v1.5.0 // indirect
+	github.com/hypebeast/go-osc v0.0.0-20220308234300-cec5a8a1e5f5
 	github.com/lxn/win v0.0.0-20210218163916-a377121e959e
 	golang.org/x/net v0.0.0-20220909164309-bea034e7d591 // indirect
 	golang.org/x/sync v0.0.0-20220907140024-f12130a52804 // indirect

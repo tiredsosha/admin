@@ -6,7 +6,7 @@ import (
 	"time"
 
 	mqtt "github.com/eclipse/paho.mqtt.golang"
-	"github.com/tiredsosha/warden/tools/logger"
+	"github.com/tiredsosha/admin/tools/logger"
 )
 
 const (
