@@ -1,10 +1,14 @@
 package web
 
 import (
+	"net/http"
+	"strconv"
+	"time"
+
 	"github.com/gin-gonic/gin"
 )
 
-func Router(server *gin.Engine) {
+func router(server *gin.Engine) {
 	power := server.Group("/power")
 	{
 		power.POST("/zone", powerZone)
@@ -41,7 +45,7 @@ func Router(server *gin.Engine) {
 		content.POST("/playmode", contentPlaymode)
 	}
 
-	status := server.Group("/content")
+	status := server.Group("/status")
 	{
 		status.GET("/park", statusPark)
 	}
@@ -51,4 +55,19 @@ func Router(server *gin.Engine) {
 		debug.GET("/getTest", testGet)
 		debug.POST("/postTest", testPost)
 	}
+}
+
+func StartServer(port int) {
+	portSrt := ":" + strconv.Itoa(port)
+	route := gin.Default()
+	router(route)
+
+	server := &http.Server{
+		Addr:           portSrt,
+		Handler:        route,
+		ReadTimeout:    10 * time.Second,
+		WriteTimeout:   10 * time.Second,
+		MaxHeaderBytes: 1 << 20,
+	}
+	server.ListenAndServe()
 }

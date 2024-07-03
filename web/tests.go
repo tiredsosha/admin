@@ -10,8 +10,8 @@ func testFunctionality() {
 	testJson.Req = "test"
 	protocols.SendUdp("127.0.0.1", 8090, "restart")
 	protocols.SendOsc("127.0.0.1", 8091, "/test", "restart")
-	protocols.SendGet("127.0.0.1:8092")
-	protocols.SendPost("127.0.0.1:8092", testJson)
+	protocols.SendGet("http://127.0.0.1:8092")
+	protocols.SendPost("http://127.0.0.1:8092", testJson)
 }
 
 func testGet(c *gin.Context) {

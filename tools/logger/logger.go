@@ -37,7 +37,7 @@ func LogInit(debug bool) {
 
 	Debug.Println("")
 	Debug.Println("")
-	Info.Print("WARDENER STARTED")
+	Info.Print("ADMIN STARTED")
 }
 
 func DebugLog(version string, debug bool, hostname, broker, username, password string, port int) {
@@ -46,7 +46,7 @@ func DebugLog(version string, debug bool, hostname, broker, username, password s
 	Debug.Printf("\t\tversion  - %s\n", version)
 	Debug.Println("- - - - - - - - - - - - - -")
 	Debug.Println("http data:")
-	Debug.Printf("\t\tweb port - %o\n", port)
+	Debug.Printf("\t\tweb port - %d\n", port)
 	Debug.Println("- - - - - - - - - - - - - -")
 	Debug.Println("сonnection data:")
 	Debug.Printf("\t\thostname - %s\n", hostname)

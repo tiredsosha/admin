@@ -17,6 +17,7 @@ func SendGet(url string) {
 	resp, err := http.Get(url)
 	if err != nil {
 		logger.Error.Println(err)
+		return
 	}
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
@@ -31,6 +32,7 @@ func SendPost(url string, reqData UserCommand) {
 	resp, err := http.Post(url, "application/json", responseBody)
 	if err != nil {
 		logger.Error.Println(err)
+		return
 	}
 	defer resp.Body.Close()
 	body, err := io.ReadAll(resp.Body)
