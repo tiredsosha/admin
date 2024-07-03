@@ -9,8 +9,8 @@ import (
 	"github.com/tiredsosha/admin/tools/logger"
 )
 
-type User struct {
-	req string
+type UserCommand struct {
+	Req string
 }
 
 func SendGet(url string) {
@@ -25,7 +25,7 @@ func SendGet(url string) {
 	logger.Debug.Printf("responce - %q to post req from %q\n", string(body), url)
 }
 
-func SendPost(reqData User, url string) {
+func SendPost(url string, reqData UserCommand) {
 	postBody, _ := json.Marshal(reqData)
 	responseBody := bytes.NewBuffer(postBody)
 	resp, err := http.Post(url, "application/json", responseBody)

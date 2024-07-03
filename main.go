@@ -1,10 +1,12 @@
 package main
 
 import (
+	"github.com/gin-gonic/gin"
 	"github.com/tiredsosha/admin/mosquitto"
 	config "github.com/tiredsosha/admin/tools/configurator"
 	"github.com/tiredsosha/admin/tools/logger"
 	"github.com/tiredsosha/admin/tray"
+	"github.com/tiredsosha/admin/web"
 )
 
 const (
@@ -42,7 +44,9 @@ func main() {
 
 	go mosquitto.StartBroker(mqttData)
 
-	// дальше нам надо инициализировать http сервак на 8080 порту.
+	route := gin.Default()
+	web.Router(route)
+	route.Run(":8088")
 
 }
 

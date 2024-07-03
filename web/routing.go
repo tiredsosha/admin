@@ -40,4 +40,15 @@ func Router(server *gin.Engine) {
 	{
 		content.POST("/playmode", contentPlaymode)
 	}
+
+	status := server.Group("/content")
+	{
+		status.GET("/park", statusPark)
+	}
+
+	debug := server.Group("/debug")
+	{
+		debug.GET("/getTest", testGet)
+		debug.POST("/postTest", testPost)
+	}
 }
