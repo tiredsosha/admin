@@ -1,5 +1,7 @@
 github.com/BurntSushi/freetype-go v0.0.0-20160129220410-b763ddbfe298/go.mod h1:D+QujdIlUNfa0igpNMk6UIvlb6C252URs4yupRUV4lQ=
 github.com/BurntSushi/graphics-go v0.0.0-20160129215708-b43f31a4a966/go.mod h1:Mid70uvE93zn9wgF92A/r5ixgnvX8Lh68fxp9KQBaI0=
+github.com/LightInstruments/pjlink v0.0.0-20180509124124-bdb7c6b2fb68 h1:1Rw3AgSU89CLeapbuhXjyu5djRIKgJkM8rZaroNLd2U=
+github.com/LightInstruments/pjlink v0.0.0-20180509124124-bdb7c6b2fb68/go.mod h1:H0cR/kIISkAI22PA0Vv3VOt9I3ijudT3SQPjlwVWgj8=
 github.com/StackExchange/wmi v0.0.0-20190523213315-cbe66965904d/go.mod h1:3eOhrUMpNV+6aFIbp5/iudMxNCF27Vw2OZgy4xEx0Fg=
 github.com/StackExchange/wmi v1.2.1 h1:VIkavFPXSjcnS+O8yTq7NI32k0R5Aj+v39y29VYDOSA=
 github.com/StackExchange/wmi v1.2.1/go.mod h1:rcmrprowKIVzvc+NUiLncP2uuArMWLCbu9SBzvHz7e8=

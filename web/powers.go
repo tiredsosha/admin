@@ -2,6 +2,7 @@ package web
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/tiredsosha/admin/mosquitto"
 	"github.com/tiredsosha/admin/protocols"
 )
 
@@ -9,7 +10,7 @@ func powerPc(c *gin.Context) {
 	var data JsonID
 	c.Bind(&data)
 
-	protocols.SendUdp("127.0.0.1", 8090, "restart")
+	mosquitto.SendMqtt()
 	// c.JSON(200, gin.H{
 	// 	"a": b.NestedStruct,
 	// 	"b": b.FieldB,
@@ -24,7 +25,7 @@ func powerProjector(c *gin.Context) {
 	var data JsonID
 	c.Bind(&data)
 
-	protocols.SendUdp("127.0.0.1", 8090, "restart")
+	protocols.SendPjlink("127.0.0.1", "on")
 	// c.JSON(200, gin.H{
 	// 	"a": b.NestedStruct,
 	// 	"b": b.FieldB,

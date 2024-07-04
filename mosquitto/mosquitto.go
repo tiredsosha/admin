@@ -90,7 +90,13 @@ func StartBroker(data MqttConf) {
 }
 
 // нам надо изменить, чтобы он принимал топик и че туда публиковать
-func (data *MqttConf) publisher(topic, command string) {
-	token := conn.Publish(data.PubTopic+topic, 0, false, command)
+// func (data *MqttConf) publisher(topic, command string) {
+// 	token := conn.Publish(data.PubTopic+topic, 0, false, command)
+// 	token.Wait()
+// }
+
+func (data *MqttConf) SendMqtt(hostname, topic, command string) {
+	finalTopic := data.PubTopic + hostname + "/commands/" + topic
+	token := conn.Publish(finalTopic, 0, false, command)
 	token.Wait()
 }
