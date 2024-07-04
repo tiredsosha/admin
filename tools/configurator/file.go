@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/tiredsosha/warden/tools/logger"
+	"github.com/tiredsosha/admin/tools/logger"
 	"gopkg.in/yaml.v3"
 )
 
@@ -57,8 +57,8 @@ func confFile() *conf {
 	}
 
 	yamlData, _ := yaml.Marshal(confDef)
-	err := os.WriteFile("config.yaml", yamlData, 0644)
-	if err != nil {
+
+	if err := os.WriteFile("config.yaml", yamlData, 0644); err != nil {
 		logger.Error.Fatal("can't to write default conf into the file")
 	}
 	return &confDef

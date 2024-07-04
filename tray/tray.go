@@ -3,8 +3,9 @@ package tray
 import (
 	"time"
 
+	"github.com/tiredsosha/admin/tools/logger"
+
 	"github.com/getlantern/systray"
-	"github.com/tiredsosha/warden/tools/logger"
 )
 
 var Conn bool = false
