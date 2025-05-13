@@ -2,7 +2,6 @@ package web
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/tiredsosha/admin/mosquitto"
 	"github.com/tiredsosha/admin/protocols"
 )
 
@@ -10,7 +9,7 @@ func powerPc(c *gin.Context) {
 	var data JsonID
 	c.Bind(&data)
 
-	mosquitto.SendMqtt()
+	// mosquitto.SendMqtt()
 	// c.JSON(200, gin.H{
 	// 	"a": b.NestedStruct,
 	// 	"b": b.FieldB,
