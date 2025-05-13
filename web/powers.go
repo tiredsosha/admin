@@ -35,37 +35,7 @@ func powerProjector(c *gin.Context) {
 	})
 }
 
-func powerLidar(c *gin.Context) {
-	var data JsonID
-	c.Bind(&data)
-
-	protocols.SendUdp("127.0.0.1", 8090, "restart")
-	// c.JSON(200, gin.H{
-	// 	"a": b.NestedStruct,
-	// 	"b": b.FieldB,
-	// })
-
-	c.JSON(200, gin.H{
-		"message": "pong",
-	})
-}
-
-func powerCamera(c *gin.Context) {
-	var data JsonID
-	c.Bind(&data)
-
-	protocols.SendUdp("127.0.0.1", 8090, "restart")
-	// c.JSON(200, gin.H{
-	// 	"a": b.NestedStruct,
-	// 	"b": b.FieldB,
-	// })
-
-	c.JSON(200, gin.H{
-		"message": "pong",
-	})
-}
-
-func powerPhone(c *gin.Context) {
+func powerRelay(c *gin.Context) {
 	var data JsonID
 	c.Bind(&data)
 
