@@ -40,7 +40,7 @@ func LogInit(debug bool) {
 	Info.Print("ADMIN STARTED")
 }
 
-func DebugLog(version string, debug bool, hostname, broker, username, password string, port int) {
+func DebugLog(version string, debug bool, mqttOn bool, hostname, broker, username, password string, port int) {
 	Debug.Println("---------------------------")
 	Debug.Println("common data:")
 	Debug.Printf("\t\tversion  - %s\n", version)
@@ -49,6 +49,7 @@ func DebugLog(version string, debug bool, hostname, broker, username, password s
 	Debug.Printf("\t\tweb port - %d\n", port)
 	Debug.Println("- - - - - - - - - - - - - -")
 	Debug.Println("сonnection data:")
+	Debug.Printf("\t\tmqtt on  - %v\n", mqttOn)
 	Debug.Printf("\t\thostname - %s\n", hostname)
 	Debug.Printf("\t\tbroker   - %s\n", broker)
 	Debug.Printf("\t\tusername - %s\n", username)

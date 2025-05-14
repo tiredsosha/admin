@@ -19,21 +19,3 @@ func soundZone(c *gin.Context) {
 		"message": "pong",
 	})
 }
-
-func soundPc() {
-	protocols.SendUdp("127.0.0.1", 8090, "lights")
-	// c.JSON(200, gin.H{
-	// 	"a": b.NestedStruct,
-	// 	"b": b.FieldB,
-	// })
-
-}
-
-func soundPlayer() {
-	protocols.SendUdp("127.0.0.1", 8090, "lights")
-	// c.JSON(200, gin.H{
-	// 	"a": b.NestedStruct,
-	// 	"b": b.FieldB,
-	// })
-
-}

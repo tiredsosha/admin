@@ -1,4 +1,5 @@
 broker: 127.0.0.1
 username: admin
-password: hello88io
-port: 8080
+password: admin
+mqttActive: false
+httpPort: 8080

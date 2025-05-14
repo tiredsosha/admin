@@ -39,6 +39,8 @@ func powerRelay(c *gin.Context) {
 	var data JsonID
 	c.Bind(&data)
 
+	// protocols.SendGet("http://[Логин]:[Пароль]@[IP адрес]/protect/rb[N]f.cgi")
+
 	protocols.SendUdp("127.0.0.1", 8090, "restart")
 	// c.JSON(200, gin.H{
 	// 	"a": b.NestedStruct,

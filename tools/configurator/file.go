@@ -16,10 +16,11 @@ type conf struct {
 	Username string `yaml:"username"`
 	Password string `yaml:"password"`
 	Port     int    `yaml:"httpPort"`
+	MqttOn   bool   `yaml:"mqttActive"`
 }
 
 // поиск конфига на диске
-func getConf(file string, cnf interface{}) error {
+func getConf(file string, cnf any) error {
 	yamlFile, err := os.ReadFile(file)
 	if err == nil {
 		err = yaml.Unmarshal(yamlFile, cnf)
@@ -53,6 +54,7 @@ func confFile() *conf {
 		Broker:   "127.0.0.1",
 		Username: "admin",
 		Password: "password",
+		MqttOn:   false,
 		Port:     8080,
 	}
 

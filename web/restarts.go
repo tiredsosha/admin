@@ -9,7 +9,7 @@ func restartPc(c *gin.Context) {
 	var data JsonID
 	c.Bind(&data)
 
-	protocols.SendUdp("127.0.0.1", 8010, "restart")
+	protocols.SendUdp("127.0.0.1", 8090, "restart")
 	// c.JSON(200, gin.H{
 	// 	"a": b.NestedStruct,
 	// 	"b": b.FieldB,
