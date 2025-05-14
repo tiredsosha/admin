@@ -60,7 +60,7 @@ func confFile() *conf {
 
 	yamlData, _ := yaml.Marshal(confDef)
 
-	if err := os.WriteFile("config.yaml", yamlData, 0644); err != nil {
+	if err := os.WriteFile("./configs/config.yaml", yamlData, 0644); err != nil {
 		logger.Error.Fatal("can't to write default conf into the file")
 	}
 	return &confDef
@@ -70,14 +70,31 @@ func ConfInit() *conf {
 	// создаем пустую версию конфига, или ссылку на него
 	cfg := &conf{}
 	// если у нас нет файла конфиг, то мы создаем дефотный конфиг
-	if err := getConf("config.yaml", cfg); err != nil {
+	if err := getConf("./configs/config.yaml", cfg); err != nil {
 		logger.Error.Println(err)
 		cfg = confFile()
 	}
-	// если у нас есть конфиг и он не проходит валидацию, то вы выходим из приложенияЫ
+	// если у нас есть конфиг и он не проходит валидацию, то вы выходим из приложения
 	if err := validateConf(cfg); err != nil {
-		logger.Error.Println(err)
+		logger.Warn.Println(err)
 		logger.Error.Fatal("EXITING")
 	}
+
 	return cfg
+}
+
+func ConfSubInit() {
+	// если наше приложение не видит побочных конфигов
+	if err := configRelay(); err != nil {
+		logger.Warn.Println(err)
+		logger.Error.Fatal("EXITING")
+	}
+	if err := configPC(); err != nil {
+		logger.Warn.Println(err)
+		logger.Error.Fatal("EXITING")
+	}
+	if err := configPJ(); err != nil {
+		logger.Warn.Println(err)
+		logger.Error.Fatal("EXITING")
+	}
 }

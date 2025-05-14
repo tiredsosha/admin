@@ -1,0 +1,54 @@
+test:
+  ip: 127.0.0.1
+  mac: 8C-F8-C5-9D-0E-D6
+invasionProjectionTouch:
+  ip: 10.1.1.21
+  mac: 8C-F8-C5-9D-0E-D6
+invasionTouch1:
+  ip: 10.1.1.22
+  mac: 8C-F8-C5-9D-0E-D6
+invasionTouch2:
+  ip: 10.1.1.23
+  mac: 8C-F8-C5-9D-0E-D6
+invasionTouch3:
+  ip: 10.1.1.24
+  mac: 8C-F8-C5-9D-0E-D6
+invasionTouch4:
+  ip: 10.1.1.25
+  mac: 8C-F8-C5-9D-0E-D6
+invasionTouch5:
+  ip: 10.1.1.26
+  mac: 8C-F8-C5-9D-0E-D6
+invasionProjectionWall:
+  ip: 10.1.1.27
+  mac: 8C-F8-C5-9D-0E-D6
+voicesInvasionLeft:
+  ip: 10.1.1.28
+  mac: 8C-F8-C5-9D-0E-D6
+voicesInvasionRight:
+  ip: 10.1.1.29
+  mac: 8C-F8-C5-9D-0E-D6
+moscow:
+  ip: 10.1.1.30
+  mac: 8C-F8-C5-9D-0E-D6
+crisisProjectionTouch:
+  ip: 10.1.2.21
+  mac: 8C-F8-C5-9D-0E-D6
+crisisTouch1:
+  ip: 10.1.2.22
+  mac: 8C-F8-C5-9D-0E-D6
+crisisTouch2:
+  ip: 10.1.2.23
+  mac: 8C-F8-C5-9D-0E-D6
+crisisTouch3:
+  ip: 10.1.2.24
+  mac: 8C-F8-C5-9D-0E-D6
+crisisTouch4:
+  ip: 10.1.2.25
+  mac: 8C-F8-C5-9D-0E-D6
+crisisTouch5:
+  ip: 10.1.2.26
+  mac: 8C-F8-C5-9D-0E-D6
+crisisProjectionWall:
+  ip: 10.1.2.27
+  mac: 8C-F8-C5-9D-0E-D6

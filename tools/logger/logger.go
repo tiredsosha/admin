@@ -4,8 +4,6 @@ import (
 	"io"
 	"log"
 	"os"
-	"syscall"
-	"time"
 )
 
 var (
@@ -57,15 +55,29 @@ func DebugLog(version string, debug bool, mqttOn bool, hostname, broker, usernam
 	Debug.Println("---------------------------")
 }
 
+// старая проверка по времени создания, плохо работает, если файл первый раз создался больше года назад
+// func logCreation() bool {
+// 	var deleteLog bool = false
+
+// 	if log, err := os.Stat("admin.log"); err == nil {
+// 		createTime := time.Unix(0, log.Sys().(*syscall.Win32FileAttributeData).CreationTime.Nanoseconds())
+// 		currTime := time.Now()
+// 		diff := currTime.Sub(createTime).Milliseconds()
+// 		// проверяем что лог не супер длинный и тяжелый.
+// 		if diff > 604800000 {
+// 			deleteLog = true
+// 		}
+// 	}
+// 	return deleteLog
+// }
+
 func logCreation() bool {
 	var deleteLog bool = false
 
 	if log, err := os.Stat("admin.log"); err == nil {
-		createTime := time.Unix(0, log.Sys().(*syscall.Win32FileAttributeData).CreationTime.Nanoseconds())
-		currTime := time.Now()
-		diff := currTime.Sub(createTime).Milliseconds()
+		bytesSize := log.Size()
 		// проверяем что лог не супер длинный и тяжелый.
-		if diff > 604800000 {
+		if bytesSize > 300000 {
 			deleteLog = true
 		}
 	}

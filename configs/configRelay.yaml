@@ -1,0 +1,10 @@
+test: 127.0.0.1:8005
+relayMoscow: 10.1.0.120
+relayStalin: 10.1.0.121
+relayLenin: 10.1.0.122
+relayKursk: 10.1.0.123
+relayDnepro: 10.1.0.124
+relayBerlin: 10.1.0.125
+relayHallStalin: 10.1.0.126
+relayHallKonev: 10.1.0.127
+relayHallDnepro: 10.1.0.128

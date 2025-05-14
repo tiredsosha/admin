@@ -16,6 +16,7 @@ func main() {
 	logger.LogInit(true)
 
 	cfg := config.ConfInit()
+	config.ConfSubInit()
 
 	hostname := "admin"
 	topicPrefix := "warden/"

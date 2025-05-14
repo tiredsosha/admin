@@ -1,5 +1,5 @@
 broker: 127.0.0.1
 username: admin
-password: admin
+password: password
+httpPort: 8098
 mqttActive: false
-httpPort: 8080

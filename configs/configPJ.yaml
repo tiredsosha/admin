@@ -1,0 +1,21 @@
+test:
+  pj_1: 10.1.1.41
+  pj_2: 10.1.1.42
+  pj_3: 10.1.1.43
+invasionProjectionTouch:
+  pj_1: 10.1.1.41
+  pj_2: 10.1.1.42
+  pj_3: 10.1.1.43
+invasionProjectionWall:
+  pj_1: 10.1.1.44
+moscow:
+  pj_1: 10.1.1.45
+  pj_2: 10.1.1.46
+  pj_3: 10.1.1.47
+  pj_4: 10.1.1.48
+crisisProjectionTouch:
+  pj_1: 10.1.2.41
+  pj_2: 10.1.2.42
+  pj_3: 10.1.2.43
+crisisProjectionWall:
+  pj_1: 10.1.2.44
