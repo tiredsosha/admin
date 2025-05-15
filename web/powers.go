@@ -25,7 +25,7 @@ func powerPc(c *gin.Context) {
 		go protocols.SendWOL(config.FindPC(data.Zone, "mac"))
 	} else {
 		go protocols.SendGet(formater.CustomStr(
-			"http://{ip}/power/off",
+			"http://{ip}:3001/off",
 			map[string]any{"ip": config.FindPC(data.Zone, "ip")}),
 		)
 	}
@@ -100,28 +100,64 @@ func powerZone(c *gin.Context) {
 		go protocols.SendWOL(config.FindPC(data.Zone, "mac"))
 	} else {
 		go protocols.SendGet(formater.CustomStr(
-			"http://{ip}/power/off",
+			"http://{ip}:3001/off",
 			map[string]any{"ip": config.FindPC(data.Zone, "ip")}),
 		)
 	}
-	// go protocols.SendPjlink(config.FindPJ(data.Zone, data.ID), data.Command)
+
+	zonePJ := config.FindZonePJ(data.Zone)
+	for _, ip := range zonePJ {
+		go protocols.SendPjlink(ip, data.Command)
+	}
 
 	c.JSON(200, gin.H{
-		"message": "pong",
+		"message": "OK",
 	})
 }
 
 func powerPark(c *gin.Context) {
-	var data JsonID
-	c.Bind(&data)
+	var data JsonNoID
 
-	protocols.SendUdp("127.0.0.1", 8090, "restart")
-	// c.JSON(200, gin.H{
-	// 	"a": b.NestedStruct,
-	// 	"b": b.FieldB,
-	// })
+	// Bind JSON and validate
+	if err := c.ShouldBindJSON(&data); err != nil {
+		logger.Error.Println("Invalid input:", err)
+		c.JSON(400, gin.H{"error": err.Error()})
+		return
+	}
+
+	logger.Info.Println(data)
+
+	if data.Command == "on" {
+
+		for _, mac := range config.ALLMAC {
+			go protocols.SendWOL(mac)
+		}
+
+		for _, pj := range config.ALLPJ {
+			go protocols.SendPjlink(pj, data.Command)
+		}
+	} else if data.Command == "off" {
+
+		for _, pc := range config.ALLPC {
+			go protocols.SendGet(formater.CustomStr(
+				"http://{ip}:3001/off",
+				map[string]any{"ip": pc}),
+			)
+		}
+
+		for _, ip := range config.ALLPJ {
+			go protocols.SendPjlink(ip, data.Command)
+		}
+	} else if data.Command == "restart" {
+		for _, pc := range config.ALLPC {
+			go protocols.SendGet(formater.CustomStr(
+				"http://{ip}:3001/restart",
+				map[string]any{"ip": pc}),
+			)
+		}
+	}
 
 	c.JSON(200, gin.H{
-		"message": "pong",
+		"message": "OK",
 	})
 }

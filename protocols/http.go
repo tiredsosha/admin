@@ -26,9 +26,10 @@ func SendGet(url string) {
 	logger.Debug.Printf("responce - %q to post req from %q\n", string(body), url)
 }
 
-func SendPost(url string, reqData UserCommand) {
-	postBody, _ := json.Marshal(reqData)
-	responseBody := bytes.NewBuffer(postBody)
+func SendPost(url string, reqData string) {
+	values := map[string]string{"command": reqData}
+	jsonReq, _ := json.Marshal(values)
+	responseBody := bytes.NewBuffer(jsonReq)
 	resp, err := http.Post(url, "application/json", responseBody)
 	if err != nil {
 		logger.Error.Println(err)

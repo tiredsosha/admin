@@ -1,0 +1,529 @@
+{
+  "zones": [
+    {
+      "id": "relay",
+      "innerZones": [
+        {
+          "id": "relayMoscow",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayStalin",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayLenin",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayKursk",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayDnepro",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayBerlin",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayHallStalin",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayHallKonev",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayHallDnepro",
+          "status": {
+            "controller_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "invasion",
+      "innerZones": [
+        {
+          "id": "invasionProjectionTouch",
+          "status": {
+            "pc_1": 520,
+            "pj_1": 520,
+            "pj_2": 520,
+            "pj_3": 520
+          }
+        },
+        {
+          "id": "relayStalin",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayLenin",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayKursk",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayDnepro",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayBerlin",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayHallStalin",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayHallKonev",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayHallDnepro",
+          "status": {
+            "controller_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "shop",
+      "status": {
+        "pc_1": 200,
+        "pj_1": 200,
+        "pj_2": 200,
+        "pj_3": 200,
+        "pj_4": 200,
+        "lidar_1": 200
+      }
+    },
+    {
+      "id": "flashlight",
+      "status": {
+        "pc_1": 200,
+        "pj_1": 200,
+        "rfid_1": 200,
+        "rfid_2": 200,
+        "rfid_3": 200,
+        "camera_1": 200,
+        "camera_2": 200
+      }
+    },
+    {
+      "id": "den",
+      "innerZones": [
+        {
+          "id": "denDisplay",
+          "status": {
+            "player_1": 521,
+            "controller_1": 521,
+            "display_1": 521
+          }
+        },
+        {
+          "id": "denLamp",
+          "status": {
+            "rfid_1": 200
+          }
+        },
+        {
+          "id": "denSoundOne",
+          "status": {
+            "player_1": 200,
+            "rfid_1": 200
+          }
+        },
+        {
+          "id": "denSoundTwo",
+          "status": {
+            "player_1": 200,
+            "rfid_1": 200
+          }
+        }
+      ]
+    },
+    {
+      "id": "theatre",
+      "status": {
+        "pc_1": 200,
+        "pj_1": 200,
+        "rfid_1": 200,
+        "rfid_2": 520,
+        "rfid_3": 521,
+        "rfid_4": 200,
+        "rfid_5": 520,
+        "rfid_6": 521,
+        "rfid_7": 200,
+        "rfid_8": 520,
+        "rfid_9": 521,
+        "rfid_10": 200
+      }
+    },
+    {
+      "id": "raoyk",
+      "innerZones": [
+        {
+          "id": "raoykTheatre",
+          "status": {
+            "player_1": 521,
+            "controller_1": 521,
+            "rfid_1": 521,
+            "display_1": 521,
+            "camera_1": 521
+          }
+        },
+        {
+          "id": "smileOne",
+          "status": {
+            "pc_1": 200,
+            "display_1": 200
+          }
+        },
+        {
+          "id": "smileTwo",
+          "status": {
+            "pc_1": 200,
+            "display_1": 200
+          }
+        },
+        {
+          "id": "raoykSound",
+          "status": {
+            "player_1": 200
+          }
+        }
+      ]
+    },
+    {
+      "id": "mechanics",
+      "status": {
+        "player_1": 521
+      }
+    },
+    {
+      "id": "table",
+      "innerZones": [
+        {
+          "id": "tablePhoto",
+          "status": {
+            "pc_1": 200,
+            "rfid_1": 200
+          }
+        },
+        {
+          "id": "tableSound",
+          "status": {
+            "player_1": 200
+          }
+        }
+      ]
+    },
+    {
+      "id": "puppets",
+      "innerZones": [
+        {
+          "id": "puppetsDolls",
+          "status": {
+            "player_1": 200,
+            "controller_1": 200,
+            "controller_2": 200,
+            "controller_3": 520,
+            "controller_4": 521,
+            "controller_5": 200,
+            "controller_6": 520,
+            "controller_7": 521,
+            "controller_8": 200,
+            "controller_9": 520,
+            "controller_10": 521,
+            "display_1": 200,
+            "camera_1": 200
+          }
+        },
+        {
+          "id": "dollOne",
+          "status": {
+            "player_1": 200,
+            "rfid_1": 200
+          }
+        },
+        {
+          "id": "dollTwo",
+          "status": {
+            "player_1": 200,
+            "rfid_1": 200
+          }
+        },
+        {
+          "id": "dollThree",
+          "status": {
+            "player_1": 200,
+            "rfid_1": 200
+          }
+        },
+        {
+          "id": "dollFour",
+          "status": {
+            "player_1": 200,
+            "rfid_1": 200
+          }
+        },
+        {
+          "id": "dollFive",
+          "status": {
+            "player_1": 200,
+            "rfid_1": 200
+          }
+        }
+      ]
+    },
+    {
+      "id": "tuz",
+      "status": {
+        "pc_1": 521,
+        "rfid_1": 521
+      }
+    },
+    {
+      "id": "pop",
+      "innerZones": [
+        {
+          "id": "popDisplay",
+          "status": {
+            "player_1": 521,
+            "player_2": 521,
+            "player_3": 521,
+            "player_4": 521,
+            "player_5": 521,
+            "display_1": 521,
+            "display_2": 521,
+            "display_3": 521,
+            "display_4": 521,
+            "display_5": 521
+          }
+        },
+        {
+          "id": "popSound",
+          "status": {
+            "player_1": 200
+          }
+        }
+      ]
+    },
+    {
+      "id": "phone",
+      "innerZones": [
+        {
+          "id": "phoneOne",
+          "status": {
+            "phone_1": 521
+          }
+        },
+        {
+          "id": "phoneTwo",
+          "status": {
+            "phone_1": 521
+          }
+        },
+        {
+          "id": "phoneThree",
+          "status": {
+            "phone_1": 521
+          }
+        },
+        {
+          "id": "phoneFour",
+          "status": {
+            "phone_1": 521
+          }
+        },
+        {
+          "id": "phoneFive",
+          "status": {
+            "phone_1": 521
+          }
+        },
+        {
+          "id": "phoneSound",
+          "status": {
+            "player_1": 521
+          }
+        }
+      ]
+    },
+    {
+      "id": "doll",
+      "innerZones": [
+        {
+          "id": "restorer",
+          "status": {
+            "pc_1": 521,
+            "rfid_1": 521
+          }
+        },
+        {
+          "id": "dollMaster",
+          "status": {
+            "pc_1": 521,
+            "controller_1": 521,
+            "controller_2": 521,
+            "controller_3": 521,
+            "display_1": 521
+          }
+        },
+        {
+          "id": "restorerSound",
+          "status": {
+            "player_1": 521,
+            "camera_1": 521
+          }
+        }
+      ]
+    },
+    {
+      "id": "model",
+      "innerZones": [
+        {
+          "id": "layout",
+          "status": {
+            "player_1": 521,
+            "pj_1": 521,
+            "rfid_1": 521
+          }
+        },
+        {
+          "id": "modelSound",
+          "status": {
+            "player_1": 200,
+            "camera_1": 200
+          }
+        }
+      ]
+    },
+    {
+      "id": "labyrinth",
+      "innerZones": [
+        {
+          "id": "labyrinthOne",
+          "status": {
+            "pc_1": 521,
+            "rfid_1": 521
+          }
+        },
+        {
+          "id": "labyrinthTwo",
+          "status": {
+            "pc_1": 521,
+            "rfid_1": 521
+          }
+        },
+        {
+          "id": "labyrinthThree",
+          "status": {
+            "pc_1": 521,
+            "rfid_1": 521
+          }
+        },
+        {
+          "id": "labyrinthFour",
+          "status": {
+            "pc_1": 521,
+            "rfid_1": 521
+          }
+        },
+        {
+          "id": "labyrinthFive",
+          "status": {
+            "pc_1": 521,
+            "rfid_1": 521
+          }
+        },
+        {
+          "id": "labyrinthSound",
+          "status": {
+            "player_1": 200,
+            "camera_1": 200
+          }
+        }
+      ]
+    },
+    {
+      "id": "final",
+      "status": {
+        "pc_1": 521,
+        "pj_1": 521,
+        "pj_2": 521,
+        "pj_3": 521,
+        "rfid_1": 521,
+        "rfid_2": 521,
+        "rfid_3": 521,
+        "rfid_4": 521,
+        "rfid_5": 521,
+        "rfid_6": 521,
+        "rfid_7": 521,
+        "rfid_8": 521,
+        "rfid_9": 521,
+        "rfid_10": 521,
+        "camera_1": 521
+      }
+    },
+    {
+      "id": "toilets",
+      "status": {
+        "player_1": 200
+      }
+    },
+    {
+      "id": "cane",
+      "innerZones": [
+        {
+          "id": "caneDolls",
+          "status": {
+            "pc_1": 521,
+            "rfid_1": 521
+          }
+        },
+        {
+          "id": "caneSound",
+          "status": {
+            "player_1": 200
+          }
+        }
+      ]
+    }
+  ]
+}

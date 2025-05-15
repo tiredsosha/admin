@@ -9,6 +9,8 @@ import (
 )
 
 var PC map[string]map[string]string
+var ALLPC []string
+var ALLMAC []string
 
 func configPC() error {
 	// Read the YAML file
@@ -24,6 +26,7 @@ func configPC() error {
 		logger.Error.Printf("error unmarshaling YAML: %v", err)
 		return err
 	}
+	FindAllPC()
 	return err
 }
 
@@ -36,4 +39,19 @@ func FindPC(id, command string) string {
 		logger.Error.Printf("key '%s' not found\n", id)
 		return "none"
 	}
+}
+
+func FindAllPC() {
+	// Collect MACs and IPs
+	for _, node := range PC {
+		if mac, ok := node["mac"]; ok {
+			ALLMAC = append(ALLMAC, mac)
+		}
+		if ip, ok := node["ip"]; ok {
+			ALLPC = append(ALLPC, ip)
+		}
+	}
+
+	logger.Info.Printf("all pc ip - '%v'\n", ALLPC)
+	logger.Info.Printf("all pc mac - '%v'\n", ALLMAC)
 }

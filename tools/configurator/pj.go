@@ -9,6 +9,7 @@ import (
 )
 
 var PJ map[string]map[string]string
+var ALLPJ []string
 
 func configPJ() error {
 	// Read the YAML file
@@ -24,6 +25,7 @@ func configPJ() error {
 		logger.Error.Printf("error unmarshaling YAML: %v", err)
 		return err
 	}
+	FindAllPJ()
 	return err
 }
 
@@ -41,4 +43,40 @@ func FindPJ(main, sub string) string {
 		logger.Debug.Printf("zone unfound '%s'\n", main)
 		return "none"
 	}
+}
+
+func FindZonePJ(main string) []string {
+
+	// Get the map for the zone
+	zoneMap, exists := PJ[main]
+	if !exists {
+		logger.Debug.Printf("zone unfound '%s'\n", main)
+		return []string{}
+	}
+
+	// Collect all IPs into a slice
+	var ipList []string
+	for _, ip := range zoneMap {
+		ipList = append(ipList, ip)
+	}
+	logger.Debug.Printf("ips in zone '%s': %v\n", main, ipList)
+	return ipList
+}
+
+func FindAllPJ() {
+
+	// Collect all IPs
+	ipSet := make(map[string]struct{}) // use a set to avoid duplicates
+	for _, zone := range PJ {
+		for _, ip := range zone {
+			ipSet[ip] = struct{}{}
+		}
+	}
+
+	// Convert set to list
+	for ip := range ipSet {
+		ALLPJ = append(ALLPJ, ip)
+	}
+
+	logger.Debug.Printf("all pj ip - '%v'\n", ALLPJ)
 }
