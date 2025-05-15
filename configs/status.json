@@ -1,0 +1,830 @@
+{
+  "zones": [
+    {
+      "id": "relay",
+      "innerZones": [
+        {
+          "id": "relayMoscow",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayStalin",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayLenin",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayKursk",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayDnepro",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayBerlin",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayHallStalin",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayHallKonev",
+          "status": {
+            "controller_1": 520
+          }
+        },
+        {
+          "id": "relayHallDnepro",
+          "status": {
+            "controller_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "invasion",
+      "innerZones": [
+        {
+          "id": "invasionProjectionTouch",
+          "status": {
+            "pc_1": 520,
+            "pj_1": 520,
+            "pj_2": 520,
+            "pj_3": 520
+          }
+        },
+        {
+          "id": "invasionProjectionWall",
+          "status": {
+            "pc_1": 520,
+            "pj_1": 520
+          }
+        },
+        {
+          "id": "invasionTouch1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "invasionTouch2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "invasionTouch3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "invasionTouch4",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "invasionTouch5",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "voicesInvasion",
+      "innerZones": [
+        {
+          "id": "voicesInvasionLeft",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "voicesInvasionRight",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "moscow",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520,
+        "pj_3": 520,
+        "pj_4": 520
+      }
+    },
+    {
+      "id": "crisis",
+      "innerZones": [
+        {
+          "id": "crisisProjectionTouch",
+          "status": {
+            "pc_1": 520,
+            "pj_1": 520,
+            "pj_2": 520,
+            "pj_3": 520
+          }
+        },
+        {
+          "id": "crisisProjectionWall",
+          "status": {
+            "pc_1": 520,
+            "pj_1": 520
+          }
+        },
+        {
+          "id": "crisisTouch1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "crisisTouch2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "crisisTouch3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "crisisTouch4",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "crisisTouch5",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "voicesCrisis",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "stalingrad",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520,
+        "pj_3": 520,
+        "pj_4": 520
+      }
+    },
+    {
+      "id": "libStalin",
+      "innerZones": [
+        {
+          "id": "libStalinTouch1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libStalinTouch2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libStalinTouch3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libStalinTouch4",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libStalinTouch5",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libStalinTouch6",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libStalinLib1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libStalinLib2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libStalinLib3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libStalinLib4",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "leningrad",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520,
+        "pj_3": 520,
+        "pj_4": 520
+      }
+    },
+    {
+      "id": "libLenin",
+      "innerZones": [
+        {
+          "id": "libLeninTouch1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libLeninTouch2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libLeninTouch3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libLeninTouch4",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libLeninTouch5",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libLeninTouch6",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libLeninLib1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libLeninLib2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libLeninLib3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "libLeninLib4",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "kursk",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520,
+        "pj_3": 520,
+        "pj_4": 520
+      }
+    },
+    {
+      "id": "liberation",
+      "innerZones": [
+        {
+          "id": "liberationProjectionTouch",
+          "status": {
+            "pc_1": 520,
+            "pj_1": 520,
+            "pj_2": 520,
+            "pj_3": 520
+          }
+        },
+        {
+          "id": "liberationProjectionWall",
+          "status": {
+            "pc_1": 520,
+            "pj_1": 520
+          }
+        },
+        {
+          "id": "liberationTouch1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "liberationTouch2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "liberationTouch3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "liberationTouch4",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "liberationTouch5",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "voicesLiberation",
+      "innerZones": [
+        {
+          "id": "voicesLiberationLeft",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "voicesLiberationRight",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "dnepr",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520
+      }
+    },
+    {
+      "id": "victory",
+      "innerZones": [
+        {
+          "id": "victoryProjectionTouch",
+          "status": {
+            "pc_1": 520,
+            "pj_1": 520,
+            "pj_2": 520,
+            "pj_3": 520
+          }
+        },
+        {
+          "id": "victoryProjectionWall",
+          "status": {
+            "pc_1": 520,
+            "pj_1": 520
+          }
+        },
+        {
+          "id": "victoryTouch1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "victoryTouch2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "victoryTouch3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "victoryTouch4",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "victoryTouch5",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "voicesVictory",
+      "innerZones": [
+        {
+          "id": "voicesVictoryLeft",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "voicesVictoryRight",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "berlin",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520,
+        "pj_3": 520,
+        "pj_4": 520
+      }
+    },
+    {
+      "id": "fireworks",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520,
+        "pj_3": 520
+      }
+    },
+    {
+      "id": "entranceVictory",
+      "innerZones": [
+        {
+          "id": "entranceVictoryLeft",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "entranceVictoryRight",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "soldiers",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "counterMoscow",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "hallStalinLeft",
+      "innerZones": [
+        {
+          "id": "hallStalinLeftTouch1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallStalinLeftTouch2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallStalinLeftTouch3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallStalinLeftTouch4",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallStalinLeftTouch5",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallStalinLeftTouch6",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "hallStalinTrans",
+      "innerZones": [
+        {
+          "id": "hallStalinTrans1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallStalinTrans2",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "hallStalinRight",
+      "innerZones": [
+        {
+          "id": "hallStalinRightTouch1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallStalinRightTouch2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallStalinRightTouch3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallStalinRightTouch4",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallStalinRightTouch5",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallStalinRightTouch6",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "counterLenin",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "hallLenin",
+      "innerZones": [
+        {
+          "id": "hallLeninTouch1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallLeninTouch2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallLeninTouch3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallLeninTouch4",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallLeninTouch5",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallLeninTouch6",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "hallGlass",
+      "innerZones": [
+        {
+          "id": "hallGlass1",
+          "status": {
+            "pc_1": 520,
+            "pj_1": 520,
+            "pj_2": 520
+          }
+        },
+        {
+          "id": "hallGlass2",
+          "status": {
+            "pc_1": 520,
+            "pj_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "counterKursk",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "hallKursk",
+      "innerZones": [
+        {
+          "id": "hallKurskTouch1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallKurskTouch2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallKurskTouch3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallKurskTouch4",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallKurskTouch5",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "hallKurskTouch6",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "gru",
+      "innerZones": [
+        {
+          "id": "gruLeft",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "gruCentre",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "gruRight",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "ribbon",
+      "innerZones": [
+        {
+          "id": "ribbonSoldier",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "ribbonKursk",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "ribbonLenin",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "ribbonMoscow",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "ribbonVase",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "ribbonBerlin",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    }
+  ]
+}
