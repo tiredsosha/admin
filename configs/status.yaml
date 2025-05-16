@@ -3,7 +3,7 @@ zones:
     innerZones:
       - id: relayMoscow
         status:
-          controller_1: 520
+          controller_1: 200
       - id: relayStalin
         status:
           controller_1: 520

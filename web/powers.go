@@ -19,7 +19,7 @@ func powerPc(c *gin.Context) {
 		return
 	}
 
-	logger.Info.Println(data)
+	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
 		go protocols.SendWOL(config.FindPC(data.Zone, "mac"))
@@ -45,7 +45,7 @@ func powerProjector(c *gin.Context) {
 		return
 	}
 
-	logger.Info.Println(data)
+	logger.Info.Println("request data -", data)
 
 	go protocols.SendPjlink(config.FindPJ(data.Zone, data.ID), data.Command)
 
@@ -65,7 +65,7 @@ func powerRelay(c *gin.Context) {
 		return
 	}
 
-	logger.Info.Println(data)
+	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
 		command = "n"
@@ -94,7 +94,7 @@ func powerZone(c *gin.Context) {
 		return
 	}
 
-	logger.Info.Println(data)
+	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
 		go protocols.SendWOL(config.FindPC(data.Zone, "mac"))
@@ -125,7 +125,7 @@ func powerPark(c *gin.Context) {
 		return
 	}
 
-	logger.Info.Println(data)
+	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
 
