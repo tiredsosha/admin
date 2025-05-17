@@ -68,9 +68,9 @@ func powerRelay(c *gin.Context) {
 	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
-		command = "n"
-	} else {
 		command = "f"
+	} else {
+		command = "n"
 	}
 
 	go protocols.SendGet(formater.CustomStr(

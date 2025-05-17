@@ -18,6 +18,8 @@ func main() {
 	cfg := config.ConfInit()
 	config.ConfSubInit()
 
+	web.StatusInit()
+
 	hostname := "admin"
 	topicPrefix := "warden/"
 
@@ -39,6 +41,13 @@ func main() {
 		}
 		go mosquitto.StartBroker(mqttData)
 	}
+
+	// функция которая чекает статусы всего
+	go func() {
+		for {
+			web.UpdateStatues()
+		}
+	}()
 
 	web.StartServer(cfg.Port)
 }
