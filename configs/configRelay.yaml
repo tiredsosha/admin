@@ -1,4 +1,3 @@
-test: 127.0.0.1:8005
 relayMoscow: 10.1.0.120
 relayStalin: 10.1.0.121
 relayLenin: 10.1.0.122
