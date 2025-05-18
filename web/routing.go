@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
+	"github.com/tiredsosha/admin/tray"
 )
 
 func router(server *gin.Engine) {
@@ -52,5 +53,7 @@ func StartServer(port int) {
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
+	tray.Conn = true
+
 	server.ListenAndServe()
 }
