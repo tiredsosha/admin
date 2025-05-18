@@ -14,14 +14,14 @@ func configRelay() error {
 	// Read the YAML file
 	data, err := os.ReadFile("./configs/configRelay.yaml")
 	if err != nil {
-		logger.Error.Printf("error reading file: %v", err)
+		logger.Error.Printf("error reading configRelay.yaml: %v", err)
 		return err
 	}
 
 	// Unmarshal YAML into the map
 	err = yaml.Unmarshal(data, &Relays)
 	if err != nil {
-		logger.Error.Printf("error unmarshaling YAML: %v", err)
+		logger.Error.Printf("error unmarshaling configRelay.yaml: %v", err)
 		return err
 	}
 	return err

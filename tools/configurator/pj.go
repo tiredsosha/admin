@@ -15,14 +15,14 @@ func configPJ() error {
 	// Read the YAML file
 	data, err := os.ReadFile("./configs/configPJ.yaml")
 	if err != nil {
-		logger.Error.Printf("error reading file: %v", err)
+		logger.Error.Printf("error reading configPJ.yaml: %v", err)
 		return err
 	}
 
 	// Unmarshal YAML into the map
 	err = yaml.Unmarshal(data, &PJ)
 	if err != nil {
-		logger.Error.Printf("error unmarshaling YAML: %v", err)
+		logger.Error.Printf("error unmarshaling configPJ.yaml: %v", err)
 		return err
 	}
 	FindAllPJ()
@@ -77,6 +77,6 @@ func FindAllPJ() {
 	for ip := range ipSet {
 		ALLPJ = append(ALLPJ, ip)
 	}
-
-	logger.Debug.Printf("all pj ip - '%v'\n", ALLPJ)
+	logger.Debug.Println("all pj ip listed")
+	// logger.Debug.Printf("all pj ip - '%v'\n", ALLPJ)
 }

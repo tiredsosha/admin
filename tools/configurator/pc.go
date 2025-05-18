@@ -16,14 +16,14 @@ func configPC() error {
 	// Read the YAML file
 	data, err := os.ReadFile("./configs/configPC.yaml")
 	if err != nil {
-		logger.Error.Printf("error reading file: %v", err)
+		logger.Error.Printf("error reading configPC.yaml: %v", err)
 		return err
 	}
 
 	// Unmarshal YAML into the map
 	err = yaml.Unmarshal(data, &PC)
 	if err != nil {
-		logger.Error.Printf("error unmarshaling YAML: %v", err)
+		logger.Error.Printf("error unmarshaling configPC.yaml: %v", err)
 		return err
 	}
 	FindAllPC()
@@ -51,7 +51,9 @@ func FindAllPC() {
 			ALLPC = append(ALLPC, ip)
 		}
 	}
+	logger.Info.Println("all pc ip listed")
+	logger.Info.Println("all pc mac listed")
 
-	logger.Info.Printf("all pc ip - '%v'\n", ALLPC)
-	logger.Info.Printf("all pc mac - '%v'\n", ALLMAC)
+	// logger.Info.Printf("all pc ip - '%v'\n", ALLPC)
+	// logger.Info.Printf("all pc mac - '%v'\n", ALLMAC)
 }

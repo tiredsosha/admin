@@ -79,7 +79,7 @@ libStalinLib1:
 libStalinLib2:
   ip: 10.1.3.28
   mac: CC:28:AA:A2:66:AB
-libStalinLib2:
+libStalinLib3:
   ip: 10.1.3.29
   mac: CC:28:AA:A2:68:14
 libStalinLib4:
@@ -112,7 +112,7 @@ libLeninLib1:
 libLeninLib2:
   ip: 10.1.4.28
   mac: CC:28:AA:A2:66:62
-libLeninLib2:
+libLeninLib3:
   ip: 10.1.4.29
   mac: CC:28:AA:A2:66:51
 libLeninLib4:
