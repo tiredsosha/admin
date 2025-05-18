@@ -65,21 +65,23 @@ func StatusInit() {
 func updatePC() {
 	// Loop through all zones and innerZones
 	for i, zone := range statusData.Zones {
-		// Check for direct status map
-		if zone.Status != nil {
-			// Update 'pc_1' status for the zone
-			statusData.Zones[i].Status["pc_1"] = protocols.GetPC(formater.CustomStr(
-				"http://{ip}:3001/status",
-				map[string]any{"ip": config.FindPC(zone.ID, "ip")}),
-			)
-		}
-		// Loop through innerZones
-		for j, inner := range zone.InnerZones {
-			// Update 'pc_1' status for each inner zone
-			statusData.Zones[i].InnerZones[j].Status["pc_1"] = protocols.GetPC(formater.CustomStr(
-				"http://{ip}:3001/status",
-				map[string]any{"ip": config.FindPC(inner.ID, "ip")}),
-			)
+		if zone.ID != "relay" {
+			// Check for direct status map
+			if zone.Status != nil {
+				// Update 'pc_1' status for the zone
+				statusData.Zones[i].Status["pc_1"] = protocols.GetPC(formater.CustomStr(
+					"http://{ip}:3001/status",
+					map[string]any{"ip": config.FindPC(zone.ID, "ip")}),
+				)
+			}
+			// Loop through innerZones
+			for j, inner := range zone.InnerZones {
+				// Update 'pc_1' status for each inner zone
+				statusData.Zones[i].InnerZones[j].Status["pc_1"] = protocols.GetPC(formater.CustomStr(
+					"http://{ip}:3001/status",
+					map[string]any{"ip": config.FindPC(inner.ID, "ip")}),
+				)
+			}
 		}
 	}
 	logger.Debug.Println("pc statuses updated")
@@ -89,9 +91,6 @@ func updateRelay() {
 	for i, zone := range statusData.Zones {
 		if zone.ID == "relay" {
 			for j, inner := range zone.InnerZones {
-				// test
-				logger.Debug.Println(inner)
-
 				// Update status
 				statusData.Zones[i].InnerZones[j].Status["controller_1"] = protocols.GetRelay(formater.CustomStr(
 					"http://{ip}/pstat.xml",
