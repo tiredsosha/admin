@@ -89,6 +89,9 @@ func updateRelay() {
 	for i, zone := range statusData.Zones {
 		if zone.ID == "relay" {
 			for j, inner := range zone.InnerZones {
+				// test
+				logger.Debug.Println(inner)
+
 				// Update status
 				statusData.Zones[i].InnerZones[j].Status["controller_1"] = protocols.GetRelay(formater.CustomStr(
 					"http://{ip}/pstat.xml",
