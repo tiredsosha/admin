@@ -17,6 +17,7 @@ type conf struct {
 	Password string `yaml:"password"`
 	Port     int    `yaml:"httpPort"`
 	MqttOn   bool   `yaml:"mqttActive"`
+	StatusOn bool   `yaml:"statusActive"`
 }
 
 // поиск конфига на диске
@@ -54,6 +55,7 @@ func confFile() *conf {
 		Broker:   "127.0.0.1",
 		Username: "admin",
 		Password: "password",
+		StatusOn: true,
 		MqttOn:   false,
 		Port:     8080,
 	}

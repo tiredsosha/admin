@@ -21,9 +21,9 @@ func main() {
 	web.StatusInit()
 
 	hostname := "admin"
-	topicPrefix := "warden/"
+	topicPrefix := "executor/"
 
-	logger.DebugLog(version, true, cfg.MqttOn, hostname, cfg.Broker, cfg.Username, cfg.Password, cfg.Port)
+	logger.DebugLog(version, true, cfg.MqttOn, cfg.StatusOn, hostname, cfg.Broker, cfg.Username, cfg.Password, cfg.Port)
 
 	// вот это нужно, но мы тоже будем с ним разбираться в конце
 	go tray.TrayStart()
@@ -42,12 +42,14 @@ func main() {
 		go mosquitto.StartBroker(mqttData)
 	}
 
-	// функция которая чекает статусы всего
-	go func() {
-		for {
-			web.UpdateStatues()
-		}
-	}()
+	if cfg.StatusOn {
+		// функция которая чекает статусы всего
+		go func() {
+			for {
+				web.UpdateStatues()
+			}
+		}()
+	}
 
 	web.StartServer(cfg.Port)
 }

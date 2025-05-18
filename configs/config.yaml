@@ -3,3 +3,4 @@ username: admin
 password: password
 httpPort: 8080
 mqttActive: false
+statusActive: false
