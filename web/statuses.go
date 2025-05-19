@@ -126,7 +126,8 @@ func updatePJ() {
 		for n := 1; n <= maxKeys; n++ {
 			key := fmt.Sprintf("pj_%d", n)
 			if _, exists := statusData.Zones[i].Status[key]; exists {
-				statusData.Zones[i].Status[key] = protocols.GetPjlink(config.FindPJ(zone.ID, key))
+				logger.Debug.Println(config.FindPJ(zone.ID, key))
+				// statusData.Zones[i].Status[key] = protocols.GetPjlink(config.FindPJ(zone.ID, key))
 			}
 		}
 
@@ -141,7 +142,9 @@ func updatePJ() {
 			for n := 1; n <= maxKeysInner; n++ {
 				key := fmt.Sprintf("pj_%d", n)
 				if _, exists := inner.Status[key]; exists {
-					inner.Status[key] = protocols.GetPjlink(config.FindPJ(inner.ID, key))
+					logger.Debug.Println(config.FindPJ(inner.ID, key))
+
+					// inner.Status[key] = protocols.GetPjlink(config.FindPJ(inner.ID, key))
 				}
 			}
 		}
