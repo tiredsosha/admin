@@ -22,7 +22,7 @@ func soundZone(c *gin.Context) {
 
 	protocols.SendPost(formater.CustomStr(
 		"http://{ip}:3001/sound",
-		map[string]any{"ip": config.FindPC(data.Zone, "ip")}), data.Command,
+		map[string]any{"ip": config.FindPC(data.Zone, "ip")}), data.Command, 2,
 	)
 
 	c.JSON(200, gin.H{

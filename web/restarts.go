@@ -22,7 +22,7 @@ func restartPc(c *gin.Context) {
 
 	protocols.SendGet(formater.CustomStr(
 		"http://{ip}:3001/restart",
-		map[string]any{"ip": config.FindPC(data.Zone, "ip")}),
+		map[string]any{"ip": config.FindPC(data.Zone, "ip")}), 2,
 	)
 
 	c.JSON(200, gin.H{

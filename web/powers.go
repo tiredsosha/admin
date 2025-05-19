@@ -26,7 +26,7 @@ func powerPc(c *gin.Context) {
 	} else {
 		protocols.SendGet(formater.CustomStr(
 			"http://{ip}:3001/off",
-			map[string]any{"ip": config.FindPC(data.Zone, "ip")}),
+			map[string]any{"ip": config.FindPC(data.Zone, "ip")}), 2,
 		)
 	}
 
@@ -76,7 +76,7 @@ func powerRelay(c *gin.Context) {
 	protocols.SendGet(formater.CustomStr(
 		"http://admin:admin@{ip}/protect/rb0{command}.cgi",
 		map[string]any{"ip": config.FindRelay(data.Zone), "command": command},
-	),
+	), 2,
 	)
 
 	c.JSON(200, gin.H{
@@ -103,7 +103,7 @@ func powerZone(c *gin.Context) {
 	} else {
 		protocols.SendGet(formater.CustomStr(
 			"http://{ip}:3001/off",
-			map[string]any{"ip": config.FindPC(data.Zone, "ip")}),
+			map[string]any{"ip": config.FindPC(data.Zone, "ip")}), 2,
 		)
 	}
 
@@ -148,7 +148,7 @@ func powerPark(c *gin.Context) {
 			for _, pc := range config.ALLPC {
 				protocols.SendGet(formater.CustomStr(
 					"http://{ip}:3001/off",
-					map[string]any{"ip": pc}),
+					map[string]any{"ip": pc}), 2,
 				)
 			}
 
@@ -162,7 +162,7 @@ func powerPark(c *gin.Context) {
 			for _, pc := range config.ALLPC {
 				protocols.SendGet(formater.CustomStr(
 					"http://{ip}:3001/restart",
-					map[string]any{"ip": pc}),
+					map[string]any{"ip": pc}), 2,
 				)
 			}
 		}()

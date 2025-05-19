@@ -29,11 +29,11 @@ func onReady() {
 
 	go func() {
 		<-menuOnPark.ClickedCh
-		protocols.SendPost("http://127.0.0.1:8080/power/park", "off")
+		protocols.SendPost("http://127.0.0.1:8080/power/park", "off", 2)
 	}()
 	go func() {
 		<-menuOffPark.ClickedCh
-		protocols.SendPost("http://127.0.0.1:8080/power/park", "on")
+		protocols.SendPost("http://127.0.0.1:8080/power/park", "on", 2)
 	}()
 
 	go func() {
