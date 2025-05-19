@@ -82,6 +82,6 @@ func GetPjlink(ip string) int {
 			logger.Error.Println("Empty response received")
 		}
 	}
-	logger.Info.Println("pjlink status -", response)
+	// logger.Info.Println("pjlink status -", response)
 	return response
 }
