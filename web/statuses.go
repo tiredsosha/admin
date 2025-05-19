@@ -117,10 +117,10 @@ func countPjKeys(statusMap map[string]int) int {
 func updatePJ() {
 	// Loop through all zones
 	for i, zone := range statusData.Zones {
-		logger.Debug.Println("pj zone is", zone.ID)
 
 		// Determine maxKeys for this zone based on existing keys
 		maxKeys := countPjKeys(statusData.Zones[i].Status)
+		logger.Debug.Println("pj zone is", zone.ID, maxKeys)
 
 		// Loop through possible pj_* keys
 		for n := 1; n <= maxKeys; n++ {
@@ -133,9 +133,10 @@ func updatePJ() {
 		// Loop through inner zones
 		for j := range zone.InnerZones {
 			inner := &zone.InnerZones[j]
-			logger.Debug.Println("pj zone is", inner.ID)
+
 			// Count existing pj_* keys in inner zone
 			maxKeysInner := countPjKeys(inner.Status)
+			logger.Debug.Println("pj zone is", inner.ID, maxKeys)
 
 			for n := 1; n <= maxKeysInner; n++ {
 				key := fmt.Sprintf("pj_%d", n)
