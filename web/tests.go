@@ -10,7 +10,7 @@ func testFunctionality() {
 	testJson.Req = "test"
 	protocols.SendUdp("127.0.0.1", 8090, "restart")
 	protocols.SendOsc("127.0.0.1", 8091, "/test", "restart")
-	protocols.SendGet("http://127.0.0.1:8080", 2)
+	protocols.SendGet("http://127.0.0.1:8090", 2)
 	// protocols.SendPost("http://127.0.0.1:8092", testJson)
 }
 

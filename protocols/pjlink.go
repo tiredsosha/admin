@@ -1,6 +1,7 @@
 package protocols
 
 import (
+	"fmt"
 	"strconv"
 
 	"github.com/LightInstruments/pjlink"
@@ -8,7 +9,15 @@ import (
 )
 
 func SendPjlink(ip, command string) {
+	defer func() {
+		if r := recover(); r != nil {
+			// Log the panic or handle it as needed
+			logger.Error.Printf("Recovered from panic in GetPjlink: %v", r)
+		}
+	}()
+
 	proj := pjlink.NewProjector(ip, "")
+	fmt.Println(command)
 
 	switch command {
 	case "on":
