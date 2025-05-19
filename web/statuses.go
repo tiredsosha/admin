@@ -160,7 +160,7 @@ func convertYamlToJson(yamlData []byte) ([]byte, error) {
 }
 
 func UpdateStatues() {
-	updatePC()
+	// updatePC()
 	updateRelay()
 	updatePJ()
 
