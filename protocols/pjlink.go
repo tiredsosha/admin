@@ -30,12 +30,14 @@ func GetPjlink(ip string) int {
 	if err != nil {
 		logger.Error.Printf("couldn't send execute pjlink %v", err)
 	} else {
-		//logger.Info.Println("pjlink status -", status.Response)
-		boolStatus, _ := strconv.ParseBool(status.Response[0])
-		if boolStatus {
-			response = 200
-		} else {
-			response = 521
+		if len(status.Response) > 0 {
+			//logger.Info.Println("pjlink status -", status.Response)
+			boolStatus, _ := strconv.ParseBool(status.Response[0])
+			if boolStatus {
+				response = 200
+			} else {
+				response = 521
+			}
 		}
 	}
 	logger.Info.Println("pjlink status -", response)
