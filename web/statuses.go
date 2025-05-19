@@ -71,7 +71,7 @@ func updatePC() {
 				// Update 'pc_1' status for the zone
 				statusData.Zones[i].Status["pc_1"] = protocols.GetPC(formater.CustomStr(
 					"http://{ip}:3001/status",
-					map[string]any{"ip": config.FindPC(zone.ID, "ip")}), 2,
+					map[string]any{"ip": config.FindPC(zone.ID, "ip")}), 1,
 				)
 			}
 			// Loop through innerZones
@@ -79,7 +79,7 @@ func updatePC() {
 				// Update 'pc_1' status for each inner zone
 				statusData.Zones[i].InnerZones[j].Status["pc_1"] = protocols.GetPC(formater.CustomStr(
 					"http://{ip}:3001/status",
-					map[string]any{"ip": config.FindPC(inner.ID, "ip")}), 2,
+					map[string]any{"ip": config.FindPC(inner.ID, "ip")}), 1,
 				)
 			}
 		}
@@ -94,7 +94,7 @@ func updateRelay() {
 				// Update status
 				statusData.Zones[i].InnerZones[j].Status["controller_1"] = protocols.GetRelay(formater.CustomStr(
 					"http://{ip}/pstat.xml",
-					map[string]any{"ip": config.FindRelay(inner.ID)}), 2,
+					map[string]any{"ip": config.FindRelay(inner.ID)}), 1,
 				)
 			}
 			break
