@@ -37,10 +37,8 @@ liberationProjectionTouch:
 liberationProjectionWall:
   pj_1: 10.1.5.44
 dnepr:
-  pj_1: 10.1.5.45
-  pj_2: 10.1.5.46
-  pj_3: 10.1.5.47
-  pj_4: 10.1.5.48
+  pj_1: 10.1.5.46
+  pj_2: 10.1.5.47
 victoryProjectionTouch:
   pj_1: 10.1.6.41
   pj_2: 10.1.6.42
