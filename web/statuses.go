@@ -120,12 +120,12 @@ func updatePJ() {
 
 		// Determine maxKeys for this zone based on existing keys
 		maxKeys := countPjKeys(statusData.Zones[i].Status)
-		logger.Debug.Println("pj zone is", zone.ID, maxKeys)
+		// logger.Debug.Println("pj zone is", zone.ID, maxKeys)
 
 		// Loop through possible pj_* keys
 		for n := 1; n <= maxKeys; n++ {
 			key := fmt.Sprintf("pj_%d", n)
-			if _, exists := statusData.Zones[i].Status[key]; !exists {
+			if _, exists := statusData.Zones[i].Status[key]; exists {
 				statusData.Zones[i].Status[key] = protocols.GetPjlink(config.FindPJ(zone.ID, key))
 			}
 		}
@@ -136,11 +136,11 @@ func updatePJ() {
 
 			// Count existing pj_* keys in inner zone
 			maxKeysInner := countPjKeys(inner.Status)
-			logger.Debug.Println("pj zone is", inner.ID, maxKeys)
+			// logger.Debug.Println("pj zone is", inner.ID, maxKeys)
 
 			for n := 1; n <= maxKeysInner; n++ {
 				key := fmt.Sprintf("pj_%d", n)
-				if _, exists := inner.Status[key]; !exists {
+				if _, exists := inner.Status[key]; exists {
 					inner.Status[key] = protocols.GetPjlink(config.FindPJ(inner.ID, key))
 				}
 			}
