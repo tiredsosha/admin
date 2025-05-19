@@ -1,7 +1,6 @@
 package protocols
 
 import (
-	"fmt"
 	"strconv"
 
 	"github.com/LightInstruments/pjlink"
@@ -17,7 +16,7 @@ func SendPjlink(ip, command string) {
 	}()
 
 	proj := pjlink.NewProjector(ip, "")
-	fmt.Println(ip, command)
+	// fmt.Println(ip, command)
 
 	switch command {
 	case "on":
