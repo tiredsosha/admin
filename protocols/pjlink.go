@@ -58,7 +58,6 @@ func GetPjlink(ip string) int {
 	if err != nil {
 		logger.Error.Printf("couldn't send execute pjlink %v", err)
 	} else {
-		//logger.Info.Println("pjlink status -", status.Response)
 		if len(status.Response) > 0 {
 			boolStatus, err := strconv.ParseBool(status.Response[0])
 			if err != nil {
@@ -74,6 +73,6 @@ func GetPjlink(ip string) int {
 			logger.Error.Println("Empty response received")
 		}
 	}
-	logger.Info.Println("pjlink status -", response)
+	// logger.Info.Println("pjlink status -", response)
 	return response
 }

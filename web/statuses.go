@@ -169,8 +169,8 @@ func convertYamlToJson(yamlData []byte) ([]byte, error) {
 }
 
 func UpdateStatues() {
-	// updatePC()
-	// updateRelay()
+	updatePC()
+	updateRelay()
 	updatePJ()
 
 	// Marshal updated data back to YAML
