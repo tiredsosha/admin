@@ -1,14 +1,12 @@
 package protocols
 
 import (
-	"fmt"
-
 	"github.com/linde12/gowol"
 	"github.com/tiredsosha/admin/tools/logger"
 )
 
 func SendWOL(mac string) {
-	fmt.Println(mac)
+	//fmt.Println(mac)
 	packet, err := gowol.NewMagicPacket(mac)
 	if err == nil {
 		packet.Send("255.255.255.255") // send to broadcast

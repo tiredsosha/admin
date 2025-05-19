@@ -169,16 +169,10 @@ func convertYamlToJson(yamlData []byte) ([]byte, error) {
 }
 
 func UpdateStatues() {
-	updateRelay()
-	logger.Info.Println("relay statuses updating")
-	update()
+	go updateRelay()
+	go updatePJ()
 
 	updatePC()
-	logger.Info.Println("pc statuses updating")
-	update()
-
-	updatePJ()
-	logger.Info.Println("pj statuses updating")
 	update()
 
 }
