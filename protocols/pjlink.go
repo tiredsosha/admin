@@ -37,5 +37,6 @@ func GetPjlink(ip string) int {
 			response = 521
 		}
 	}
+	logger.Info.Println("pjlink status -", response)
 	return response
 }
