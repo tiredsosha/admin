@@ -172,10 +172,10 @@ victoryTouch5:
 victoryProjectionWall:
   ip: 10.1.6.27
   mac: CC:28:AA:A2:66:AD
-victoryLiberationLeft:
+voicesVictoryLeft:
   ip: 10.1.6.28
   mac: CC:28:AA:A2:66:7B
-victoryLiberationRight:
+voicesVictoryRight:
   ip: 10.1.6.29
   mac: CC:28:AA:A2:68:23
 berlin:
