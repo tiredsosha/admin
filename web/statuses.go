@@ -169,10 +169,21 @@ func convertYamlToJson(yamlData []byte) ([]byte, error) {
 }
 
 func UpdateStatues() {
-	updatePC()
 	updateRelay()
-	updatePJ()
+	logger.Info.Println("relay statuses updating")
+	update()
 
+	updatePC()
+	logger.Info.Println("pc statuses updating")
+	update()
+
+	updatePJ()
+	logger.Info.Println("pj statuses updating")
+	update()
+
+}
+
+func update() {
 	// Marshal updated data back to YAML
 	updatedYAML, err := yaml.Marshal(&statusData)
 	if err != nil {
@@ -204,4 +215,5 @@ func UpdateStatues() {
 	}
 
 	logger.Debug.Println("json updated, check status.json")
+
 }
