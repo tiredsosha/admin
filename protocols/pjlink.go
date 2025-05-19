@@ -17,7 +17,7 @@ func SendPjlink(ip, command string) {
 	}()
 
 	proj := pjlink.NewProjector(ip, "")
-	fmt.Println(command)
+	fmt.Println(ip, command)
 
 	switch command {
 	case "on":
