@@ -117,6 +117,8 @@ func countPjKeys(statusMap map[string]int) int {
 func updatePJ() {
 	// Loop through all zones
 	for i, zone := range statusData.Zones {
+		logger.Debug.Println("pj zone is", zone.ID)
+
 		// Determine maxKeys for this zone based on existing keys
 		maxKeys := countPjKeys(statusData.Zones[i].Status)
 
@@ -131,6 +133,7 @@ func updatePJ() {
 		// Loop through inner zones
 		for j := range zone.InnerZones {
 			inner := &zone.InnerZones[j]
+			logger.Debug.Println("pj zone is", inner.ID)
 			// Count existing pj_* keys in inner zone
 			maxKeysInner := countPjKeys(inner.Status)
 
@@ -161,7 +164,7 @@ func convertYamlToJson(yamlData []byte) ([]byte, error) {
 
 func UpdateStatues() {
 	// updatePC()
-	updateRelay()
+	// updateRelay()
 	updatePJ()
 
 	// Marshal updated data back to YAML
