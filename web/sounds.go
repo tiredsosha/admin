@@ -20,7 +20,7 @@ func soundZone(c *gin.Context) {
 
 	logger.Info.Println("request data -", data)
 
-	go protocols.SendPost(formater.CustomStr(
+	protocols.SendPost(formater.CustomStr(
 		"http://{ip}:3001/sound",
 		map[string]any{"ip": config.FindPC(data.Zone, "ip")}), data.Command,
 	)

@@ -22,9 +22,9 @@ func powerPc(c *gin.Context) {
 	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
-		go protocols.SendWOL(config.FindPC(data.Zone, "mac"))
+		protocols.SendWOL(config.FindPC(data.Zone, "mac"))
 	} else {
-		go protocols.SendGet(formater.CustomStr(
+		protocols.SendGet(formater.CustomStr(
 			"http://{ip}:3001/off",
 			map[string]any{"ip": config.FindPC(data.Zone, "ip")}),
 		)
@@ -47,7 +47,7 @@ func powerProjector(c *gin.Context) {
 
 	logger.Info.Println("request data -", data)
 
-	go protocols.SendPjlink(config.FindPJ(data.Zone, data.ID), data.Command)
+	protocols.SendPjlink(config.FindPJ(data.Zone, data.ID), data.Command)
 
 	c.JSON(200, gin.H{
 		"message": "OK",
@@ -73,7 +73,7 @@ func powerRelay(c *gin.Context) {
 		command = "n"
 	}
 
-	go protocols.SendGet(formater.CustomStr(
+	protocols.SendGet(formater.CustomStr(
 		"http://admin:admin@{ip}/protect/rb0{command}.cgi",
 		map[string]any{"ip": config.FindRelay(data.Zone), "command": command},
 	),
@@ -97,9 +97,11 @@ func powerZone(c *gin.Context) {
 	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
-		go protocols.SendWOL(config.FindPC(data.Zone, "mac"))
+		for range 4 {
+			protocols.SendWOL(config.FindPC(data.Zone, "mac"))
+		}
 	} else {
-		go protocols.SendGet(formater.CustomStr(
+		protocols.SendGet(formater.CustomStr(
 			"http://{ip}:3001/off",
 			map[string]any{"ip": config.FindPC(data.Zone, "ip")}),
 		)
@@ -107,7 +109,7 @@ func powerZone(c *gin.Context) {
 
 	zonePJ := config.FindZonePJ(data.Zone)
 	for _, ip := range zonePJ {
-		go protocols.SendPjlink(ip, data.Command)
+		protocols.SendPjlink(ip, data.Command)
 	}
 
 	c.JSON(200, gin.H{
@@ -128,33 +130,42 @@ func powerPark(c *gin.Context) {
 	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
+		go func() {
+			for _, mac := range config.ALLMAC {
+				for range 4 {
+					protocols.SendWOL(mac)
+				}
+			}
 
-		for _, mac := range config.ALLMAC {
-			go protocols.SendWOL(mac)
-		}
+			for _, pj := range config.ALLPJ {
+				protocols.SendPjlink(pj, data.Command)
+			}
+		}()
 
-		for _, pj := range config.ALLPJ {
-			go protocols.SendPjlink(pj, data.Command)
-		}
 	} else if data.Command == "off" {
 
-		for _, pc := range config.ALLPC {
-			go protocols.SendGet(formater.CustomStr(
-				"http://{ip}:3001/off",
-				map[string]any{"ip": pc}),
-			)
-		}
+		go func() {
+			for _, pc := range config.ALLPC {
+				protocols.SendGet(formater.CustomStr(
+					"http://{ip}:3001/off",
+					map[string]any{"ip": pc}),
+				)
+			}
 
-		for _, ip := range config.ALLPJ {
-			go protocols.SendPjlink(ip, data.Command)
-		}
+			for _, ip := range config.ALLPJ {
+				protocols.SendPjlink(ip, data.Command)
+			}
+		}()
+
 	} else if data.Command == "restart" {
-		for _, pc := range config.ALLPC {
-			go protocols.SendGet(formater.CustomStr(
-				"http://{ip}:3001/restart",
-				map[string]any{"ip": pc}),
-			)
-		}
+		go func() {
+			for _, pc := range config.ALLPC {
+				protocols.SendGet(formater.CustomStr(
+					"http://{ip}:3001/restart",
+					map[string]any{"ip": pc}),
+				)
+			}
+		}()
 	}
 
 	c.JSON(200, gin.H{
