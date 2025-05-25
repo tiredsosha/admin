@@ -72,12 +72,14 @@ func powerRelay(c *gin.Context) {
 	} else {
 		command = "n"
 	}
-
-	protocols.SendGet(formater.CustomStr(
-		"http://admin:admin@{ip}/protect/rb0{command}.cgi",
-		map[string]any{"ip": config.FindRelay(data.Zone), "command": command},
-	), 2,
-	)
+	zoneRelay := config.FindRelay(data.Zone)
+	for _, ip := range zoneRelay {
+		protocols.SendGet(formater.CustomStr(
+			"http://admin:admin@{ip}/protect/rb0{command}.cgi",
+			map[string]any{"ip": ip, "command": command},
+		), 2,
+		)
+	}
 
 	c.JSON(200, gin.H{
 		"message": "OK",

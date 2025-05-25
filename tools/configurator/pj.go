@@ -59,7 +59,7 @@ func FindZonePJ(main string) []string {
 	for _, ip := range zoneMap {
 		ipList = append(ipList, ip)
 	}
-	logger.Debug.Printf("ips in zone '%s': %v\n", main, ipList)
+	logger.Debug.Printf("pj ips in zone '%s': %v\n", main, ipList)
 	return ipList
 }
 

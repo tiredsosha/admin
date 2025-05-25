@@ -1,9 +1,24 @@
-relayMoscow: 10.1.0.120
-relayStalin: 10.1.0.121
-relayLenin: 10.1.0.122
-relayKursk: 10.1.0.123
-relayDnepro: 10.1.0.124
-relayBerlin: 10.1.0.125
-relayHallStalin: 10.1.0.126
-relayHallKonev: 10.1.0.127
-relayHallDnepro: 10.1.0.128
+relayMoscow:
+  controller_1: 10.1.0.120
+  controller_2: 10.1.0.129
+relayStalin:
+  controller_1: 10.1.0.121
+  controller_2: 10.1.0.130
+relayLenin:
+  controller_1: 10.1.0.122
+  controller_2: 10.1.0.131
+relayKursk:
+  controller_1: 10.1.0.123
+  controller_2: 10.1.0.132
+relayDnepro:
+  controller_1: 10.1.0.124
+  controller_2: 10.1.0.133
+relayBerlin:
+  controller_1: 10.1.0.125
+  controller_2: 10.1.0.134
+relayHallStalin:
+  controller_1: 10.1.0.126
+relayHallKonev:
+  controller_1: 10.1.0.127
+relayHallDnepro:
+  controller_1: 10.1.0.128

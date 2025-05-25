@@ -8,7 +8,7 @@ import (
 	"github.com/tiredsosha/admin/tools/logger"
 )
 
-var Relays map[string]string
+var Relays map[string]map[string]string
 
 func configRelay() error {
 	// Read the YAML file
@@ -27,14 +27,32 @@ func configRelay() error {
 	return err
 }
 
-func FindRelay(id string) string {
+// func FindRelay(id string) string {
 
-	if value, exists := Relays[id]; exists {
-		logger.Info.Printf("value for key '%s' - '%s'\n", id, value)
-		return value
-	} else {
-		logger.Error.Printf("key '%s' not found\n", id)
-		return "none"
+// 	if value, exists := Relays[id]; exists {
+// 		logger.Info.Printf("value for key '%s' - '%s'\n", id, value)
+// 		return value
+// 	} else {
+// 		logger.Error.Printf("key '%s' not found\n", id)
+// 		return "none"
+// 	}
+
+// }
+
+func FindRelay(main string) []string {
+
+	// Get the map for the zone
+	zoneMap, exists := Relays[main]
+	if !exists {
+		logger.Debug.Printf("zone unfound '%s'\n", main)
+		return []string{}
 	}
 
+	// Collect all IPs into a slice
+	var ipList []string
+	for _, ip := range zoneMap {
+		ipList = append(ipList, ip)
+	}
+	logger.Debug.Printf("re;lay ips in zone '%s': %v\n", main, ipList)
+	return ipList
 }
