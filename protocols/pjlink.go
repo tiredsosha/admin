@@ -1,32 +1,61 @@
 package protocols
 
 import (
+	"context"
+	"fmt"
 	"strconv"
+	"time"
 
 	"github.com/LightInstruments/pjlink"
 	"github.com/tiredsosha/admin/tools/logger"
+	"github.com/tiredsosha/gopjlink"
 )
 
+// func SendPjlink(ip, command string) {
+// 	defer func() {
+// 		if r := recover(); r != nil {
+// 			// Log the panic or handle it as needed
+// 			logger.Error.Printf("Recovered from panic in GetPjlink: %v", r)
+// 		}
+// 	}()
+
+// 	proj := pjlink.NewProjector(ip, "")
+// 	// fmt.Println(ip, command)
+
+// 	switch command {
+// 	case "on":
+// 		if err := proj.TurnOn(); err != nil {
+// 			logger.Error.Printf("couldn't send execute pjlink %v", err)
+// 		}
+// 	case "off":
+// 		if err := proj.TurnOff(); err != nil {
+// 			logger.Error.Printf("couldn't send execute pjlink %v", err)
+// 		}
+// 	}
+
+// }
+
 func SendPjlink(ip, command string) {
-	defer func() {
-		if r := recover(); r != nil {
-			// Log the panic or handle it as needed
-			logger.Error.Printf("Recovered from panic in GetPjlink: %v", r)
-		}
-	}()
+	var boolCommand bool
 
-	proj := pjlink.NewProjector(ip, "")
-	// fmt.Println(ip, command)
+	if command == "on" {
+		boolCommand = true
+	} else {
+		boolCommand = false
+	}
 
-	switch command {
-	case "on":
-		if err := proj.TurnOn(); err != nil {
-			logger.Error.Printf("couldn't send execute pjlink %v", err)
-		}
-	case "off":
-		if err := proj.TurnOff(); err != nil {
-			logger.Error.Printf("couldn't send execute pjlink %v", err)
-		}
+	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
+	defer cancel()
+
+	// Initialize your projector object with connection details
+	proj := gopjlink.NewProjector(ip) // or however the constructor is defined
+
+	// Send power off command
+	err := proj.SetPower(ctx, boolCommand)
+	if err != nil {
+		fmt.Println("Failed to power off the projector:", err)
+	} else {
+		fmt.Println("Power off command sent successfully.")
 	}
 
 }

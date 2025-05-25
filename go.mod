@@ -1,6 +1,8 @@
 module github.com/tiredsosha/admin
 
-go 1.22
+go 1.23.0
+
+toolchain go1.24.3
 
 require (
 	github.com/eclipse/paho.mqtt.golang v1.4.1
@@ -46,8 +48,8 @@ require (
 	go.opentelemetry.io/otel v1.10.0 // indirect
 	go.opentelemetry.io/otel/trace v1.10.0 // indirect
 	go.uber.org/atomic v1.10.0 // indirect
-	go.uber.org/multierr v1.8.0 // indirect
-	go.uber.org/zap v1.23.0 // indirect
+	go.uber.org/multierr v1.11.0 // indirect
+	go.uber.org/zap v1.27.0 // indirect
 	golang.org/x/arch v0.8.0 // indirect
 	golang.org/x/crypto v0.23.0 // indirect
 	golang.org/x/text v0.15.0 // indirect
@@ -61,8 +63,9 @@ require (
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/hypebeast/go-osc v0.0.0-20220308234300-cec5a8a1e5f5
 	github.com/lxn/win v0.0.0-20210218163916-a377121e959e
+	github.com/tiredsosha/gopjlink v0.0.0-20250525144434-f57a43bc91ad
 	golang.org/x/net v0.25.0 // indirect
-	golang.org/x/sync v0.0.0-20220907140024-f12130a52804 // indirect
+	golang.org/x/sync v0.14.0 // indirect
 	golang.org/x/sys v0.20.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1
 )
