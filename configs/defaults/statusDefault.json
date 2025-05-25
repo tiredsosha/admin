@@ -6,37 +6,43 @@
         {
           "id": "relayMoscow",
           "status": {
-            "controller_1": 520
+            "controller_1": 200,
+            "controller_2": 200
           }
         },
         {
           "id": "relayStalin",
           "status": {
-            "controller_1": 520
+            "controller_1": 200,
+            "controller_2": 200
           }
         },
         {
           "id": "relayLenin",
           "status": {
-            "controller_1": 520
+            "controller_1": 200,
+            "controller_2": 200
           }
         },
         {
           "id": "relayKursk",
           "status": {
-            "controller_1": 520
+            "controller_1": 200,
+            "controller_2": 200
           }
         },
         {
           "id": "relayDnepro",
           "status": {
-            "controller_1": 520
+            "controller_1": 200,
+            "controller_2": 200
           }
         },
         {
           "id": "relayBerlin",
           "status": {
-            "controller_1": 520
+            "controller_1": 200,
+            "controller_2": 200
           }
         },
         {
@@ -820,6 +826,84 @@
         },
         {
           "id": "ribbonBerlin",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "rift",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "light",
+      "innerZones": [
+        {
+          "id": "lightVase",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "lightShowcase21",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "lightShowcase22",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "lightShowcase23",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "lightShowcase31",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "lightShowcase32",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "lightShowcase33",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "lightGru",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "lightCoridor",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "lightPlatform3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "lightPlatform4",
           "status": {
             "pc_1": 520
           }
