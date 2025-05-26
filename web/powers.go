@@ -204,6 +204,7 @@ func powerPark(c *gin.Context) {
 			}
 		}()
 
+		// Turn defaults on lights
 		go func() {
 			for _, dali := range config.ALLDALI {
 				out, lamps, defaults := config.FindDali(dali)
@@ -227,13 +228,13 @@ func powerPark(c *gin.Context) {
 			}
 		}()
 
-		// Turn off lights
-		go func() {
-			for _, dali := range config.ALLDALI {
-				out, lamps, _ := config.FindDali(dali)
-				protocols.ArlightControl(out, lamps, "0")
-			}
-		}()
+		// // Turn off lights
+		// go func() {
+		// 	for _, dali := range config.ALLDALI {
+		// 		out, lamps, _ := config.FindDali(dali)
+		// 		protocols.ArlightControl(out, lamps, "0")
+		// 	}
+		// }()
 
 	case "restart":
 		// Restart PCs by IP

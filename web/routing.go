@@ -31,6 +31,8 @@ func router(server *gin.Engine) {
 	light := server.Group("/light")
 	{
 		light.POST("/brightness", brightnessChange)
+		light.GET("/off", brightnessOFF)
+		light.GET("/default", brightnessDefault)
 	}
 
 	status := server.Group("/status")

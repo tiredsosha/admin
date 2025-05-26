@@ -27,3 +27,36 @@ func brightnessChange(c *gin.Context) {
 		"message": "OK",
 	})
 }
+
+func brightnessDefault(c *gin.Context) {
+
+	logger.Info.Println("request data all light to default")
+
+	go func() {
+		for _, dali := range config.ALLDALI {
+			out, lamps, defaults := config.FindDali(dali)
+			protocols.ArlightDefault(out, lamps, defaults)
+		}
+	}()
+
+	c.JSON(200, gin.H{
+		"message": "OK",
+	})
+}
+
+func brightnessOFF(c *gin.Context) {
+
+	logger.Info.Println("request data all light to default")
+
+	// Turn off lights
+	go func() {
+		for _, dali := range config.ALLDALI {
+			out, lamps, _ := config.FindDali(dali)
+			protocols.ArlightControl(out, lamps, "0")
+		}
+	}()
+
+	c.JSON(200, gin.H{
+		"message": "OK",
+	})
+}
