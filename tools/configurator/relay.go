@@ -53,6 +53,6 @@ func FindRelay(main string) []string {
 	for _, ip := range zoneMap {
 		ipList = append(ipList, ip)
 	}
-	logger.Debug.Printf("re;lay ips in zone '%s': %v\n", main, ipList)
+	logger.Debug.Printf("relay ips in zone '%s': %v\n", main, ipList)
 	return ipList
 }

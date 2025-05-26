@@ -1,0 +1,135 @@
+lightVase:
+  out: A
+  lights:
+    - 200
+    - 4
+    - 8
+    - 27
+    - 33
+    - 37
+    - 50
+    - 51
+    - 53
+    - 58
+lightShowcase1:
+  out: B
+  lights:
+    - 1
+    - 6
+    - 16
+lightPlatform2:
+  out: B
+  lights:
+    - 4
+    - 5
+    - 8
+    - 9
+    - 11
+    - 12
+    - 17
+ligthTree:
+  out: B
+  lights:
+    - 0
+    - 3
+    - 10
+    - 15
+lightZoya:
+  out: B
+  lights:
+    - 2
+    - 7
+    - 14
+lightFireworks:
+  out: C
+  lights:
+    - 4
+    - 2
+    - 3
+    - 9
+    - 1
+    - 8
+    - 0
+lightStars:
+  out: C
+  lights:
+    - 5
+    - 7
+    - 6
+lightShowcase21:
+  out: A
+  lights:
+    - 30
+    - 40
+    - 41
+lightShowcase22:
+  out: A
+  lights:
+    - 2
+    - 5
+    - 22
+    - 26
+    - 35
+lightShowcase23:
+  out: A
+  lights:
+    - 0
+    - 39
+lightShowcase31:
+  out: A
+  lights:
+    - 9
+    - 14
+    - 21
+    - 47
+    - 55
+    - 56
+lightShowcase32:
+  out: A
+  lights:
+    - 10
+    - 20
+    - 49
+lightShowcase33:
+  out: A
+  lights:
+    - 3
+    - 6
+    - 18
+    - 32
+    - 54
+lightGru:
+  out: A
+  lights:
+    - 23
+    - 24
+    - 52
+lightCoridor:
+  out: A
+  lights:
+    - 12
+lightPlatform3:
+  out: A
+  lights:
+    - 11
+    - 15
+    - 16
+    - 31
+    - 34
+    - 43
+    - 45
+    - 48
+    - 57
+lightPlatform4:
+  out: A
+  lights:
+    - 7
+    - 13
+    - 19
+    - 25
+    - 36
+    - 38
+    - 42
+    - 44
+    - 46
+    - 59

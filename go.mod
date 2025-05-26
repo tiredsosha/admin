@@ -31,6 +31,7 @@ require (
 	github.com/go-playground/universal-translator v0.18.1 // indirect
 	github.com/go-playground/validator/v10 v10.20.0 // indirect
 	github.com/go-stack/stack v1.8.1 // indirect
+	github.com/goburrow/serial v0.1.0 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
@@ -55,6 +56,7 @@ require (
 require (
 	github.com/getlantern/systray v1.2.1
 	github.com/gin-gonic/gin v1.10.0
+	github.com/goburrow/modbus v0.1.0
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/hypebeast/go-osc v0.0.0-20220308234300-cec5a8a1e5f5
 	github.com/tiredsosha/gopjlink v0.0.0-20250525144434-f57a43bc91ad

@@ -28,6 +28,10 @@ func router(server *gin.Engine) {
 	{
 		sound.POST("/zone", soundZone)
 	}
+	light := server.Group("/light")
+	{
+		light.POST("/brightness", brightnessChange)
+	}
 
 	status := server.Group("/status")
 	{

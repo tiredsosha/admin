@@ -849,6 +849,42 @@
           }
         },
         {
+          "id": "lightShowcase1",
+          "status": {
+            "pc_1": 200
+          }
+        },
+        {
+          "id": "lightPlatform2",
+          "status": {
+            "pc_1": 200
+          }
+        },
+        {
+          "id": "ligthTree",
+          "status": {
+            "pc_1": 200
+          }
+        },
+        {
+          "id": "lightZoya",
+          "status": {
+            "pc_1": 200
+          }
+        },
+        {
+          "id": "lightFireworks",
+          "status": {
+            "pc_1": 200
+          }
+        },
+        {
+          "id": "lightStars",
+          "status": {
+            "pc_1": 200
+          }
+        },
+        {
           "id": "lightShowcase21",
           "status": {
             "pc_1": 200
