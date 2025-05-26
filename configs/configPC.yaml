@@ -247,6 +247,9 @@ hallLeninTouch1:
 hallLeninTouch2:
   ip: 10.1.8.24
   mac: 60:CF:84:9D:E5:D3
+rift:
+  ip: 10.1.8.25
+  mac: 10:FF:E0:47:C6:77
 hallLeninTouch3:
   ip: 10.1.8.26
   mac: 60:CF:84:9D:E6:A5

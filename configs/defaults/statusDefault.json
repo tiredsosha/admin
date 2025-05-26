@@ -845,67 +845,67 @@
         {
           "id": "lightVase",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "lightShowcase21",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "lightShowcase22",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "lightShowcase23",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "lightShowcase31",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "lightShowcase32",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "lightShowcase33",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "lightGru",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "lightCoridor",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "lightPlatform3",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "lightPlatform4",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         }
       ]

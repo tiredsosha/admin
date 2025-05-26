@@ -65,7 +65,7 @@ func StatusInit() {
 func updatePC() {
 	// Loop through all zones and innerZones
 	for i, zone := range statusData.Zones {
-		if zone.ID != "relay" {
+		if zone.ID != "relay" && zone.ID != "light" {
 			// Check for direct status map
 			if zone.Status != nil {
 				// Update 'pc_1' status for the zone
@@ -87,15 +87,45 @@ func updatePC() {
 	logger.Debug.Println("pc statuses updated")
 }
 
+// func updateRelay() {
+// 	for i, zone := range statusData.Zones {
+// 		if zone.ID == "relay" {
+// 			for j, inner := range zone.InnerZones {
+// 				// Update status
+// 				statusData.Zones[i].InnerZones[j].Status["controller_1"] = protocols.GetRelay(formater.CustomStr(
+// 					"http://{ip}/pstat.xml",
+// 					map[string]any{"ip": config.FindRelay(inner.ID)}), 1,
+// 				)
+// 			}
+// 			break
+// 		}
+// 	}
+// 	logger.Debug.Println("relay statuses updated")
+// }
+
 func updateRelay() {
 	for i, zone := range statusData.Zones {
 		if zone.ID == "relay" {
 			for j, inner := range zone.InnerZones {
 				// Update status
-				statusData.Zones[i].InnerZones[j].Status["controller_1"] = protocols.GetRelay(formater.CustomStr(
-					"http://{ip}/pstat.xml",
-					map[string]any{"ip": config.FindRelay(inner.ID)}), 1,
-				)
+				relays := config.FindRelay(inner.ID)
+				if len(relays) == 2 {
+					statusData.Zones[i].InnerZones[j].Status["controller_1"] = protocols.GetRelay(formater.CustomStr(
+						"http://{ip}/pstat.xml",
+						map[string]any{"ip": relays[0]}), 1,
+					)
+					statusData.Zones[i].InnerZones[j].Status["controller_2"] = protocols.GetRelay(formater.CustomStr(
+						"http://{ip}/pstat.xml",
+						map[string]any{"ip": relays[2]}), 1,
+					)
+				} else if len(relays) == 1 {
+					statusData.Zones[i].InnerZones[j].Status["controller_1"] = protocols.GetRelay(formater.CustomStr(
+						"http://{ip}/pstat.xml",
+						map[string]any{"ip": relays[0]}), 1,
+					)
+				} else {
+					logger.Warn.Println("no relay found for inner zone:", inner.ID)
+				}
 			}
 			break
 		}

@@ -2,7 +2,6 @@ package protocols
 
 import (
 	"context"
-	"fmt"
 	"strconv"
 	"time"
 
@@ -53,11 +52,8 @@ func SendPjlink(ip, command string) {
 	// Send power off command
 	err := proj.SetPower(ctx, boolCommand)
 	if err != nil {
-		fmt.Println("Failed to power off the projector:", err)
-	} else {
-		fmt.Println("Power off command sent successfully.")
+		logger.Error.Printf("couldn't send execute pjlink %v", err)
 	}
-
 }
 
 // func GetPjlink(ip string) int {

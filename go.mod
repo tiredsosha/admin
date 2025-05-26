@@ -5,14 +5,13 @@ go 1.23.0
 toolchain go1.24.3
 
 require (
+	github.com/LightInstruments/pjlink v0.0.0-20180509124124-bdb7c6b2fb68
+	github.com/WqyJh/go-fstring v0.4.1
 	github.com/eclipse/paho.mqtt.golang v1.4.1
-	github.com/go-ole/go-ole v1.2.6
-	github.com/moutend/go-wca v0.2.0
+	github.com/linde12/gowol v0.0.0-20180926075039-797e4d01634c
 )
 
 require (
-	github.com/LightInstruments/pjlink v0.0.0-20180509124124-bdb7c6b2fb68 // indirect
-	github.com/WqyJh/go-fstring v0.4.1 // indirect
 	github.com/bytedance/sonic v1.11.6 // indirect
 	github.com/bytedance/sonic/loader v0.1.1 // indirect
 	github.com/byuoitav/connpool v0.4.1 // indirect
@@ -36,9 +35,7 @@ require (
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.7 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect
-	github.com/linde12/gowol v0.0.0-20180926075039-797e4d01634c // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
-	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c // indirect
@@ -47,7 +44,6 @@ require (
 	github.com/ugorji/go/codec v1.2.12 // indirect
 	go.opentelemetry.io/otel v1.10.0 // indirect
 	go.opentelemetry.io/otel/trace v1.10.0 // indirect
-	go.uber.org/atomic v1.10.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
 	golang.org/x/arch v0.8.0 // indirect
@@ -57,12 +53,10 @@ require (
 )
 
 require (
-	github.com/byuoitav/pjlink v0.0.0-20210217184038-6407f896a02a
 	github.com/getlantern/systray v1.2.1
 	github.com/gin-gonic/gin v1.10.0
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/hypebeast/go-osc v0.0.0-20220308234300-cec5a8a1e5f5
-	github.com/lxn/win v0.0.0-20210218163916-a377121e959e
 	github.com/tiredsosha/gopjlink v0.0.0-20250525144434-f57a43bc91ad
 	golang.org/x/net v0.25.0 // indirect
 	golang.org/x/sync v0.14.0 // indirect
