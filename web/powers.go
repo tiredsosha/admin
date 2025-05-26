@@ -119,10 +119,65 @@ func powerZone(c *gin.Context) {
 	})
 }
 
+// func powerPark(c *gin.Context) {
+// 	var data JsonNoID
+
+// 	// Bind JSON and validate
+// 	if err := c.ShouldBindJSON(&data); err != nil {
+// 		logger.Error.Println("Invalid input:", err)
+// 		c.JSON(400, gin.H{"error": err.Error()})
+// 		return
+// 	}
+
+// 	logger.Info.Println("request data -", data)
+
+// 	if data.Command == "on" {
+// 		go func() {
+// 			for _, mac := range config.ALLMAC {
+// 				for range 4 {
+// 					protocols.SendWOL(mac)
+// 				}
+// 			}
+
+// 			for _, pj := range config.ALLPJ {
+// 				protocols.SendPjlink(pj, data.Command)
+// 			}
+// 		}()
+
+// 	} else if data.Command == "off" {
+
+// 		go func() {
+// 			for _, pc := range config.ALLPC {
+// 				protocols.SendGet(formater.CustomStr(
+// 					"http://{ip}:3001/off",
+// 					map[string]any{"ip": pc}), 2,
+// 				)
+// 			}
+
+// 			for _, ip := range config.ALLPJ {
+// 				protocols.SendPjlink(ip, data.Command)
+// 			}
+// 		}()
+
+// 	} else if data.Command == "restart" {
+// 		go func() {
+// 			for _, pc := range config.ALLPC {
+// 				protocols.SendGet(formater.CustomStr(
+// 					"http://{ip}:3001/restart",
+// 					map[string]any{"ip": pc}), 2,
+// 				)
+// 			}
+// 		}()
+// 	}
+
+// 	c.JSON(200, gin.H{
+// 		"message": "OK",
+// 	})
+// }
+
 func powerPark(c *gin.Context) {
 	var data JsonNoID
 
-	// Bind JSON and validate
 	if err := c.ShouldBindJSON(&data); err != nil {
 		logger.Error.Println("Invalid input:", err)
 		c.JSON(400, gin.H{"error": err.Error()})
@@ -131,46 +186,67 @@ func powerPark(c *gin.Context) {
 
 	logger.Info.Println("request data -", data)
 
-	if data.Command == "on" {
+	switch data.Command {
+	case "on":
+		// Wake MACs
 		go func() {
 			for _, mac := range config.ALLMAC {
-				for range 4 {
+				for i := 0; i < 4; i++ {
 					protocols.SendWOL(mac)
 				}
 			}
+		}()
 
+		// Turn on projectors
+		go func() {
 			for _, pj := range config.ALLPJ {
-				protocols.SendPjlink(pj, data.Command)
+				protocols.SendPjlink(pj, "on")
 			}
 		}()
-
-	} else if data.Command == "off" {
 
 		go func() {
-			for _, pc := range config.ALLPC {
-				protocols.SendGet(formater.CustomStr(
-					"http://{ip}:3001/off",
-					map[string]any{"ip": pc}), 2,
-				)
-			}
-
-			for _, ip := range config.ALLPJ {
-				protocols.SendPjlink(ip, data.Command)
+			for _, dali := range config.ALLDALI {
+				out, lamps, defaults := config.FindDali(dali)
+				protocols.ArlightDefault(out, lamps, defaults)
 			}
 		}()
 
-	} else if data.Command == "restart" {
+	case "off":
+		// Power off PCs by IP
 		go func() {
-			for _, pc := range config.ALLPC {
-				protocols.SendGet(formater.CustomStr(
-					"http://{ip}:3001/restart",
-					map[string]any{"ip": pc}), 2,
-				)
+			for _, ip := range config.ALLPC {
+				url := formater.CustomStr("http://{ip}:3001/off", map[string]any{"ip": ip})
+				protocols.SendGet(url, 2)
 			}
 		}()
+
+		// Turn off projectors
+		go func() {
+			for _, pj := range config.ALLPJ {
+				protocols.SendPjlink(pj, "off")
+			}
+		}()
+
+		// Turn off lights
+		go func() {
+			for _, dali := range config.ALLDALI {
+				out, lamps, _ := config.FindDali(dali)
+				protocols.ArlightControl(out, lamps, "0")
+			}
+		}()
+
+	case "restart":
+		// Restart PCs by IP
+		go func() {
+			for _, ip := range config.ALLPC {
+				url := formater.CustomStr("http://{ip}:3001/restart", map[string]any{"ip": ip})
+				protocols.SendGet(url, 2)
+			}
+		}()
+
+	default:
+		logger.Warn.Printf("unknown command for park power: %s", data.Command)
 	}
 
-	c.JSON(200, gin.H{
-		"message": "OK",
-	})
+	c.JSON(200, gin.H{"message": "OK"})
 }

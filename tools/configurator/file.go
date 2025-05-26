@@ -99,4 +99,8 @@ func ConfSubInit() {
 		logger.Warn.Println(err)
 		logger.Error.Fatal("EXITING")
 	}
+	if err := configDALI(); err != nil {
+		logger.Warn.Println(err)
+		logger.Error.Fatal("EXITING")
+	}
 }

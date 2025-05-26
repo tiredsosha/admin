@@ -1,135 +1,233 @@
 lightVase:
   out: A
   lights:
-    - 200
-    - 4
-    - 8
-    - 27
-    - 33
-    - 37
-    - 50
-    - 51
-    - 53
-    - 58
+    - address: 4
+      default: 245
+    - address: 8
+      default: 220
+    - address: 27
+      default: 220
+    - address: 33
+      default: 245
+    - address: 37
+      default: 245
+    - address: 50
+      default: 220
+    - address: 51
+      default: 240
+    - address: 53
+      default: 240
+    - address: 58
+      default: 240
+
 lightShowcase1:
   out: B
   lights:
-    - 1
-    - 6
-    - 16
+    - address: 1
+      default: 220
+    - address: 6
+      default: 220
+    - address: 16
+      default: 180
+
 lightPlatform2:
   out: B
   lights:
-    - 4
-    - 5
-    - 8
-    - 9
-    - 11
-    - 12
-    - 17
+    - address: 4
+      default: 229
+    - address: 5
+      default: 240
+    - address: 8
+      default: 220
+    - address: 9
+      default: 220
+    - address: 11
+      default: 240
+    - address: 12
+      default: 240
+    - address: 17
+      default: 240
+
 ligthTree:
   out: B
   lights:
-    - 0
-    - 3
-    - 10
-    - 15
+    - address: 0
+      default: 250
+    - address: 3
+      default: 240
+    - address: 10
+      default: 240
+    - address: 15
+      default: 254
+
 lightZoya:
   out: B
   lights:
-    - 2
-    - 7
-    - 14
+    - address: 2
+      default: 235
+    - address: 7
+      default: 220
+    - address: 14
+      default: 240
+
 lightFireworks:
   out: C
   lights:
-    - 4
-    - 2
-    - 3
-    - 9
-    - 1
-    - 8
-    - 0
+    - address: 4
+      default: 220
+    - address: 2
+      default: 220
+    - address: 3
+      default: 240
+    - address: 9
+      default: 220
+    - address: 1
+      default: 220
+    - address: 8
+      default: 250
+    - address: 0
+      default: 240
+
 lightStars:
   out: C
   lights:
-    - 5
-    - 7
-    - 6
+    - address: 5
+      default: 229
+    - address: 7
+      default: 240
+    - address: 6
+      default: 220
+
 lightShowcase21:
   out: A
   lights:
-    - 30
-    - 40
-    - 41
+    - address: 30
+      default: 190
+    - address: 40
+      default: 220
+    - address: 41
+      default: 220
+
 lightShowcase22:
   out: A
   lights:
-    - 2
-    - 5
-    - 22
-    - 26
-    - 35
+    - address: 2
+      default: 220
+    - address: 5
+      default: 220
+    - address: 22
+      default: 220
+    - address: 26
+      default: 220
+    - address: 35
+      default: 190
+
 lightShowcase23:
   out: A
   lights:
-    - 0
-    - 39
+    - address: 0
+      default: 220
+    - address: 39
+      default: 220
+
 lightShowcase31:
   out: A
   lights:
-    - 9
-    - 14
-    - 21
-    - 47
-    - 55
-    - 56
+    - address: 9
+      default: 220
+    - address: 14
+      default: 160
+    - address: 21
+      default: 220
+    - address: 47
+      default: 160
+    - address: 55
+      default: 160
+    - address: 56
+      default: 157
+
 lightShowcase32:
   out: A
   lights:
-    - 10
-    - 20
-    - 49
+    - address: 10
+      default: 189
+    - address: 20
+      default: 190
+    - address: 49
+      default: 190
+
 lightShowcase33:
   out: A
   lights:
-    - 3
-    - 6
-    - 18
-    - 32
-    - 54
+    - address: 3
+      default: 170
+    - address: 6
+      default: 160
+    - address: 18
+      default: 220
+    - address: 32
+      default: 160
+    - address: 54
+      default: 220
+
 lightGru:
   out: A
   lights:
-    - 23
-    - 24
-    - 52
+    - address: 23
+      default: 220
+    - address: 24
+      default: 201
+    - address: 52
+      default: 224
+
 lightCoridor:
   out: A
   lights:
-    - 12
+    - address: 12
+      default: 194
+
 lightPlatform3:
   out: A
   lights:
-    - 11
-    - 15
-    - 16
-    - 31
-    - 34
-    - 43
-    - 45
-    - 48
-    - 57
+    - address: 11
+      default: 240
+    - address: 15
+      default: 220
+    - address: 16
+      default: 240
+    - address: 31
+      default: 240
+    - address: 34
+      default: 240
+    - address: 43
+      default: 220
+    - address: 45
+      default: 240
+    - address: 48
+      default: 240
+    - address: 57
+      default: 240
+
 lightPlatform4:
   out: A
   lights:
-    - 7
-    - 13
-    - 19
-    - 25
-    - 36
-    - 38
-    - 42
-    - 44
-    - 46
-    - 59
+    - address: 7
+      default: 240
+    - address: 13
+      default: 240
+    - address: 19
+      default: 240
+    - address: 25
+      default: 240
+    - address: 36
+      default: 220
+    - address: 38
+      default: 220
+    - address: 42
+      default: 239
+    - address: 44
+      default: 219
+    - address: 46
+      default: 240
+    - address: 59
+      default: 200

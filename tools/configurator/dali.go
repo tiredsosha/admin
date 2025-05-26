@@ -9,14 +9,20 @@ import (
 	"github.com/tiredsosha/admin/tools/logger"
 )
 
+type LightEntry struct {
+	Address uint16 `yaml:"address"`
+	Default uint16 `yaml:"default"`
+}
+
 type Light struct {
-	Out    string   `yaml:"out"`
-	Lights []uint16 `yaml:"lights"`
+	Out    string       `yaml:"out"`
+	Lights []LightEntry `yaml:"lights"`
 }
 
 type DALIConfig map[string]Light
 
 var Dali DALIConfig
+var ALLDALI []string
 
 // Load YAML config once
 func configDALI() error {
@@ -33,6 +39,15 @@ func configDALI() error {
 		logger.Error.Printf("error unmarshaling configRelay.yaml: %v", err)
 		return err
 	}
+
+	// Reset ALLDALI in case configDALI is called more than once
+	ALLDALI = make([]string, 0, len(Dali))
+
+	for zone := range Dali {
+		ALLDALI = append(ALLDALI, zone)
+	}
+
+	logger.Debug.Printf("loaded zones: %v", ALLDALI)
 	return nil
 }
 
@@ -51,14 +66,18 @@ func getBusID(out string) byte {
 	}
 }
 
-func FindDali(zone string) (byte, []uint16) {
-	// Get the data for the zone
+func FindDali(zone string) (busID byte, addresses, defaults []uint16) {
 	data, exists := Dali[zone]
 	if !exists {
 		logger.Debug.Printf("light zone not found '%s'\n", zone)
-		return 0, []uint16{}
+		return 0, []uint16{}, []uint16{}
 	}
 
-	logger.Debug.Printf("zone '%s' => out: %s, lamps: %v\n", zone, data.Out, data.Lights)
-	return getBusID(data.Out), data.Lights
+	for _, light := range data.Lights {
+		addresses = append(addresses, light.Address)
+		defaults = append(defaults, light.Default)
+	}
+
+	logger.Debug.Printf("zone '%s' => out: %s, addresses: %v, defaults: %v\n", zone, data.Out, addresses, defaults)
+	return getBusID(data.Out), addresses, defaults
 }
