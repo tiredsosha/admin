@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"regexp"
+	"sync"
 
 	"github.com/gin-gonic/gin"
 	"github.com/tiredsosha/admin/protocols"
@@ -30,7 +31,14 @@ type InnerZone struct {
 	Status map[string]int `yaml:"status"`
 }
 
-var statusData Status
+var (
+	pcRunning bool
+	pjRunning bool
+
+	statusData Status
+
+	mu sync.Mutex
+)
 
 func statusPark(c *gin.Context) {
 	// Read the JSON data from the file
@@ -199,8 +207,33 @@ func convertYamlToJson(yamlData []byte) ([]byte, error) {
 }
 
 func UpdateStatues() {
-	go updatePC()
-	go updatePJ()
+	mu.Lock()
+	if !pcRunning {
+		pcRunning = true
+		go func() {
+			defer func() {
+				mu.Lock()
+				pcRunning = false
+				mu.Unlock()
+			}()
+			updatePC()
+		}()
+	}
+	if !pjRunning {
+		pjRunning = true
+		go func() {
+			defer func() {
+				mu.Lock()
+				pjRunning = false
+				mu.Unlock()
+			}()
+			updatePJ()
+		}()
+	}
+
+	mu.Unlock()
+
+	// Эта функция вызывается синхронно
 	updateRelay()
 	update()
 }
