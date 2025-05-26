@@ -116,7 +116,7 @@ func updateRelay() {
 					)
 					statusData.Zones[i].InnerZones[j].Status["controller_2"] = protocols.GetRelay(formater.CustomStr(
 						"http://{ip}/pstat.xml",
-						map[string]any{"ip": relays[2]}), 1,
+						map[string]any{"ip": relays[1]}), 1,
 					)
 				} else if len(relays) == 1 {
 					statusData.Zones[i].InnerZones[j].Status["controller_1"] = protocols.GetRelay(formater.CustomStr(
