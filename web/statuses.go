@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"regexp"
+	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/tiredsosha/admin/protocols"
@@ -84,6 +85,7 @@ func updatePC() {
 			}
 		}
 	}
+	update()
 	logger.Debug.Println("pc statuses updated")
 }
 
@@ -130,7 +132,9 @@ func updateRelay() {
 			break
 		}
 	}
+	update()
 	logger.Debug.Println("relay statuses updated")
+	time.Sleep(3 * time.Second)
 }
 
 func countPjKeys(statusMap map[string]int) int {
@@ -181,7 +185,9 @@ func updatePJ() {
 			}
 		}
 	}
+	update()
 	logger.Debug.Println("pj statuses updated")
+	time.Sleep(3 * time.Second)
 }
 
 func convertYamlToJson(yamlData []byte) ([]byte, error) {
@@ -201,10 +207,7 @@ func convertYamlToJson(yamlData []byte) ([]byte, error) {
 func UpdateStatues() {
 	go updateRelay()
 	go updatePJ()
-
-	updatePC()
-	update()
-
+	go updatePC()
 }
 
 func update() {
