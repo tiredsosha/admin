@@ -159,13 +159,13 @@ victoryTouch1:
   mac: CC:28:AA:A2:66:DF
 victoryTouch2:
   ip: 10.1.6.23
-  mac: CC:28:AA:A2:66:DF
+  mac: CC:28:AA:A2:66:8D
 victoryTouch3:
   ip: 10.1.6.24
   mac: CC:28:AA:A2:66:3F
 victoryTouch4:
   ip: 10.1.6.25
-  mac: CC:28:AA:A2:66:3F
+  mac: CC:28:AA:A2:67:17
 victoryTouch5:
   ip: 10.1.6.26
   mac: CC:28:AA:A2:67:57
