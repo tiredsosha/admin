@@ -2,18 +2,18 @@ zones:
   - id: reception
     status:
       pc_1: 520
-  - id: review
+  - id: entrance
     innerZones:
-      - id: reviewLeft
+      - id: entranceLeft
         status:
           pc_1: 520
-      - id: reviewRight
+      - id: entranceRight
         status:
           pc_1: 520
-      - id: reviewStand
-        status:
-          pc_1: 520
-  - id: toungsWall
+  - id: mfc
+    status:
+      pc_1: 520
+  - id: showHall
     status:
       pc_1: 520
       pj_1: 520
@@ -22,203 +22,51 @@ zones:
       pj_4: 520
       pj_5: 520
       pj_6: 520
-  - id: toungsFloor
-    status:
-      pc_1: 520
-      pj_1: 520
-      pj_2: 520
-  - id: music
-    status:
-      pc_1: 520
-  - id: costumes
-    status:
-      pc_1: 520
-  - id: crafts
-    status:
-      pc_1: 520
-  - id: traditions
-    status:
-      pc_1: 520
-  - id: events
-    status:
-      pc_1: 520
-  - id: fengShui
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: oneDay
-    status:
-      pc_1: 520
-  - id: holidays
-    status:
-      pc_1: 520
-  - id: food
+      pj_7: 520
+  - id: capture
     innerZones:
-      - id: foodLeft
+      - id: captureLeftTop
         status:
           pc_1: 520
           mc_1: 520
-      - id: roodRight
+      - id: captureRightTop
         status:
           pc_1: 520
           mc_1: 520
-  - id: mukbang
-    status:
-      mc_1: 520
-  - id: tea
-    innerZones:
-      - id: teaRussian
+      - id: captureLeftBottom
         status:
           pc_1: 520
-      - id: teaChineese
+          mc_1: 520
+      - id: captureRightBottom
         status:
           pc_1: 520
-  - id: projects
-    status:
-      pc_1: 520
-  - id: partners
+          mc_1: 520
+  - id: model
     status:
       pc_1: 520
       pj_1: 520
-  - id: labour
+  - id: book
+    status:
+      pc_1: 520
+  - id: sports
     status:
       pc_1: 520
       pj_1: 520
-  - id: uni
-    status:
-      pc_1: 520
-  - id: science
-    status:
-      mc_1: 520
-  - id: sport
-    status:
-      mc_1: 520
-      mc_2: 520
-      mc_3: 520
-      mc_4: 520
-      mc_5: 520
-  - id: history
-    status:
-      pc_1: 520
-  - id: health
-    status:
-      pc_1: 520
-  - id: pharmacy
-    status:
-      pc_1: 520
-  - id: medicine
-    status:
-      mc_1: 520
-      mc_2: 520
-  - id: sleep
+  - id: sportsTouch
+    innerZones:
+      - id: sportsTouchLeft
+        status:
+          pc_1: 520
+      - id: sportsTouchMiddle
+        status:
+          pc_1: 520
+      - id: sportsTouchRight
+        status:
+          pc_1: 520
+  - id: literature
     status:
       pc_1: 520
       pj_1: 520
-  - id: theatre
-    status:
-      mc_1: 520
-      mc_2: 520
-  - id: cinema
+  - id: literatureTouch
     status:
       pc_1: 520
-      pc_2: 520
-  - id: ballet
-    status:
-      pc_1: 520
-  - id: panorama
-    status:
-      pc_1: 520
-  - id: friendship
-    status:
-      pc_1: 520
-  - id: tv
-    innerZones:
-      - id: tvOne
-        status:
-          mc_1: 520
-      - id: tvTwo
-        status:
-          mc_1: 520
-      - id: tvThree
-        status:
-          mc_1: 520
-      - id: tvFour
-        status:
-          mc_1: 520
-      - id: tvFive
-        status:
-          mc_1: 520
-  - id: names
-    innerZones:
-      - id: namesLeft
-        status:
-          pc_1: 520
-          pj_1: 520
-      - id: namesRight
-        status:
-          pc_1: 520
-          pj_1: 520
-  - id: landscape
-    status:
-      pc_1: 520
-  - id: finalWalls
-    status:
-      pc_1: 520
-      pj_1: 520
-      pj_2: 520
-      pj_3: 520
-      pj_4: 520
-      pj_5: 520
-  - id: finalFloor
-    status:
-      pc_1: 520
-      pj_1: 520
-      pj_2: 520
-      pj_3: 520
-      pj_4: 520
-  - id: sound
-    innerZones:
-      - id: soundEntrance
-        status:
-          pc_1: 520
-      - id: soundTradition
-        status:
-          pc_1: 520
-      - id: soundCity
-        status:
-          pc_1: 520
-      - id: soundDevelopment
-        status:
-          pc_1: 520
-      - id: soundHealth
-        status:
-          pc_1: 520
-      - id: soundCulture
-        status:
-          pc_1: 520
-  - id: light
-    innerZones:
-      - id: lightEntrance
-        status:
-          pc_1: 520
-      - id: lightToungs
-        status:
-          pc_1: 520
-      - id: lightTradition
-        status:
-          pc_1: 520
-      - id: lightCity
-        status:
-          pc_1: 520
-      - id: lightDevelopment
-        status:
-          pc_1: 520
-      - id: lightHealth
-        status:
-          pc_1: 520
-      - id: lightCulture
-        status:
-          pc_1: 520
-      - id: lightFinal
-        status:
-          pc_1: 520
