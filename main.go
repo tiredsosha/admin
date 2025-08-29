@@ -39,7 +39,7 @@ func main() {
 			PubTopic: topicPrefix,
 			Icon:     &tray.Conn,
 		}
-		go mosquitto.StartBroker(mqttData)
+		// go mosquitto.StartBroker(mqttData)
 	}
 
 	if cfg.StatusOn {
