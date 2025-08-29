@@ -1,318 +1,51 @@
-invasionProjectionTouch:
+reception:
   ip: 10.1.1.21
   mac: CC:28:AA:A2:66:34
-invasionTouch1:
+entranceLeft:
   ip: 10.1.1.22
   mac: CC:28:AA:A2:67:5C
-invasionTouch2:
+entranceRight:
   ip: 10.1.1.23
   mac: CC:28:AA:A2:67:91
-invasionTouch3:
+mfc:
   ip: 10.1.1.24
   mac: CC:28:AA:A2:67:C4
-invasionTouch4:
+showHall:
   ip: 10.1.1.25
   mac: CC:28:AA:A2:66:BD
-invasionTouch5:
+captureLeftTop:
   ip: 10.1.1.26
   mac: CC:28:AA:A2:67:46
-invasionProjectionWall:
+captureRightTop:
   ip: 10.1.1.27
   mac: CC:28:AA:A2:67:09
-voicesInvasionLeft:
+captureLeftBottom:
   ip: 10.1.1.28
   mac: CC:28:AA:A2:67:E6
-voicesInvasionRight:
+captureRightBottom:
   ip: 10.1.1.29
   mac: CC:28:AA:A2:66:90
-moscow:
+model:
   ip: 10.1.1.30
   mac: 9C:6B:00:5E:A5:28
-crisisProjectionTouch:
+book:
   ip: 10.1.2.21
   mac: CC:28:AA:A2:67:1A
-crisisTouch1:
+sports:
   ip: 10.1.2.22
   mac: CC:28:AA:A2:67:C2
-crisisTouch2:
+sportsTouchLeft:
   ip: 10.1.2.23
   mac: CC:28:AA:A2:67:22
-crisisTouch3:
+sportsTouchMiddle:
   ip: 10.1.2.24
   mac: CC:28:AA:A2:66:59
-crisisTouch4:
+sportsTouchRight:
   ip: 10.1.2.25
   mac: CC:28:AA:A2:66:4F
-crisisTouch5:
+literature:
   ip: 10.1.2.26
   mac: CC:28:AA:A2:67:54
-crisisProjectionWall:
+literatureTouch:
   ip: 10.1.2.27
   mac: CC:28:AA:A2:66:61
-voicesCrisis:
-  ip: 10.1.2.28
-  mac: CC:28:AA:A2:68:0B
-stalingrad:
-  ip: 10.1.2.29
-  mac: 9C:6B:00:5E:A5:2A
-libStalinTouch1:
-  ip: 10.1.3.21
-  mac: CC:28:AA:A2:67:E4
-libStalinTouch2:
-  ip: 10.1.3.22
-  mac: CC:28:AA:A2:66:FC
-libStalinTouch3:
-  ip: 10.1.3.23
-  mac: CC:28:AA:A2:67:4E
-libStalinTouch4:
-  ip: 10.1.3.24
-  mac: CC:28:AA:A2:67:10
-libStalinTouch5:
-  ip: 10.1.3.25
-  mac: CC:28:AA:A2:67:0E
-libStalinTouch6:
-  ip: 10.1.3.26
-  mac: CC:28:AA:A2:67:EB
-libStalinLib1:
-  ip: 10.1.3.27
-  mac: CC:28:AA:A2:67:11
-libStalinLib2:
-  ip: 10.1.3.28
-  mac: CC:28:AA:A2:66:AB
-libStalinLib3:
-  ip: 10.1.3.29
-  mac: CC:28:AA:A2:68:14
-libStalinLib4:
-  ip: 10.1.3.30
-  mac: CC:28:AA:A2:67:8B
-leningrad:
-  ip: 10.1.3.31
-  mac: 9C:6B:00:57:F6:A1
-libLeninTouch1:
-  ip: 10.1.4.21
-  mac: CC:28:AA:A2:67:1E
-libLeninTouch2:
-  ip: 10.1.4.22
-  mac: CC:28:AA:A2:67:7A
-libLeninTouch3:
-  ip: 10.1.4.23
-  mac: CC:28:AA:A2:66:B2
-libLeninTouch4:
-  ip: 10.1.4.24
-  mac: CC:28:AA:A2:67:05
-libLeninTouch5:
-  ip: 10.1.4.25
-  mac: CC:28:AA:A2:66:52
-libLeninTouch6:
-  ip: 10.1.4.26
-  mac: CC:28:AA:A2:67:59
-libLeninLib1:
-  ip: 10.1.4.27
-  mac: CC:28:AA:A2:67:00
-libLeninLib2:
-  ip: 10.1.4.28
-  mac: CC:28:AA:A2:66:62
-libLeninLib3:
-  ip: 10.1.4.29
-  mac: CC:28:AA:A2:66:51
-libLeninLib4:
-  ip: 10.1.4.30
-  mac: CC:28:AA:A2:66:A8
-kursk:
-  ip: 10.1.4.31
-  mac: 9C:6B:00:5E:A4:F0
-liberationProjectionTouch:
-  ip: 10.1.5.21
-  mac: CC:28:AA:A2:66:36
-liberationTouch1:
-  ip: 10.1.5.22
-  mac: CC:28:AA:A2:67:F4
-liberationTouch2:
-  ip: 10.1.5.23
-  mac: CC:28:AA:A2:67:F9
-liberationTouch3:
-  ip: 10.1.5.24
-  mac: CC:28:AA:A2:67:16
-liberationTouch4:
-  ip: 10.1.5.25
-  mac: CC:28:AA:A2:67:48
-liberationTouch5:
-  ip: 10.1.5.26
-  mac: CC:28:AA:A2:67:FB
-liberationProjectionWall:
-  ip: 10.1.5.27
-  mac: CC:28:AA:A2:68:24
-voicesLiberationLeft:
-  ip: 10.1.5.28
-  mac: CC:28:AA:A2:66:87
-voicesLiberationRight:
-  ip: 10.1.5.29
-  mac: CC:28:AA:A2:66:81
-dnepr:
-  ip: 10.1.5.30
-  mac: 9C:6B:00:5E:A5:18
-victoryProjectionTouch:
-  ip: 10.1.6.21
-  mac: CC:28:AA:A2:66:76
-victoryTouch1:
-  ip: 10.1.6.22
-  mac: CC:28:AA:A2:66:DF
-victoryTouch2:
-  ip: 10.1.6.23
-  mac: CC:28:AA:A2:66:8D
-victoryTouch3:
-  ip: 10.1.6.24
-  mac: CC:28:AA:A2:66:3F
-victoryTouch4:
-  ip: 10.1.6.25
-  mac: CC:28:AA:A2:67:17
-victoryTouch5:
-  ip: 10.1.6.26
-  mac: CC:28:AA:A2:67:57
-victoryProjectionWall:
-  ip: 10.1.6.27
-  mac: CC:28:AA:A2:66:AD
-voicesVictoryLeft:
-  ip: 10.1.6.28
-  mac: CC:28:AA:A2:66:7B
-voicesVictoryRight:
-  ip: 10.1.6.29
-  mac: CC:28:AA:A2:68:23
-berlin:
-  ip: 10.1.6.30
-  mac: 9C:6B:00:5E:A5:74
-fireworks:
-  ip: 10.1.6.31
-  mac: 10:FF:E0:47:C6:BA
-entranceVictoryLeft:
-  ip: 10.1.7.21
-  mac: 10:FF:E0:47:C6:74
-entranceVictoryRight:
-  ip: 10.1.7.22
-  mac: 10:FF:E0:47:C6:B4
-soldiers:
-  ip: 10.1.7.23
-  mac: 10:FF:E0:47:C6:B2
-counterMoscow:
-  ip: 10.1.7.24
-  mac: 10:FF:E0:47:C6:72
-hallStalinLeftTouch1:
-  ip: 10.1.7.25
-  mac: 60:CF:84:9D:E6:EA
-hallStalinLeftTouch2:
-  ip: 10.1.7.26
-  mac: 60:CF:84:9D:E6:08
-hallStalinLeftTouch3:
-  ip: 10.1.7.27
-  mac: 60:CF:84:9D:E6:97
-hallStalinLeftTouch4:
-  ip: 10.1.7.28
-  mac: 60:CF:84:9D:E6:FD
-hallStalinLeftTouch5:
-  ip: 10.1.7.29
-  mac: 60:CF:84:9D:E6:83
-hallStalinLeftTouch6:
-  ip: 10.1.7.30
-  mac: 60:CF:84:9D:E6:8F
-hallStalinTrans1:
-  ip: 10.1.7.32
-  mac: 10:FF:E0:47:C6:B9
-hallStalinTrans2:
-  ip: 10.1.7.33
-  mac: 10:FF:E0:47:C5:AA
-hallStalinRightTouch1:
-  ip: 10.1.7.34
-  mac: 60:CF:84:9D:E5:EF
-hallStalinRightTouch2:
-  ip: 10.1.7.35
-  mac: 60:CF:84:9D:E5:D4
-hallStalinRightTouch3:
-  ip: 10.1.7.36
-  mac: 60:CF:84:9D:E6:48
-hallStalinRightTouch4:
-  ip: 10.1.7.37
-  mac: 60:CF:84:9D:E5:F7
-hallStalinRightTouch5:
-  ip: 10.1.7.38
-  mac: 60:CF:84:9D:E6:0D
-hallStalinRightTouch6:
-  ip: 10.1.7.39
-  mac: 60:CF:84:9D:E6:95
-counterLenin:
-  ip: 10.1.8.21
-  mac: 10:FF:E0:47:C6:29
-hallLeninTouch1:
-  ip: 10.1.8.22
-  mac: 60:CF:84:9D:E6:AD
-hallLeninTouch2:
-  ip: 10.1.8.24
-  mac: 60:CF:84:9D:E5:D3
-rift:
-  ip: 10.1.8.25
-  mac: 10:FF:E0:47:C6:77
-hallLeninTouch3:
-  ip: 10.1.8.26
-  mac: 60:CF:84:9D:E6:A5
-hallLeninTouch4:
-  ip: 10.1.8.27
-  mac: 60:CF:84:9D:E6:5A
-hallLeninTouch5:
-  ip: 10.1.8.29
-  mac: 60:CF:84:9D:E6:9D
-hallLeninTouch6:
-  ip: 10.1.8.30
-  mac: 60:CF:84:9D:E6:2D
-hallGlass1:
-  ip: 10.1.8.23
-  mac: 10:FF:E0:47:C6:4D
-hallGlass2:
-  ip: 10.1.8.28
-  mac: 10:FF:E0:47:C6:C0
-counterKursk:
-  ip: 10.1.9.21
-  mac: 10:FF:E0:47:C6:4B
-hallKurskTouch1:
-  ip: 10.1.9.22
-  mac: 60:CF:84:9D:E6:BC
-hallKurskTouch2:
-  ip: 10.1.9.23
-  mac: 60:CF:84:9D:E6:EE
-hallKurskTouch3:
-  ip: 10.1.9.24
-  mac: 60:CF:84:9D:E5:F4
-hallKurskTouch4:
-  ip: 10.1.9.25
-  mac: 60:CF:84:9D:E5:BE
-hallKurskTouch5:
-  ip: 10.1.9.26
-  mac: 60:CF:84:9D:E6:49
-hallKurskTouch6:
-  ip: 10.1.9.27
-  mac: 60:CF:84:9D:E5:C8
-gruLeft:
-  ip: 10.1.9.28
-  mac: 60:CF:84:9D:E7:01
-gruCentre:
-  ip: 10.1.9.29
-  mac: 10:FF:E0:47:C6:BC
-gruRight:
-  ip: 10.1.9.30
-  mac: 60:CF:84:9D:E6:B7
-ribbonSoldier:
-  ip: 10.1.7.41
-  mac: 10:7C:61:B5:6F:2B
-ribbonKursk:
-  ip: 10.1.7.42
-  mac: CC:28:AA:A2:66:E9
-ribbonLenin:
-  ip: 10.1.8.31
-  mac: 10:7C:61:B5:6E:59
-ribbonMoscow:
-  ip: 10.1.8.32
-  mac: CC:28:AA:A2:66:7E
-ribbonVase:
-  ip: 10.1.9.31
-  mac: 10:7C:61:B5:6E:FC
-ribbonBerlin:
-  ip: 10.1.9.32
-  mac: 10:7C:61:B5:6E:CC

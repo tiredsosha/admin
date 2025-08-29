@@ -1,71 +1,14 @@
-invasionProjectionTouch:
+showHall:
   pj_1: 10.1.1.41
   pj_2: 10.1.1.42
   pj_3: 10.1.1.43
-invasionProjectionWall:
+  pj_4: 10.1.1.41
+  pj_5: 10.1.1.42
+  pj_6: 10.1.1.43
+  pj_7: 10.1.1.43
+model:
   pj_1: 10.1.1.44
-moscow:
+sports:
   pj_1: 10.1.1.45
-  pj_2: 10.1.1.46
-  pj_3: 10.1.1.47
-  pj_4: 10.1.1.48
-crisisProjectionTouch:
+literature:
   pj_1: 10.1.2.41
-  pj_2: 10.1.2.42
-  pj_3: 10.1.2.43
-crisisProjectionWall:
-  pj_1: 10.1.2.44
-stalingrad:
-  pj_1: 10.1.2.45
-  pj_2: 10.1.2.46
-  pj_3: 10.1.2.47
-  pj_4: 10.1.2.48
-leningrad:
-  pj_1: 10.1.3.41
-  pj_2: 10.1.3.42
-  pj_3: 10.1.3.43
-  pj_4: 10.1.3.44
-kursk:
-  pj_1: 10.1.4.41
-  pj_2: 10.1.4.42
-  pj_3: 10.1.4.43
-  pj_4: 10.1.4.44
-liberationProjectionTouch:
-  pj_1: 10.1.5.41
-  pj_2: 10.1.5.42
-  pj_3: 10.1.5.43
-liberationProjectionWall:
-  pj_1: 10.1.5.44
-dnepr:
-  pj_1: 10.1.5.46
-  pj_2: 10.1.5.47
-victoryProjectionTouch:
-  pj_1: 10.1.6.41
-  pj_2: 10.1.6.42
-  pj_3: 10.1.6.43
-victoryProjectionWall:
-  pj_1: 10.1.6.44
-berlin:
-  pj_1: 10.1.6.45
-  pj_2: 10.1.6.46
-  pj_3: 10.1.6.47
-  pj_4: 10.1.6.48
-fireworks:
-  pj_1: 10.1.6.49
-  pj_2: 10.1.6.50
-  pj_3: 10.1.6.51
-soldiers:
-  pj_1: 10.1.7.43
-counterMoscow:
-  pj_1: 10.1.7.44
-counterLenin:
-  pj_1: 10.1.8.41
-hallGlass1:
-  pj_1: 10.1.8.42
-  pj_2: 10.1.8.43
-rift:
-  pj_1: 10.1.8.44
-hallGlass2:
-  pj_1: 10.1.8.45
-counterKursk:
-  pj_1: 10.1.9.41
