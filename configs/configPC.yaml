@@ -1,51 +1,51 @@
 reception:
-  ip: 10.1.1.21
+  ip: 10.1.31.13
   mac: CC:28:AA:A2:66:34
 entranceLeft:
-  ip: 10.1.1.22
+  ip: 10.1.31.11
   mac: CC:28:AA:A2:67:5C
 entranceRight:
-  ip: 10.1.1.23
+  ip: 10.1.31.12
   mac: CC:28:AA:A2:67:91
 mfc:
   ip: 10.1.1.24
   mac: CC:28:AA:A2:67:C4
 showHall:
-  ip: 10.1.1.25
-  mac: CC:28:AA:A2:66:BD
+  ip: 10.1.1.11
+  mac: 08:BF:B8:00:03:EE
 captureLeftTop:
-  ip: 10.1.1.26
-  mac: CC:28:AA:A2:67:46
+  ip: 10.1.2.11
+  mac: 34:5A:60:6D:7B:25
 captureRightTop:
-  ip: 10.1.1.27
-  mac: CC:28:AA:A2:67:09
+  ip: 10.1.2.12
+  mac: 34:5A:60:6D:7A:2D
 captureLeftBottom:
-  ip: 10.1.1.28
-  mac: CC:28:AA:A2:67:E6
+  ip: 10.1.2.13
+  mac: 34:5A:60:6D:7B:80
 captureRightBottom:
-  ip: 10.1.1.29
-  mac: CC:28:AA:A2:66:90
+  ip: 10.1.2.14
+  mac: 34:5A:60:6D:7B:7A
 model:
-  ip: 10.1.1.30
-  mac: 9C:6B:00:5E:A5:28
+  ip: 10.1.3.11
+  mac: 34:5A:60:6D:77:24
 book:
-  ip: 10.1.2.21
-  mac: CC:28:AA:A2:67:1A
+  ip: 10.1.3.12
+  mac: 34:5A:60:6D:7B:AB
 sports:
-  ip: 10.1.2.22
-  mac: CC:28:AA:A2:67:C2
+  ip: 10.1.5.11
+  mac: 34:5A:60:6D:7B:B0
 sportsTouchLeft:
-  ip: 10.1.2.23
-  mac: CC:28:AA:A2:67:22
+  ip: 10.1.5.12
+  mac: 34:5A:60:6D:71:85
 sportsTouchMiddle:
-  ip: 10.1.2.24
-  mac: CC:28:AA:A2:66:59
+  ip: 10.1.5.13
+  mac: 34:5A:60:6D:7B:7C
 sportsTouchRight:
-  ip: 10.1.2.25
-  mac: CC:28:AA:A2:66:4F
+  ip: 10.1.5.14
+  mac: 34:5A:60:6D:7B:AA
 literature:
-  ip: 10.1.2.26
-  mac: CC:28:AA:A2:67:54
+  ip: 10.1.7.11
+  mac: 60:CF:84:9D:E6:05
 literatureTouch:
-  ip: 10.1.2.27
-  mac: CC:28:AA:A2:66:61
+  ip: 10.1.7.12
+  mac: 34:5A:60:6D:7A:F1
