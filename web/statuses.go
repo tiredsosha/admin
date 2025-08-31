@@ -155,6 +155,7 @@ func countPjKeys(statusMap map[string]int) int {
 func updatePJ() {
 	// Loop through all zones
 	for i, zone := range statusData.Zones {
+		fmt.Println(i, zone)
 
 		// Determine maxKeys for this zone based on existing keys
 		maxKeys := countPjKeys(statusData.Zones[i].Status)
