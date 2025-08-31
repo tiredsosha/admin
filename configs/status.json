@@ -49,28 +49,28 @@
           "id": "captureLeftTop",
           "status": {
             "pc_1": 520,
-            "mc_1": 520
+            "mc_1": 200
           }
         },
         {
           "id": "captureRightTop",
           "status": {
             "pc_1": 520,
-            "mc_1": 520
+            "mc_1": 200
           }
         },
         {
           "id": "captureLeftBottom",
           "status": {
             "pc_1": 520,
-            "mc_1": 520
+            "mc_1": 200
           }
         },
         {
           "id": "captureRightBottom",
           "status": {
             "pc_1": 520,
-            "mc_1": 520
+            "mc_1": 200
           }
         }
       ]
