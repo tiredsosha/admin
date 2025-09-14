@@ -1,10 +1,7 @@
 package configurator
 
 import (
-	"os"
 	"strings"
-
-	"gopkg.in/yaml.v3"
 
 	"github.com/tiredsosha/admin/tools/logger"
 )
@@ -25,31 +22,31 @@ var Dali DALIConfig
 var ALLDALI []string
 
 // Load YAML config once
-func configDALI() error {
-	// Read the YAML file
-	data, err := os.ReadFile("./configs/configDali.yaml")
-	if err != nil {
-		logger.Error.Printf("error reading configRelay.yaml: %v", err)
-		return err
-	}
+// func configDALI() error {
+// 	// Read the YAML file
+// 	data, err := os.ReadFile("./configs/configDali.yaml")
+// 	if err != nil {
+// 		logger.Error.Printf("error reading configRelay.yaml: %v", err)
+// 		return err
+// 	}
 
-	// Unmarshal YAML into the global `Dali` map
-	err = yaml.Unmarshal(data, &Dali)
-	if err != nil {
-		logger.Error.Printf("error unmarshaling configRelay.yaml: %v", err)
-		return err
-	}
+// 	// Unmarshal YAML into the global `Dali` map
+// 	err = yaml.Unmarshal(data, &Dali)
+// 	if err != nil {
+// 		logger.Error.Printf("error unmarshaling configRelay.yaml: %v", err)
+// 		return err
+// 	}
 
-	// Reset ALLDALI in case configDALI is called more than once
-	ALLDALI = make([]string, 0, len(Dali))
+// 	// Reset ALLDALI in case configDALI is called more than once
+// 	ALLDALI = make([]string, 0, len(Dali))
 
-	for zone := range Dali {
-		ALLDALI = append(ALLDALI, zone)
-	}
+// 	for zone := range Dali {
+// 		ALLDALI = append(ALLDALI, zone)
+// 	}
 
-	logger.Debug.Printf("loaded zones: %v", ALLDALI)
-	return nil
-}
+// 	logger.Debug.Printf("loaded zones: %v", ALLDALI)
+// 	return nil
+// }
 
 func getBusID(out string) byte {
 	switch strings.ToUpper(out) {
