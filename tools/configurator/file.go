@@ -87,10 +87,10 @@ func ConfInit() *conf {
 
 func ConfSubInit() {
 	// если наше приложение не видит побочных конфигов
-	if err := configRelay(); err != nil {
-		logger.Warn.Println(err)
-		logger.Error.Fatal("EXITING")
-	}
+	// if err := configRelay(); err != nil {
+	// 	logger.Warn.Println(err)
+	// 	logger.Error.Fatal("EXITING")
+	// }
 	if err := configPC(); err != nil {
 		logger.Warn.Println(err)
 		logger.Error.Fatal("EXITING")
@@ -99,8 +99,8 @@ func ConfSubInit() {
 		logger.Warn.Println(err)
 		logger.Error.Fatal("EXITING")
 	}
-	if err := configDALI(); err != nil {
-		logger.Warn.Println(err)
-		logger.Error.Fatal("EXITING")
-	}
+	// if err := configDALI(); err != nil {
+	// 	logger.Warn.Println(err)
+	// 	logger.Error.Fatal("EXITING")
+	// }
 }

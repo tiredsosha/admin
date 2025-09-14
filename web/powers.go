@@ -47,7 +47,7 @@ func powerProjector(c *gin.Context) {
 
 	logger.Info.Println("request data -", data)
 
-	protocols.SendPjlink(config.FindPJ(data.Zone, data.ID), data.Command)
+	// protocols.SendPjlink(config.FindPJ(data.Zone, data.ID), data.Command) ВКЛЮЧИТЬ
 
 	c.JSON(200, gin.H{
 		"message": "OK",
@@ -55,31 +55,31 @@ func powerProjector(c *gin.Context) {
 }
 
 func powerRelay(c *gin.Context) {
-	var data JsonCommand
-	command := "0"
+	// var data JsonCommand
+	// command := "0"
 
 	// Bind JSON and validate
-	if err := c.ShouldBindJSON(&data); err != nil {
-		logger.Error.Println("Invalid input:", err)
-		c.JSON(400, gin.H{"error": err.Error()})
-		return
-	}
+	// if err := c.ShouldBindJSON(&data); err != nil {
+	// 	logger.Error.Println("Invalid input:", err)
+	// 	c.JSON(400, gin.H{"error": err.Error()})
+	// 	return
+	// }
 
-	logger.Info.Println("request data -", data)
+	// logger.Info.Println("request data -", data)
 
-	if data.Command == "on" {
-		command = "f"
-	} else {
-		command = "n"
-	}
-	zoneRelay := config.FindRelay(data.Zone)
-	for _, ip := range zoneRelay {
-		protocols.SendGet(formater.CustomStr(
-			"http://admin:admin@{ip}/protect/rb0{command}.cgi",
-			map[string]any{"ip": ip, "command": command},
-		), 2,
-		)
-	}
+	// if data.Command == "on" {
+	// 	command = "f"
+	// } else {
+	// 	command = "n"
+	// }
+	// zoneRelay := config.FindRelay(data.Zone)
+	// for _, ip := range zoneRelay {
+	// 	protocols.SendGet(formater.CustomStr(
+	// 		"http://admin:admin@{ip}/protect/rb0{command}.cgi",
+	// 		map[string]any{"ip": ip, "command": command},
+	// 	), 2,
+	// 	)
+	// }
 
 	c.JSON(200, gin.H{
 		"message": "OK",
@@ -109,10 +109,10 @@ func powerZone(c *gin.Context) {
 		)
 	}
 
-	zonePJ := config.FindZonePJ(data.Zone)
-	for _, ip := range zonePJ {
-		protocols.SendPjlink(ip, data.Command)
-	}
+	// zonePJ := config.FindZonePJ(data.Zone) ВКЛЮЧИТЬ
+	// for _, ip := range zonePJ {
+	// 	protocols.SendPjlink(ip, data.Command)
+	// }
 
 	c.JSON(200, gin.H{
 		"message": "OK",
@@ -197,20 +197,20 @@ func powerPark(c *gin.Context) {
 			}
 		}()
 
-		// Turn on projectors
-		go func() {
-			for _, pj := range config.ALLPJ {
-				protocols.SendPjlink(pj, "on")
-			}
-		}()
+		// // Turn on projectors ВКЛЮЧИТЬ
+		// go func() {
+		// 	for _, pj := range config.ALLPJ {
+		// 		protocols.SendPjlink(pj, "on")
+		// 	}
+		// }()
 
 		// Turn defaults on lights
-		go func() {
-			for _, dali := range config.ALLDALI {
-				out, lamps, defaults := config.FindDali(dali)
-				protocols.ArlightDefault(out, lamps, defaults)
-			}
-		}()
+		// go func() {
+		// 	for _, dali := range config.ALLDALI {
+		// 		out, lamps, defaults := config.FindDali(dali)
+		// 		protocols.ArlightDefault(out, lamps, defaults)
+		// 	}
+		// }()
 
 	case "off":
 		// Power off PCs by IP
@@ -221,12 +221,12 @@ func powerPark(c *gin.Context) {
 			}
 		}()
 
-		// Turn off projectors
-		go func() {
-			for _, pj := range config.ALLPJ {
-				protocols.SendPjlink(pj, "off")
-			}
-		}()
+		// Turn off projectors ВКЛЮЧИТЬ
+		// go func() {
+		// 	for _, pj := range config.ALLPJ {
+		// 		protocols.SendPjlink(pj, "off")
+		// 	}
+		// }()
 
 		// // Turn off lights
 		// go func() {

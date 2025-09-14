@@ -1,14 +1,33 @@
-showHall:
+toungsWall:
   pj_1: 10.1.1.31
   pj_2: 10.1.1.32
   pj_3: 10.1.1.33
   pj_4: 10.1.1.34
   pj_5: 10.1.1.35
   pj_6: 10.1.1.36
-  pj_7: 10.1.1.37
-model:
+toungsFloor:
+  pj_1: 10.1.1.31
+  pj_2: 10.1.1.32
+fengShui:
   pj_1: 10.1.3.31
-sports:
+partners:
   pj_1: 10.1.5.31
-literature:
+labour:
   pj_1: 10.1.7.31
+sleep:
+  pj_1: 10.1.7.31
+namesLeft:
+  pj_1: 10.1.7.31
+namesRight:
+  pj_1: 10.1.7.31
+finalWalls:
+  pj_1: 10.1.1.31
+  pj_2: 10.1.1.32
+  pj_3: 10.1.1.33
+  pj_4: 10.1.1.34
+  pj_5: 10.1.1.35
+finalFloor:
+  pj_1: 10.1.1.31
+  pj_2: 10.1.1.32
+  pj_3: 10.1.1.33
+  pj_4: 10.1.1.34

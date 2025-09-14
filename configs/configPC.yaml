@@ -1,51 +1,114 @@
 reception:
-  ip: 10.1.31.14
-  mac: 34:5A:60:6D:7B:67
-entranceLeft:
-  ip: 10.1.31.11
-  mac: 34:5A:60:6D:7B:76
-entranceRight:
-  ip: 10.1.31.12
-  mac: 34:5A:60:6D:7A:59
-mfc:
-  ip: 10.1.31.13
-  mac: 34:5A:60:6D:7B:AF
-showHall:
-  ip: 10.1.1.11
-  mac: 08:BF:B8:00:03:EE
-captureLeftTop:
-  ip: 10.1.2.11
-  mac: 34:5A:60:6D:7B:25
-captureRightTop:
-  ip: 10.1.2.12
-  mac: 34:5A:60:6D:7A:2D
-captureLeftBottom:
-  ip: 10.1.2.13
-  mac: 34:5A:60:6D:7B:80
-captureRightBottom:
-  ip: 10.1.2.14
-  mac: 34:5A:60:6D:7B:7A
-model:
-  ip: 10.1.3.11
-  mac: 34:5A:60:6D:77:24
-book:
-  ip: 10.1.3.12
-  mac: 34:5A:60:6D:7B:AB
-sports:
-  ip: 10.1.5.11
-  mac: 34:5A:60:6D:7B:B0
-sportsTouchLeft:
-  ip: 10.1.5.12
-  mac: 34:5A:60:6D:71:85
-sportsTouchMiddle:
-  ip: 10.1.5.13
-  mac: 34:5A:60:6D:7B:7C
-sportsTouchRight:
-  ip: 10.1.5.14
-  mac: 34:5A:60:6D:7B:AA
-literature:
-  ip: 10.1.7.11
-  mac: 60:CF:84:9D:E6:05
-literatureTouch:
-  ip: 10.1.7.12
-  mac: 34:5A:60:6D:7A:F1
+  ip: 10.1.0.21
+  mac: 10:7C:61:3F:C9:5F
+reviewLeft:
+  ip: 10.1.0.22
+  mac: 10:7C:61:3E:DB:88
+reviewRight:
+  ip: 10.1.0.23
+  mac: 10:7C:61:3E:DB:88
+reviewStand:
+  ip: 10.1.0.24
+  mac: 10:7C:61:3F:C9:45
+toungsWall:
+  ip: 10.1.1.22
+  mac: 08:BF:B8:00:02:C3
+toungsFloor:
+  ip: 10.1.1.21
+  mac: 10:7C:61:3E:DB:7F
+music:
+  ip: 10.1.2.21
+  mac: 10:7C:61:3F:C9:3E
+traditions:
+  ip: 10.1.2.22
+  mac: 10:7C:61:3F:C9:25
+crafts:
+  ip: 10.1.2.23
+  mac: 10:7C:61:3F:2F:3C
+costumes:
+  ip: 10.1.2.25
+  mac: 10:7C:61:3F:2F:3A
+events:
+  ip: 10.1.2.24
+  mac: 10:7C:61:3F:2F:25
+fengShui:
+  ip: 10.1.2.26
+  mac: 10:7C:61:3E:DB:2F
+oneDay:
+  ip: 10.1.3.21
+  mac: 10:7C:61:3E:DB:2E
+holidays:
+  ip: 10.1.3.26
+  mac: 10:7C:61:3F:C8:76
+foodLeft:
+  ip: 10.1.3.22
+  mac: 10:7C:61:3E:E0:1F
+roodRight:
+  ip: 10.1.3.23
+  mac: 10:7C:61:3F:C9:8B
+teaRussian:
+  ip: 10.1.3.25
+  mac: 10:7C:61:3F:2F:20
+teaChineese:
+  ip: 10.1.3.24
+  mac: 10:7C:61:3F:2E:DD
+projects:
+  ip: 10.1.4.21
+  mac: 10:7C:61:3E:E0:2F
+partners:
+  ip: 10.1.4.22
+  mac: 10:7C:61:3F:2F:13
+labour:
+  ip: 10.1.4.23
+  mac: 10:7C:61:3E:DC:70
+uni:
+  ip: 10.1.4.24
+  mac: 10:7C:61:3E:DF:20
+history:
+  ip: 10.1.5.21
+  mac: 10:7C:61:3F:2E:E5
+health:
+  ip: 10.1.5.22
+  mac: 10:7C:61:3E:D8:5E
+pharmacy:
+  ip: 10.1.5.23
+  mac: 10:7C:61:3F:2B:47
+sleep:
+  ip: 10.1.5.24
+  mac: 10:7C:61:3E:DA:71
+theatre:
+  ip: 10.1.6.21
+  mac: 08:BF:B8:00:04:11
+cinema:
+  ip: 10.1.6.26
+  mac: 08:BF:B8:00:04:11
+ballet:
+  ip: 10.1.6.22
+  mac: 10:7C:61:3E:DB:DB
+panorama:
+  ip: 10.1.6.21
+  mac: 08:BF:B8:00:04:11
+friendship:
+  ip: 10.1.6.27
+  mac: 10:7C:61:3E:DC:06
+namesLeft:
+  ip: 10.1.6.23
+  mac: 10:7C:61:3F:2F:5C
+namesRight:
+  ip: 10.1.6.24
+  mac: 10:7C:61:3F:2F:16
+landscape:
+  ip: 10.1.6.25
+  mac: 08:BF:B8:00:03:D7
+finalWalls:
+  ip: 10.1.7.28
+  mac: 08:BF:B8:00:02:FC
+finalFloor:
+  ip: 10.1.1.21
+  mac: 10:7C:61:3E:DB:7F
+sound:
+  ip: 10.1.10.22
+  mac: 10:7C:61:3E:DD:AB
+light:
+  ip: 10.1.10.22
+  mac: 10:7C:61:3E:DD:AB
