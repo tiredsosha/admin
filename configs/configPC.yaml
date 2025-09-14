@@ -14,7 +14,7 @@ toungsWall:
   ip: 10.1.1.22
   mac: 08:BF:B8:00:02:C3
 toungsFloor:
-  ip: 10.1.1.21
+  ip: 10.1.1.22
   mac: 10:7C:61:3E:DB:7F
 music:
   ip: 10.1.2.21
