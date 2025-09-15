@@ -43,7 +43,7 @@ holidays:
 foodLeft:
   ip: 10.1.3.22
   mac: 10:7C:61:3E:E0:1F
-roodRight:
+foodRight:
   ip: 10.1.3.23
   mac: 10:7C:61:3F:C9:8B
 teaRussian:
@@ -76,9 +76,6 @@ pharmacy:
 sleep:
   ip: 10.1.5.24
   mac: 10:7C:61:3E:DA:71
-theatre:
-  ip: 10.1.6.21
-  mac: 08:BF:B8:00:04:11
 cinema:
   ip: 10.1.6.26
   mac: 08:BF:B8:00:04:11
