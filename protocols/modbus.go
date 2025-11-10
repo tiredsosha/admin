@@ -28,7 +28,7 @@ func ArlightControl(out byte, lamps []uint16, commandStr string) {
 	command := mapTo254(commandStr)
 
 	if out != 0 || len(lamps) != 0 || command != 500 {
-		handler := modbus.NewTCPClientHandler("10.1.0.121:502")
+		handler := modbus.NewTCPClientHandler("10.1.24.240:502")
 		handler.SlaveId = out
 		handler.Timeout = 4 * time.Second
 		err := handler.Connect()
@@ -53,7 +53,7 @@ func ArlightControl(out byte, lamps []uint16, commandStr string) {
 
 func ArlightDefault(out byte, lamps, defaults []uint16) {
 	if out != 0 || len(lamps) != 0 {
-		handler := modbus.NewTCPClientHandler("10.1.31.251:502")
+		handler := modbus.NewTCPClientHandler("10.1.24.240:502")
 		handler.SlaveId = out
 		handler.Timeout = 15 * time.Second
 		err := handler.Connect()

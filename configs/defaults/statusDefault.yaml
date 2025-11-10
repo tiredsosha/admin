@@ -3,181 +3,181 @@ zones:
     innerZones:
       - id: filesLeft1
         status:
-          pc_1: 520
+          pc_1: 200
       - id: filesLeft2
         status:
-          pc_1: 520
+          pc_1: 200
       - id: filesLeft3
         status:
-          pc_1: 520
+          pc_1: 200
       - id: filesRight1
         status:
-          pc_1: 520
+          pc_1: 200
       - id: filesRight2
         status:
-          pc_1: 520
+          pc_1: 200
       - id: filesRight3
         status:
-          pc_1: 520
+          pc_1: 200
   - id: reception
     status:
-      pc_1: 520
+      pc_1: 200
   - id: touch
     status:
-      pc_1: 520
+      pc_1: 200
   - id: windows
     innerZones:
       - id: windowsLeft
         status:
-          pc_1: 520
+          pc_1: 200
       - id: windowsRight
         status:
-          pc_1: 520
+          pc_1: 200
   - id: table
     status:
-      pc_1: 520
+      pc_1: 200
   - id: soldier
     status:
-      pc_1: 520
+      pc_1: 200
   - id: map1812
     status:
-      pc_1: 520
+      pc_1: 200
   - id: arch
     status:
-      pc_1: 520
+      pc_1: 200
   - id: touchWarLeft
     status:
-      pc_1: 520
+      pc_1: 200
   - id: touchWarBreak
     status:
-      pc_1: 520
+      pc_1: 200
   - id: touchWarTransp
     status:
-      pc_1: 520
+      pc_1: 200
   - id: powermate
     status:
-      pc_1: 520
+      pc_1: 200
   - id: break
     status:
-      pc_1: 520
+      pc_1: 200
   - id: stand
     status:
-      pc_1: 520
+      pc_1: 200
   - id: pictures
     innerZones:
       - id: picturesLeft
         status:
-          pc_1: 520
+          pc_1: 200
       - id: picturesMiddle
         status:
-          pc_1: 520
+          pc_1: 200
       - id: picturesRight
         status:
-          pc_1: 520
+          pc_1: 200
   - id: circle
     status:
-      pc_1: 520
+      pc_1: 200
   - id: wardrobe
     status:
-      pc_1: 520
+      pc_1: 200
   - id: picturesTouch
     status:
-      pc_1: 520
+      pc_1: 200
   - id: led
     status:
-      pc_1: 520
+      pc_1: 200
   - id: ammo
     status:
-      pc_1: 520
+      pc_1: 200
   - id: control
     status:
-      pc_1: 520
+      pc_1: 200
   - id: atomFiles
     status:
-      pc_1: 520
+      pc_1: 200
   - id: shelves
     innerZones:
       - id: shelvesLeft
         status:
-          pc_1: 520
+          pc_1: 200
       - id: shelvesMiddle
         status:
-          pc_1: 520
+          pc_1: 200
       - id: shelvesRight
         status:
-          pc_1: 520
+          pc_1: 200
   - id: tableIR
     status:
-      pc_1: 520
+      pc_1: 200
   - id: tvs
     status:
-      pc_1: 520
+      pc_1: 200
   - id: operations
     innerZones:
       - id: operationsCaucas
         status:
-          pc_1: 520
+          pc_1: 200
       - id: operationsSyria
         status:
-          pc_1: 520
+          pc_1: 200
       - id: operationsCrimea
         status:
-          pc_1: 520
+          pc_1: 200
       - id: operationsSlatin
         status:
-          pc_1: 520
+          pc_1: 200
       - id: operationsSVO
         status:
-          pc_1: 520
+          pc_1: 200
   - id: projection
     innerZones:
       - id: globus
         status:
-          pc_1: 520
+          pc_1: 200
       - id: mapping
         status:
-          pc_1: 520
-          pj_1: 520
-          pj_2: 520
+          pc_1: 200
+          pj_1: 200
+          pj_2: 200
   - id: server
     status:
-      pc_1: 520
+      pc_1: 200
   - id: projection8
     status:
-      pc_1: 520
-      pj_1: 520
+      pc_1: 200
+      pj_1: 200
   - id: touch8
     status:
-      pc_1: 520
+      pc_1: 200
   - id: table8
     innerZones:
       - id: table1
         status:
-          pc_1: 520
+          pc_1: 200
       - id: table2
         status:
-          pc_1: 520
+          pc_1: 200
       - id: table3
         status:
-          pc_1: 520
+          pc_1: 200
       - id: table4
         status:
-          pc_1: 520
+          pc_1: 200
       - id: table5
         status:
-          pc_1: 520
+          pc_1: 200
       - id: table6
         status:
-          pc_1: 520
+          pc_1: 200
       - id: table7
         status:
-          pc_1: 520
+          pc_1: 200
       - id: table8
         status:
-          pc_1: 520
+          pc_1: 200
       - id: table9
         status:
-          pc_1: 520
+          pc_1: 200
       - id: table10
         status:
-          pc_1: 520
+          pc_1: 200

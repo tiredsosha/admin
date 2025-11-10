@@ -1,11 +1,9 @@
-literature:
+led:
   out: A
   lights:
     - address: 0
       default: 245
     - address: 1
-      default: 245
-    - address: 2
       default: 245
     - address: 3
       default: 245
@@ -14,8 +12,4 @@ literature:
     - address: 5
       default: 245
     - address: 6
-      default: 245
-    - address: 7
-      default: 245
-    - address: 8
       default: 245

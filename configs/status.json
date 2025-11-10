@@ -1,22 +1,69 @@
 {
   "zones": [
     {
+      "id": "files",
+      "innerZones": [
+        {
+          "id": "filesLeft1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "filesLeft2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "filesLeft3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "filesRight1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "filesRight2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "filesRight3",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
       "id": "reception",
       "status": {
         "pc_1": 520
       }
     },
     {
-      "id": "entrance",
+      "id": "touch",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "windows",
       "innerZones": [
         {
-          "id": "entranceLeft",
+          "id": "windowsLeft",
           "status": {
             "pc_1": 520
           }
         },
         {
-          "id": "entranceRight",
+          "id": "windowsRight",
           "status": {
             "pc_1": 520
           }
@@ -24,94 +71,82 @@
       ]
     },
     {
-      "id": "mfc",
+      "id": "table",
       "status": {
         "pc_1": 520
       }
     },
     {
-      "id": "showHall",
-      "status": {
-        "pc_1": 520,
-        "pj_1": 520,
-        "pj_2": 520,
-        "pj_3": 520,
-        "pj_4": 520,
-        "pj_5": 520,
-        "pj_6": 520,
-        "pj_7": 520
-      }
-    },
-    {
-      "id": "capture",
-      "innerZones": [
-        {
-          "id": "captureLeftTop",
-          "status": {
-            "pc_1": 520,
-            "mc_1": 200
-          }
-        },
-        {
-          "id": "captureRightTop",
-          "status": {
-            "pc_1": 520,
-            "mc_1": 200
-          }
-        },
-        {
-          "id": "captureLeftBottom",
-          "status": {
-            "pc_1": 520,
-            "mc_1": 200
-          }
-        },
-        {
-          "id": "captureRightBottom",
-          "status": {
-            "pc_1": 520,
-            "mc_1": 200
-          }
-        }
-      ]
-    },
-    {
-      "id": "model",
-      "status": {
-        "pc_1": 520,
-        "pj_1": 520
-      }
-    },
-    {
-      "id": "book",
+      "id": "soldier",
       "status": {
         "pc_1": 520
       }
     },
     {
-      "id": "sports",
+      "id": "map1812",
       "status": {
-        "pc_1": 520,
-        "pj_1": 520
+        "pc_1": 520
       }
     },
     {
-      "id": "sportsTouch",
+      "id": "arch",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "touchWarLeft",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "touchWarBreak",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "touchWarTransp",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "powermate",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "break",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "stand",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "pictures",
       "innerZones": [
         {
-          "id": "sportsTouchLeft",
+          "id": "picturesLeft",
           "status": {
             "pc_1": 520
           }
         },
         {
-          "id": "sportsTouchMiddle",
+          "id": "picturesMiddle",
           "status": {
             "pc_1": 520
           }
         },
         {
-          "id": "sportsTouchRight",
+          "id": "picturesRight",
           "status": {
             "pc_1": 520
           }
@@ -119,17 +154,219 @@
       ]
     },
     {
-      "id": "literature",
+      "id": "circle",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "wardrobe",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "picturesTouch",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "led",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "ammo",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "control",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "atomFiles",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "shelves",
+      "innerZones": [
+        {
+          "id": "shelvesLeft",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "shelvesMiddle",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "shelvesRight",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "tableIR",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "tvs",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "operations",
+      "innerZones": [
+        {
+          "id": "operationsCaucas",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "operationsSyria",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "operationsCrimea",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "operationsSlatin",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "operationsSVO",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "projection",
+      "innerZones": [
+        {
+          "id": "globus",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "mapping",
+          "status": {
+            "pc_1": 520,
+            "pj_1": 520,
+            "pj_2": 520
+          }
+        }
+      ]
+    },
+    {
+      "id": "server",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "projection8",
       "status": {
         "pc_1": 520,
         "pj_1": 520
       }
     },
     {
-      "id": "literatureTouch",
+      "id": "touch8",
       "status": {
         "pc_1": 520
       }
+    },
+    {
+      "id": "table8",
+      "innerZones": [
+        {
+          "id": "table1",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "table2",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "table3",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "table4",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "table5",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "table6",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "table7",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "table8",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "table9",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "table10",
+          "status": {
+            "pc_1": 520
+          }
+        }
+      ]
     }
   ]
 }
