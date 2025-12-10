@@ -1,38 +1,65 @@
 zones:
-  - id: files
-    innerZones:
-      - id: filesLeft1
-        status:
-          pc_1: 520
-      - id: filesLeft2
-        status:
-          pc_1: 520
-      - id: filesLeft3
-        status:
-          pc_1: 520
-      - id: filesRight1
-        status:
-          pc_1: 520
-      - id: filesRight2
-        status:
-          pc_1: 520
-      - id: filesRight3
-        status:
-          pc_1: 520
   - id: reception
     status:
       pc_1: 520
-  - id: touch
+  - id: zal
     status:
       pc_1: 520
-  - id: windows
-    innerZones:
-      - id: windowsLeft
-        status:
-          pc_1: 520
-      - id: windowsRight
-        status:
-          pc_1: 520
+      pj_1: 520
+      pj_2: 520
+  - id: peace
+    status:
+      pc_1: 520
+  - id: jornal
+    status:
+      pc_1: 520
+  - id: books
+    status:
+      pc_1: 520
+  - id: war
+    status:
+      pc_1: 520
+  - id: map
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: board
+    status:
+      pc_1: 520
+  - id: occupation
+    status:
+      pc_1: 520
+  - id: limit
+    status:
+      pc_1: 520
+  - id: memories
+    status:
+      pc_1: 520
+  - id: undercover
+    status:
+      pc_1: 520
+  - id: table
+    status:
+      pc_1: 520
+  - id: feat
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: history
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: vov
+    status:
+      pc_1: 520
+  - id: liberation
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: stalino
+    status:
+      pc_1: 520
+
   - id: table
     status:
       pc_1: 520
