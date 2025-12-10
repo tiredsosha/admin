@@ -6,49 +6,49 @@ zal:
   mac: 10:7C:61:85:60:6F
 peace:
   ip: 10.1.1.21
-  mac: 10:7C:61:B5:6F:39
+  mac: 34:5A:60:CD:E1:7E
 jornal:
   ip: 10.1.2.21
-  mac: 10:7C:61:B5:70:74
+  mac: 10:7C:61:B5:70:E9
 books:
   ip: 10.1.2.22
-  mac: 10:7C:61:B5:70:E2
+  mac: 34:5A:60:CD:DE:DC
 war:
   ip: 10.1.3.21
-  mac: 10:7C:61:B5:70:4E
+  mac: 34:5A:60:CD:E0:5A
 map:
   ip: 10.1.4.21
-  mac: 30:56:0F:06:E5:56
+  mac: 34:5A:60:CD:E0:42
 board:
   ip: 10.1.4.22
-  mac: 10:7C:61:B7:63:AB
+  mac: 10:7C:61:B5:6F:AA
 occupation:
   ip: 10.1.4.23
-  mac: 10:7C:61:B5:6F:FC
+  mac: 10:7C:61:B5:70:8C
 limit:
   ip: 10.1.5.21
-  mac: 10:7C:61:B5:6D:59
+  mac: 10:7C:61:B5:6F:D1
 memories:
   ip: 10.1.5.22
-  mac: 10:7C:61:B5:6F:82
+  mac: 34:5A:60:CD:E2:86
 undercover:
   ip: 10.1.7.21
-  mac: 10:7C:61:B5:70:2B
+  mac: 10:7C:61:B5:70:9F
 table:
   ip: 10.1.7.22
-  mac: 10:7C:61:B5:6F:C2
+  mac: 10:7C:61:B5:6D:E8
 feat:
   ip: 10.1.8.21
-  mac: 30:56:0F:06:E4:0C
+  mac: 10:7C:61:B5:70:1D
 history:
   ip: 10.1.9.21
-  mac: 10:7C:61:B5:70:5D
+  mac: 34:5A:60:CD:E0:62
 vov:
   ip: 10.1.10.21
-  mac: 10:7C:61:B5:70:3A
+  mac: 34:5A:60:CD:DE:D6
 liberation:
   ip: 10.1.11.21
-  mac: 10:7C:61:B7:63:6C
+  mac: 34:5A:60:CD:E1:86
 stalino:
   ip: 10.1.11.22
-  mac: 10:7C:61:B5:6F:74
+  mac: 10:7C:61:B5:70:77
