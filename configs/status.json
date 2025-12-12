@@ -1,372 +1,361 @@
 {
   "zones": [
     {
-      "id": "files",
-      "innerZones": [
-        {
-          "id": "filesLeft1",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "filesLeft2",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "filesLeft3",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "filesRight1",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "filesRight2",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "filesRight3",
-          "status": {
-            "pc_1": 520
-          }
-        }
-      ]
-    },
-    {
-      "id": "reception",
+      "id": "countrymenLeft",
       "status": {
         "pc_1": 520
       }
     },
     {
-      "id": "touch",
+      "id": "countrymenRight",
       "status": {
         "pc_1": 520
       }
     },
     {
-      "id": "windows",
-      "innerZones": [
-        {
-          "id": "windowsLeft",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "windowsRight",
-          "status": {
-            "pc_1": 520
-          }
-        }
-      ]
-    },
-    {
-      "id": "table",
+      "id": "countrymenLeft",
       "status": {
         "pc_1": 520
       }
     },
     {
-      "id": "soldier",
+      "id": "oldProjection",
       "status": {
-        "pc_1": 520
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520
       }
     },
     {
-      "id": "map1812",
+      "id": "oldMapping",
       "status": {
-        "pc_1": 520
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520,
+        "pj_3": 520,
+        "pj_4": 520
       }
     },
     {
-      "id": "arch",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "touchWarLeft",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "touchWarBreak",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "touchWarTransp",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "powermate",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "break",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "stand",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "pictures",
-      "innerZones": [
-        {
-          "id": "picturesLeft",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "picturesMiddle",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "picturesRight",
-          "status": {
-            "pc_1": 520
-          }
-        }
-      ]
-    },
-    {
-      "id": "circle",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "wardrobe",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "picturesTouch",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "led",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "ammo",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "control",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "atomFiles",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "shelves",
-      "innerZones": [
-        {
-          "id": "shelvesLeft",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "shelvesMiddle",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "shelvesRight",
-          "status": {
-            "pc_1": 520
-          }
-        }
-      ]
-    },
-    {
-      "id": "tableIR",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "tvs",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "operations",
-      "innerZones": [
-        {
-          "id": "operationsCaucas",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "operationsSyria",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "operationsCrimea",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "operationsSlatin",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "operationsSVO",
-          "status": {
-            "pc_1": 520
-          }
-        }
-      ]
-    },
-    {
-      "id": "projection",
-      "innerZones": [
-        {
-          "id": "globus",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "mapping",
-          "status": {
-            "pc_1": 520,
-            "pj_1": 520,
-            "pj_2": 520
-          }
-        }
-      ]
-    },
-    {
-      "id": "server",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "projection8",
+      "id": "oldMap",
       "status": {
         "pc_1": 520,
         "pj_1": 520
       }
     },
     {
-      "id": "touch8",
+      "id": "oldGames",
       "status": {
         "pc_1": 520
       }
     },
     {
-      "id": "table8",
-      "innerZones": [
-        {
-          "id": "table1",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "table2",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "table3",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "table4",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "table5",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "table6",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "table7",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "table8",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "table9",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "table10",
-          "status": {
-            "pc_1": 520
-          }
-        }
-      ]
+      "id": "oldBones",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "blacksmith",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "treasure",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "oldMapThings",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "oldDiorama",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520,
+        "pj_3": 520,
+        "pj_4": 520
+      }
+    },
+    {
+      "id": "oldChapel",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "oldBirch",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "oldPsalm",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "oldGospel",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "oldBoots",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "oldSoundPereyasl",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "oldSoundElectro",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "oldScreen",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "oldSloboda",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "rotonda",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "reforms",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "napoleonWar",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "eastWar",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "armyClothes",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "province",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "boudoir",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "cottage",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520
+      }
+    },
+    {
+      "id": "judicial",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "izba",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "pottery",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "crafts",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "craftsTouch",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "holidays",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520,
+        "pj_3": 520
+      }
+    },
+    {
+      "id": "holidaysStandalone",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "cabinet",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "photobooth",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "medicine",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "vynil",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "apartment",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "magazine",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "library",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "lecture",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "catalogue",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "book",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "meeting",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "rounddelay",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "mishera",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "steppe",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "ryzan",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "radiusProjection",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520,
+        "pj_3": 520,
+        "pj_4": 520,
+        "pj_5": 520
+      }
     }
   ]
 }
