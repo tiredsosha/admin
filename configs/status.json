@@ -1,24 +1,6 @@
 {
   "zones": [
     {
-      "id": "countrymenLeft",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "countrymenRight",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
-      "id": "countrymenLeft",
-      "status": {
-        "pc_1": 520
-      }
-    },
-    {
       "id": "oldProjection",
       "status": {
         "pc_1": 520,
