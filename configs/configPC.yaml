@@ -9,151 +9,151 @@
 #   mac: 10:7C:61:B5:6F:39
 oldProjection:
   ip: 172.16.2.21
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldMapping:
   ip: 172.16.2.22
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldMappingScreen:
   ip: 172.16.2.23
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldMap:
   ip: 172.16.2.24
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldGames:
   ip: 172.16.2.25
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldBones:
   ip: 172.16.2.68
-  mac:
+  mac: 34:5A:60:AF:39:56
 blacksmith:
   ip: 172.16.2.26
-  mac:
+  mac: 34:5A:60:AF:39:56
 treasure:
   ip: 172.16.2.27
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldMapThings:
   ip: 172.16.2.28
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldDiorama:
   ip: 172.16.2.29
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldChapel:
   ip: 172.16.2.30
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldBirch:
   ip: 172.16.2.31
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldPsalm:
   ip: 172.16.2.32
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldGospel:
   ip: 172.16.2.33
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldBoots:
   ip: 172.16.2.34
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldSoundPereyasl:
   ip: 172.16.2.37
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldSoundElectro:
   ip: 172.16.2.36
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldScreen:
   ip: 172.16.2.35
-  mac:
+  mac: 34:5A:60:AF:39:56
 oldSloboda:
   ip: 172.16.2.78
-  mac:
+  mac: 34:5A:60:AF:39:56
 rotonda:
   ip: 172.16.3.21
-  mac:
+  mac: 34:5A:60:AF:39:56
 reforms:
   ip: 172.16.3.22
-  mac:
+  mac: 34:5A:60:AF:39:3A
 napoleonWar:
   ip: 172.16.3.23
-  mac:
+  mac: 34:5A:60:AF:37:EE
 eastWar:
   ip: 172.16.3.24
-  mac:
+  mac: 34:5A:60:AF:35:3B
 armyClothes:
   ip: 172.16.3.25
-  mac:
+  mac: 34:5A:60:AF:38:08
 province:
   ip: 172.16.3.26
-  mac:
+  mac: 34:5A:60:AF:37:F4
 boudoir:
   ip: 172.16.3.27
-  mac:
+  mac: 34:5A:60:AF:35:B7
 cottage:
   ip: 172.16.3.28
-  mac:
+  mac: CC:28:AA:A6:2A:10
 judicial:
   ip: 172.16.3.29
-  mac:
+  mac: 34:5A:60:AF:38:09
 izba:
   ip: 172.16.3.30
-  mac:
+  mac: 34:5A:60:AF:37:F5
 pottery:
   ip: 172.16.3.31
-  mac:
+  mac: 34:5A:60:AF:38:0E
 crafts:
   ip: 172.16.3.32
-  mac:
+  mac: 34:5A:60:AF:37:F7
 craftsTouch:
   ip: 172.16.3.33
-  mac:
+  mac: 34:5A:60:AF:39:55
 holidays:
   ip: 172.16.3.34
-  mac:
+  mac: CC:28:AA:A6:2A:C8
 holidaysStandalone:
   ip: 172.16.3.35
-  mac:
+  mac: 34:5A:60:AF:35:40
 cabinet:
   ip: 172.16.3.36
-  mac:
+  mac: 34:5A:60:AF:35:40
 photobooth:
   ip: 172.16.3.37
-  mac:
+  mac: E8:9C:25:32:88:A8
 medicine:
   ip: 172.16.3.38
-  mac:
+  mac: 34:5A:60:AF:39:53
 vynil:
   ip: 172.16.3.39
-  mac:
+  mac: 10:7C:61:B5:6D:85
 apartment:
   ip: 172.16.3.40
-  mac:
+  mac: CC:28:AA:46:32:15
 magazine:
   ip: 172.16.3.41
-  mac:
+  mac: 34:5A:60:AF:35:44
 library:
   ip: 172.16.4.21
-  mac:
+  mac: 10:7C:61:B5:6D:60
 lecture:
   ip: 172.16.4.22
-  mac:
+  mac: CC:28:AA:A6:2B:DB
 catalogue:
   ip: 172.16.4.23
-  mac:
+  mac: 34:5A:60:AF:39:16
 book:
   ip: 172.16.4.24
-  mac:
+  mac: 34:5A:60:AF:39:1B
 meeting:
   ip: 172.16.4.25
-  mac:
+  mac: 34:5A:60:AF:39:0E
 rounddelay:
   ip: 172.16.5.21
-  mac:
+  mac: 34:5A:60:AF:39:18
 mishera:
   ip: 172.16.5.22
-  mac:
+  mac: 34:5A:60:AF:39:1D
 steppe:
   ip: 172.16.5.23
-  mac:
+  mac: 34:5A:60:AF:39:13
 ryzan:
   ip: 172.16.5.24
-  mac:
+  mac: 34:5A:60:AF:33:54
 radiusProjection:
   ip: 172.16.5.25
-  mac:
+  mac: 60:CF:84:D8:B2:A8
