@@ -68,9 +68,9 @@ func powerRelay(c *gin.Context) {
 	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
-		command = "f"
-	} else {
 		command = "n"
+	} else {
+		command = "f"
 	}
 	zoneRelay := config.FindRelay(data.Zone)
 	for _, ip := range zoneRelay {
@@ -88,6 +88,7 @@ func powerRelay(c *gin.Context) {
 
 func powerZone(c *gin.Context) {
 	var data JsonCommand
+	command := "0"
 
 	// Bind JSON and validate
 	if err := c.ShouldBindJSON(&data); err != nil {
@@ -99,10 +100,12 @@ func powerZone(c *gin.Context) {
 	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
+		command = "n"
 		for range 4 {
 			protocols.SendWOL(config.FindPC(data.Zone, "mac"))
 		}
 	} else {
+		command = "f"
 		protocols.SendGet(formater.CustomStr(
 			"http://{ip}:3001/off",
 			map[string]any{"ip": config.FindPC(data.Zone, "ip")}), 2,
@@ -112,6 +115,15 @@ func powerZone(c *gin.Context) {
 	zonePJ := config.FindZonePJ(data.Zone)
 	for _, ip := range zonePJ {
 		protocols.SendPjlink(ip, data.Command)
+	}
+
+	zoneRelay := config.FindRelay(data.Zone)
+	for _, ip := range zoneRelay {
+		protocols.SendGet(formater.CustomStr(
+			"http://admin:admin@{ip}/protect/rb0{command}.cgi",
+			map[string]any{"ip": ip, "command": command},
+		), 2,
+		)
 	}
 
 	c.JSON(200, gin.H{
@@ -188,6 +200,9 @@ func powerPark(c *gin.Context) {
 
 	switch data.Command {
 	case "on":
+
+		command := "n"
+
 		// Wake MACs
 		go func() {
 			for _, mac := range config.ALLMAC {
@@ -204,15 +219,27 @@ func powerPark(c *gin.Context) {
 			}
 		}()
 
-		// Turn defaults on lights
+		// Turn on relay
 		go func() {
-			for _, dali := range config.ALLDALI {
-				out, lamps, defaults := config.FindDali(dali)
-				protocols.ArlightDefault(out, lamps, defaults)
-			}
+			protocols.SendGet(formater.CustomStr(
+				"http://admin:admin@{ip}/protect/rb0{command}.cgi",
+				map[string]any{"ip": "172.16.3.76", "command": command},
+			), 2,
+			)
 		}()
 
+		// // Turn defaults on lights
+		// go func() {
+		// 	for _, dali := range config.ALLDALI {
+		// 		out, lamps, defaults := config.FindDali(dali)
+		// 		protocols.ArlightDefault(out, lamps, defaults)
+		// 	}
+		// }()
+
 	case "off":
+
+		command := "f"
+
 		// Power off PCs by IP
 		go func() {
 			for _, ip := range config.ALLPC {
@@ -228,13 +255,14 @@ func powerPark(c *gin.Context) {
 			}
 		}()
 
-		// // Turn off lights
-		// go func() {
-		// 	for _, dali := range config.ALLDALI {
-		// 		out, lamps, _ := config.FindDali(dali)
-		// 		protocols.ArlightControl(out, lamps, "0")
-		// 	}
-		// }()
+		// Turn off relay
+		go func() {
+			protocols.SendGet(formater.CustomStr(
+				"http://admin:admin@{ip}/protect/rb0{command}.cgi",
+				map[string]any{"ip": "172.16.3.76", "command": command},
+			), 2,
+			)
+		}()
 
 	case "restart":
 		// Restart PCs by IP
