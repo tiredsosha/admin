@@ -49,6 +49,24 @@ func powerProjector(c *gin.Context) {
 
 	protocols.SendPjlink(config.FindPJ(data.Zone, data.ID), data.Command)
 
+	if data.Zone == "vynil" {
+		command := "0"
+		if data.Command == "on" {
+			command = "n"
+		} else {
+			command = "f"
+		}
+		zoneRelay := config.FindRelay(data.Zone)
+		for _, ip := range zoneRelay {
+			protocols.SendGet(formater.CustomStr(
+				"http://admin:admin@{ip}/protect/rb0{command}.cgi",
+				map[string]any{"ip": ip, "command": command},
+			), 2,
+			)
+		}
+
+	}
+
 	c.JSON(200, gin.H{
 		"message": "OK",
 	})
