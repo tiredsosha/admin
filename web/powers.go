@@ -1,8 +1,6 @@
 package web
 
 import (
-	"fmt"
-
 	"github.com/gin-gonic/gin"
 	"github.com/tiredsosha/admin/protocols"
 	"github.com/tiredsosha/admin/tools/formater"
@@ -51,7 +49,7 @@ func powerProjector(c *gin.Context) {
 
 	protocols.SendPjlink(config.FindPJ(data.Zone, data.ID), data.Command)
 
-	fmt.Println(data.Zone)
+	// fmt.Println(data.Zone)
 
 	if data.Zone == "vynil" {
 		command := "0"
