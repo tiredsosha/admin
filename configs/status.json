@@ -3,7 +3,7 @@
     {
       "id": "oldProjection",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520,
         "pj_2": 520
       }
@@ -11,7 +11,7 @@
     {
       "id": "oldMapping",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520,
         "pj_2": 520,
         "pj_3": 520,
@@ -21,47 +21,47 @@
     {
       "id": "oldMap",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "oldGames",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "oldBones",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "blacksmith",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "treasure",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "oldMapThings",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "oldDiorama",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520,
         "pj_2": 520,
         "pj_3": 520,
@@ -71,112 +71,112 @@
     {
       "id": "oldChapel",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "oldBirch",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "oldPsalm",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "oldGospel",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "oldBoots",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "oldSoundPereyasl",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "oldSoundElectro",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "oldScreen",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "oldSloboda",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "rotonda",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "reforms",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "napoleonWar",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "eastWar",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "armyClothes",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "province",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "boudoir",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "cottage",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520,
         "pj_2": 520
       }
@@ -184,40 +184,40 @@
     {
       "id": "judicial",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "izba",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "pottery",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "crafts",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "craftsTouch",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "holidays",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520,
         "pj_2": 520,
         "pj_3": 520
@@ -226,112 +226,112 @@
     {
       "id": "holidaysStandalone",
       "status": {
-        "pc_1": 520,
+        "pc_1": 521,
         "pj_1": 520
       }
     },
     {
       "id": "cabinet",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "photobooth",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "medicine",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "vynil",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "apartment",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "magazine",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "library",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "lecture",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "catalogue",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "book",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "meeting",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "rounddelay",
       "status": {
-        "pc_1": 520,
+        "pc_1": 200,
         "pj_1": 520
       }
     },
     {
       "id": "mishera",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "steppe",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "ryzan",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "radiusProjection",
       "status": {
-        "pc_1": 520,
+        "pc_1": 521,
         "pj_1": 520,
         "pj_2": 520,
         "pj_3": 520,

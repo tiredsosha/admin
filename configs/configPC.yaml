@@ -9,61 +9,61 @@
 #   mac: 10:7C:61:B5:6F:39
 oldProjection:
   ip: 172.16.2.21
-  mac: 34:5A:60:AF:39:56
+  mac: CC:28:AA:A5:37:D3
 oldMapping:
   ip: 172.16.2.22
-  mac: 34:5A:60:AF:39:56
+  mac: CC:28:AA:A6:2A:E0
 oldMappingScreen:
   ip: 172.16.2.23
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:39:5B
 oldMap:
   ip: 172.16.2.24
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:39:11
 oldGames:
   ip: 172.16.2.25
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:39:14
 oldBones:
-  ip: 172.16.2.68
-  mac: 34:5A:60:AF:39:56
+  ip: 172.16.2.25
+  mac: 34:5A:60:AF:39:14
 blacksmith:
   ip: 172.16.2.26
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:39:5A
 treasure:
   ip: 172.16.2.27
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:37:C9
 oldMapThings:
   ip: 172.16.2.28
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:35:39
 oldDiorama:
   ip: 172.16.2.29
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:35:39
 oldChapel:
   ip: 172.16.2.30
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:39:1C
 oldBirch:
   ip: 172.16.2.31
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:37:EF
 oldPsalm:
   ip: 172.16.2.32
-  mac: 34:5A:60:AF:39:56
+  mac: CC:28:AA:A6:2A:E4
 oldGospel:
   ip: 172.16.2.33
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:35:7E
 oldBoots:
   ip: 172.16.2.34
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:38:41
 oldSoundPereyasl:
   ip: 172.16.2.37
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:39:4C
 oldSoundElectro:
   ip: 172.16.2.36
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:39:57
 oldScreen:
   ip: 172.16.2.35
-  mac: 34:5A:60:AF:39:56
+  mac: 34:5A:60:AF:37:F8
 oldSloboda:
-  ip: 172.16.2.78
-  mac: 34:5A:60:AF:39:56
+  ip: 172.16.2.35
+  mac: 34:5A:60:AF:37:F8
 rotonda:
   ip: 172.16.3.21
   mac: 34:5A:60:AF:39:56
