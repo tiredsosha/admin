@@ -1,9 +1,12 @@
 reception:
-  ip: 10.1.0.21
-  mac: 10:7C:61:B5:70:24
+  ip: 10.1.0.135
+  mac: 34:5A:60:CD:DF:EE
 zal:
   ip: 10.1.0.22
-  mac: 10:7C:61:85:60:6F
+  mac: 10:7C:61:B5:6F:DD
+zalTwo:
+  ip: 10.1.0.23
+  mac: 10:7C:61:B5:6D:EC
 peace:
   ip: 10.1.1.21
   mac: 34:5A:60:CD:E1:7E

@@ -3,115 +3,115 @@
     {
       "id": "reception",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "zal",
       "status": {
-        "pc_1": 520,
-        "pj_1": 520,
-        "pj_2": 520
+        "pc_1": 521,
+        "pj_1": 200,
+        "pj_2": 200
       }
     },
     {
       "id": "peace",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "jornal",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "books",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "war",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "map",
       "status": {
-        "pc_1": 520,
-        "pj_1": 520
+        "pc_1": 200,
+        "pj_1": 200
       }
     },
     {
       "id": "board",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "occupation",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "limit",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "memories",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "undercover",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "table",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "feat",
       "status": {
-        "pc_1": 520,
-        "pj_1": 520
+        "pc_1": 200,
+        "pj_1": 200
       }
     },
     {
       "id": "history",
       "status": {
-        "pc_1": 520,
-        "pj_1": 520
+        "pc_1": 200,
+        "pj_1": 200
       }
     },
     {
       "id": "vov",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "liberation",
       "status": {
-        "pc_1": 520,
-        "pj_1": 520
+        "pc_1": 200,
+        "pj_1": 200
       }
     },
     {
       "id": "stalino",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     }
   ]
