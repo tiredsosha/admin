@@ -15,18 +15,18 @@ treasure:
 oldMapThings:
   pj_1: 172.16.2.71
 oldDiorama:
-  pj_1: 172.16.2.71
-  pj_2: 172.16.2.72
-  pj_3: 172.16.2.73
-  pj_4: 172.16.2.79
+  pj_1: 172.16.2.72
+  pj_2: 172.16.2.73
+  pj_3: 172.16.2.74
+  pj_4: 172.16.2.75
 oldChapel:
-  pj_1: 172.16.2.74
+  pj_1: 172.16.2.76
 oldPsalm:
-  pj_1: 172.16.2.75
-oldScreen:
   pj_1: 172.16.2.77
-oldSloboda:
+oldScreen:
   pj_1: 172.16.2.78
+oldSloboda:
+  pj_1: 172.16.2.79
 rotonda:
   pj_1: 172.16.3.61
 reforms:
