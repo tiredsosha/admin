@@ -173,17 +173,17 @@ func UpdateStatues() {
 			updatePC()
 		}()
 	}
-	// if !pjRunning {
-	// 	pjRunning = true
-	// 	go func() {
-	// 		defer func() {
-	// 			mu.Lock()
-	// 			pjRunning = false
-	// 			mu.Unlock()
-	// 		}()
-	// 		updatePJ()
-	// 	}()
-	// }
+	if !pjRunning {
+		pjRunning = true
+		go func() {
+			defer func() {
+				mu.Lock()
+				pjRunning = false
+				mu.Unlock()
+			}()
+			updatePJ()
+		}()
+	}
 	mu.Unlock()
 
 	update()
