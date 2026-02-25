@@ -51,6 +51,7 @@ func powerProjector(c *gin.Context) {
 
 	// fmt.Println(data.Zone)
 
+	// вот это тока для рязани исключение, в других проектах надо его убирать
 	if data.Zone == "vynil" {
 		command := "0"
 		if data.Command == "on" {
@@ -235,7 +236,11 @@ func powerPark(c *gin.Context) {
 		// Turn on projectors
 		go func() {
 			for _, pj := range config.ALLPJ {
-				protocols.SendPjlink(pj, "on")
+
+				// вот это тока для рязани исключение, в других проектах надо его убирать
+				if pj != "172.16.3.73" {
+					protocols.SendPjlink(pj, "on")
+				}
 			}
 		}()
 
