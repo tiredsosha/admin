@@ -28,7 +28,6 @@ zones:
   - id: treasure
     status:
       pc_1: 200
-      pj_1: 520
   - id: oldMapThings
     status:
       pc_1: 200
