@@ -7,6 +7,8 @@ import (
 	"github.com/tiredsosha/admin/tools/logger"
 
 	config "github.com/tiredsosha/admin/tools/configurator"
+
+	"net"
 )
 
 func powerPc(c *gin.Context) {
@@ -17,6 +19,17 @@ func powerPc(c *gin.Context) {
 		logger.Error.Println("Invalid input:", err)
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
+	}
+
+	if data.Zone == "faces" || data.Zone == "art" || data.Zone == "city" {
+		conn, err := net.Dial("udp", "255.255.255.255:5000")
+		if err != nil {
+			panic(err)
+		}
+		defer conn.Close()
+
+		conn.Write([]byte(data.Command))
+
 	}
 
 	logger.Info.Println("request data -", data)
@@ -52,23 +65,6 @@ func powerProjector(c *gin.Context) {
 	// fmt.Println(data.Zone)
 
 	// вот это тока для рязани исключение, в других проектах надо его убирать
-	if data.Zone == "vynil" {
-		command := "0"
-		if data.Command == "on" {
-			command = "n"
-		} else {
-			command = "f"
-		}
-		zoneRelay := config.FindRelay(data.Zone)
-		for _, ip := range zoneRelay {
-			protocols.SendGet(formater.CustomStr(
-				"http://admin:admin@{ip}/protect/rb0{command}.cgi",
-				map[string]any{"ip": ip, "command": command},
-			), 2,
-			)
-		}
-
-	}
 
 	c.JSON(200, gin.H{
 		"message": "OK",
@@ -88,11 +84,6 @@ func powerRelay(c *gin.Context) {
 
 	logger.Info.Println("request data -", data)
 
-	if data.Command == "on" {
-		command = "n"
-	} else {
-		command = "f"
-	}
 	zoneRelay := config.FindRelay(data.Zone)
 	for _, ip := range zoneRelay {
 		protocols.SendGet(formater.CustomStr(
@@ -145,6 +136,78 @@ func powerZone(c *gin.Context) {
 			map[string]any{"ip": ip, "command": command},
 		), 2,
 		)
+	}
+
+	if data.Zone == "faces" {
+		conn, err := net.Dial("udp", "192.168.10.56:5000")
+		if err != nil {
+			panic(err)
+		}
+		defer conn.Close()
+
+		conn.Write([]byte(data.Command))
+
+		conn2, err := net.Dial("udp", "192.168.10.57:5000")
+		if err != nil {
+			panic(err)
+		}
+		defer conn2.Close()
+
+		conn2.Write([]byte(data.Command))
+
+	}
+
+	if data.Zone == "art" {
+		conn, err := net.Dial("udp", "192.168.10.51:5000")
+		if err != nil {
+			panic(err)
+		}
+		defer conn.Close()
+
+		conn.Write([]byte(data.Command))
+
+		conn2, err := net.Dial("udp", "192.168.10.52:5000")
+		if err != nil {
+			panic(err)
+		}
+		defer conn2.Close()
+
+		conn2.Write([]byte(data.Command))
+
+		conn3, err := net.Dial("udp", "192.168.10.53:5000")
+		if err != nil {
+			panic(err)
+		}
+		defer conn3.Close()
+
+		conn3.Write([]byte(data.Command))
+
+		conn4, err := net.Dial("udp", "192.168.10.54:5000")
+		if err != nil {
+			panic(err)
+		}
+		defer conn4.Close()
+
+		conn4.Write([]byte(data.Command))
+
+		conn5, err := net.Dial("udp", "192.168.10.55:5000")
+		if err != nil {
+			panic(err)
+		}
+		defer conn5.Close()
+
+		conn5.Write([]byte(data.Command))
+
+	}
+
+	if data.Zone == "city" {
+		conn, err := net.Dial("udp", "192.168.10.50:5000")
+		if err != nil {
+			panic(err)
+		}
+		defer conn.Close()
+
+		conn.Write([]byte(data.Command))
 	}
 
 	c.JSON(200, gin.H{

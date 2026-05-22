@@ -1,337 +1,50 @@
 {
   "zones": [
     {
-      "id": "oldProjection",
+      "id": "ideas",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "table",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "faces",
       "status": {
         "pc_1": 200,
-        "pj_1": 200,
-        "pj_2": 200
+        "pc_2": 200
       }
     },
     {
-      "id": "oldMapping",
+      "id": "art",
       "status": {
         "pc_1": 200,
-        "pj_1": 200,
-        "pj_2": 200,
-        "pj_3": 200,
-        "pj_4": 200
+        "pc_2": 200,
+        "pc_3": 200,
+        "pc_4": 200,
+        "pc_5": 200
       }
     },
     {
-      "id": "oldMap",
+      "id": "animation",
       "status": {
-        "pc_1": 200,
-        "pj_1": 200
+        "pc_1": 520
       }
     },
     {
-      "id": "oldGames",
+      "id": "postprod",
       "status": {
-        "pc_1": 200
+        "pc_1": 520
       }
     },
     {
-      "id": "oldBones",
+      "id": "city",
       "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "blacksmith",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "treasure",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "oldMapThings",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "oldDiorama",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200,
-        "pj_2": 200,
-        "pj_3": 200,
-        "pj_4": 200
-      }
-    },
-    {
-      "id": "oldChapel",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "oldBirch",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "oldPsalm",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "oldGospel",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "oldBoots",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "oldSoundPereyasl",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "oldSoundElectro",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "oldScreen",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "oldSloboda",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "rotonda",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "reforms",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "napoleonWar",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "eastWar",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "armyClothes",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "province",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "boudoir",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "cottage",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200,
-        "pj_2": 200
-      }
-    },
-    {
-      "id": "judicial",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "izba",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "pottery",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "crafts",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "craftsTouch",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "holidays",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200,
-        "pj_2": 200,
-        "pj_3": 200
-      }
-    },
-    {
-      "id": "holidaysStandalone",
-      "status": {
-        "pc_1": 521,
-        "pj_1": 521
-      }
-    },
-    {
-      "id": "cabinet",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "photobooth",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "medicine",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 0
-      }
-    },
-    {
-      "id": "vynil",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 0
-      }
-    },
-    {
-      "id": "apartment",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "magazine",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "library",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "lecture",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "catalogue",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "book",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "meeting",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "rounddelay",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200
-      }
-    },
-    {
-      "id": "mishera",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "steppe",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "ryzan",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "radiusProjection",
-      "status": {
-        "pc_1": 200,
-        "pj_1": 200,
-        "pj_2": 200,
-        "pj_3": 200,
-        "pj_4": 200,
-        "pj_5": 200
+        "pc_1": 520
       }
     }
   ]
