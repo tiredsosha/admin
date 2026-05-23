@@ -499,22 +499,23 @@ func ensureInnerStatusMap(zoneIdx, innerIdx int) {
 // -------------------- Persistence (atomic files) --------------------
 
 func persistSnapshots() error {
-	// Снимаем снепшот структуры под RLock
 	statusMu.RLock()
-	snap := statusData
+
+	yamlBytes, err := yaml.Marshal(statusData)
+	if err != nil {
+		statusMu.RUnlock()
+		logger.Warn.Println(err)
+		return err
+	}
+
+	jsonBytes, err := json.MarshalIndent(statusData, "", "  ")
+	if err != nil {
+		statusMu.RUnlock()
+		logger.Warn.Println(err)
+		return err
+	}
+
 	statusMu.RUnlock()
-
-	yamlBytes, err := yaml.Marshal(snap)
-	if err != nil {
-		logger.Warn.Println(err)
-		return err
-	}
-
-	jsonBytes, err := json.MarshalIndent(snap, "", "  ")
-	if err != nil {
-		logger.Warn.Println(err)
-		return err
-	}
 
 	if err := writeFileAtomic(statusYAMLPath, yamlBytes, 0644); err != nil {
 		logger.Warn.Println(err)
