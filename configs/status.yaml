@@ -8,14 +8,9 @@ zones:
   - id: faces
     status:
       pc_1: 200
-      pc_2: 200
   - id: art
     status:
       pc_1: 200
-      pc_2: 200
-      pc_3: 200
-      pc_4: 200
-      pc_5: 200
   - id: animation
     status:
       pc_1: 520
