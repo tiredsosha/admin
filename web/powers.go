@@ -1,6 +1,8 @@
 package web
 
 import (
+	"fmt"
+
 	"github.com/gin-gonic/gin"
 	"github.com/tiredsosha/admin/protocols"
 	"github.com/tiredsosha/admin/tools/formater"
@@ -21,15 +23,34 @@ func powerPc(c *gin.Context) {
 		return
 	}
 
-	if data.Zone == "faces" || data.Zone == "art" || data.Zone == "city" {
-		conn, err := net.Dial("udp", "255.255.255.255:5000")
+	for i := 50; i <= 59; i++ {
+		localIP := fmt.Sprintf("192.168.10.%d:0", i)
+		targetIP := fmt.Sprintf("192.168.10.%d:5000", i)
+
+		laddr, err := net.ResolveUDPAddr("udp", localIP)
 		if err != nil {
-			panic(err)
+			fmt.Println("local resolve error:", err)
+			continue
 		}
-		defer conn.Close()
 
-		conn.Write([]byte(data.Command))
+		raddr, err := net.ResolveUDPAddr("udp", targetIP)
+		if err != nil {
+			fmt.Println("remote resolve error:", err)
+			continue
+		}
 
+		conn, err := net.DialUDP("udp", laddr, raddr)
+		if err != nil {
+			fmt.Println("dial error:", err)
+			continue
+		}
+
+		_, err = conn.Write([]byte(data.Command))
+		if err != nil {
+			fmt.Println("write error:", err)
+		}
+
+		conn.Close()
 	}
 
 	logger.Info.Println("request data -", data)
