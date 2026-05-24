@@ -1,6 +1,7 @@
 package protocols
 
 import (
+	"fmt"
 	"net"
 	"strconv"
 
@@ -21,4 +22,36 @@ func SendUdp(ip string, port int, data string) {
 	}
 	logger.Debug.Printf("udp msg - %q to %q\n", data, address)
 
+}
+
+func SendUDPBrights(ipPrefix string, from int, to int, port int, command string) {
+	for i := from; i <= to; i++ {
+		localAddr := fmt.Sprintf("%s.%d:0", ipPrefix, i)
+		targetAddr := fmt.Sprintf("%s.%d:%d", ipPrefix, i, port)
+
+		laddr, err := net.ResolveUDPAddr("udp", localAddr)
+		if err != nil {
+			fmt.Println("local resolve error:", err)
+			continue
+		}
+
+		raddr, err := net.ResolveUDPAddr("udp", targetAddr)
+		if err != nil {
+			fmt.Println("remote resolve error:", err)
+			continue
+		}
+
+		conn, err := net.DialUDP("udp", laddr, raddr)
+		if err != nil {
+			fmt.Println("dial error:", err)
+			continue
+		}
+
+		_, err = conn.Write([]byte(command))
+		if err != nil {
+			fmt.Println("write error:", err)
+		}
+
+		conn.Close()
+	}
 }

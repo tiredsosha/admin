@@ -1,16 +1,12 @@
 package web
 
 import (
-	"fmt"
-
 	"github.com/gin-gonic/gin"
 	"github.com/tiredsosha/admin/protocols"
 	"github.com/tiredsosha/admin/tools/formater"
 	"github.com/tiredsosha/admin/tools/logger"
 
 	config "github.com/tiredsosha/admin/tools/configurator"
-
-	"net"
 )
 
 func powerPc(c *gin.Context) {
@@ -21,36 +17,6 @@ func powerPc(c *gin.Context) {
 		logger.Error.Println("Invalid input:", err)
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
-	}
-
-	for i := 50; i <= 59; i++ {
-		localIP := fmt.Sprintf("192.168.10.%d:0", i)
-		targetIP := fmt.Sprintf("192.168.10.%d:8010", i)
-
-		laddr, err := net.ResolveUDPAddr("udp", localIP)
-		if err != nil {
-			fmt.Println("local resolve error:", err)
-			continue
-		}
-
-		raddr, err := net.ResolveUDPAddr("udp", targetIP)
-		if err != nil {
-			fmt.Println("remote resolve error:", err)
-			continue
-		}
-
-		conn, err := net.DialUDP("udp", laddr, raddr)
-		if err != nil {
-			fmt.Println("dial error:", err)
-			continue
-		}
-
-		_, err = conn.Write([]byte(data.Command))
-		if err != nil {
-			fmt.Println("write error:", err)
-		}
-
-		conn.Close()
 	}
 
 	logger.Info.Println("request data -", data)
@@ -160,75 +126,15 @@ func powerZone(c *gin.Context) {
 	}
 
 	if data.Zone == "faces" {
-		conn, err := net.Dial("udp", "192.168.10.56:5000")
-		if err != nil {
-			panic(err)
-		}
-		defer conn.Close()
-
-		conn.Write([]byte(data.Command))
-
-		conn2, err := net.Dial("udp", "192.168.10.57:5000")
-		if err != nil {
-			panic(err)
-		}
-		defer conn2.Close()
-
-		conn2.Write([]byte(data.Command))
-
+		protocols.SendUDPBrights("192.168.10", 56, 57, 8010, data.Command)
 	}
 
 	if data.Zone == "art" {
-		conn, err := net.Dial("udp", "192.168.10.51:5000")
-		if err != nil {
-			panic(err)
-		}
-		defer conn.Close()
-
-		conn.Write([]byte(data.Command))
-
-		conn2, err := net.Dial("udp", "192.168.10.52:5000")
-		if err != nil {
-			panic(err)
-		}
-		defer conn2.Close()
-
-		conn2.Write([]byte(data.Command))
-
-		conn3, err := net.Dial("udp", "192.168.10.53:5000")
-		if err != nil {
-			panic(err)
-		}
-		defer conn3.Close()
-
-		conn3.Write([]byte(data.Command))
-
-		conn4, err := net.Dial("udp", "192.168.10.54:5000")
-		if err != nil {
-			panic(err)
-		}
-		defer conn4.Close()
-
-		conn4.Write([]byte(data.Command))
-
-		conn5, err := net.Dial("udp", "192.168.10.55:5000")
-		if err != nil {
-			panic(err)
-		}
-		defer conn5.Close()
-
-		conn5.Write([]byte(data.Command))
-
+		protocols.SendUDPBrights("192.168.10", 51, 55, 8010, data.Command)
 	}
 
 	if data.Zone == "city" {
-		conn, err := net.Dial("udp", "192.168.10.50:5000")
-		if err != nil {
-			panic(err)
-		}
-		defer conn.Close()
-
-		conn.Write([]byte(data.Command))
+		protocols.SendUDPBrights("192.168.10", 50, 50, 8010, data.Command)
 	}
 
 	c.JSON(200, gin.H{
@@ -302,6 +208,9 @@ func powerPark(c *gin.Context) {
 	}
 
 	logger.Info.Println("request data -", data)
+
+	// turn on brights
+	protocols.SendUDPBrights("192.168.10", 50, 59, 8010, data.Command)
 
 	switch data.Command {
 	case "on":
