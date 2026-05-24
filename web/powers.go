@@ -25,7 +25,7 @@ func powerPc(c *gin.Context) {
 
 	for i := 50; i <= 59; i++ {
 		localIP := fmt.Sprintf("192.168.10.%d:0", i)
-		targetIP := fmt.Sprintf("192.168.10.%d:5000", i)
+		targetIP := fmt.Sprintf("192.168.10.%d:8010", i)
 
 		laddr, err := net.ResolveUDPAddr("udp", localIP)
 		if err != nil {
