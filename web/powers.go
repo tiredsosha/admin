@@ -19,6 +19,16 @@ func powerPc(c *gin.Context) {
 		return
 	}
 
+	if data.Zone == "faces" {
+		protocols.SendUDPBrights("192.168.10", 56, 57, 8010, data.Command)
+	}
+	if data.Zone == "art" {
+		protocols.SendUDPBrights("192.168.10", 51, 55, 8010, data.Command)
+	}
+	if data.Zone == "city" {
+		protocols.SendUDPBrights("192.168.10", 50, 50, 8010, data.Command)
+	}
+
 	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
@@ -128,11 +138,9 @@ func powerZone(c *gin.Context) {
 	if data.Zone == "faces" {
 		protocols.SendUDPBrights("192.168.10", 56, 57, 8010, data.Command)
 	}
-
 	if data.Zone == "art" {
 		protocols.SendUDPBrights("192.168.10", 51, 55, 8010, data.Command)
 	}
-
 	if data.Zone == "city" {
 		protocols.SendUDPBrights("192.168.10", 50, 50, 8010, data.Command)
 	}
