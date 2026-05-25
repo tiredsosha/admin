@@ -26,7 +26,7 @@ func SendUdp(ip string, port int, data string) {
 
 func SendUDPBrights(ipPrefix string, from int, to int, port int, command string) {
 	for i := from; i <= to; i++ {
-		localAddr := fmt.Sprintf("%s.%d:0", ipPrefix, i)
+		localAddr := "192.168.10.5:8016"
 		targetAddr := fmt.Sprintf("%s.%d:%d", ipPrefix, i, port)
 
 		laddr, err := net.ResolveUDPAddr("udp", localAddr)

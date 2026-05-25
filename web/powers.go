@@ -18,26 +18,23 @@ func powerPc(c *gin.Context) {
 		c.JSON(400, gin.H{"error": err.Error()})
 		return
 	}
-
-	if data.Zone == "faces" {
-		protocols.SendUDPBrights("192.168.10", 56, 57, 8010, data.Command)
-	}
-	if data.Zone == "art" {
-		protocols.SendUDPBrights("192.168.10", 51, 55, 8010, data.Command)
-	}
-	if data.Zone == "city" {
-		protocols.SendUDPBrights("192.168.10", 50, 50, 8010, data.Command)
-	}
-
 	logger.Info.Println("request data -", data)
 
-	if data.Command == "on" {
-		protocols.SendWOL(config.FindPC(data.Zone, "mac"))
+	if data.Zone == "faces" {
+		protocols.SendUDPBrights("192.168.10", 57, 58, 8010, data.Command)
+	} else if data.Zone == "art" {
+		protocols.SendUDPBrights("192.168.10", 52, 56, 8010, data.Command)
+	} else if data.Zone == "city" {
+		protocols.SendUDPBrights("192.168.10", 50, 50, 8010, data.Command)
 	} else {
-		protocols.SendGet(formater.CustomStr(
-			"http://{ip}:3001/off",
-			map[string]any{"ip": config.FindPC(data.Zone, "ip")}), 2,
-		)
+		if data.Command == "on" {
+			protocols.SendWOL(config.FindPC(data.Zone, "mac"))
+		} else {
+			protocols.SendGet(formater.CustomStr(
+				"http://{ip}:3001/off",
+				map[string]any{"ip": config.FindPC(data.Zone, "ip")}), 2,
+			)
+		}
 	}
 
 	c.JSON(200, gin.H{
@@ -97,7 +94,6 @@ func powerRelay(c *gin.Context) {
 
 func powerZone(c *gin.Context) {
 	var data JsonCommand
-	command := "0"
 
 	// Bind JSON and validate
 	if err := c.ShouldBindJSON(&data); err != nil {
@@ -108,41 +104,29 @@ func powerZone(c *gin.Context) {
 
 	logger.Info.Println("request data -", data)
 
-	if data.Command == "on" {
-		command = "n"
-		for range 4 {
-			protocols.SendWOL(config.FindPC(data.Zone, "mac"))
-		}
+	if data.Zone == "faces" {
+		protocols.SendUDPBrights("192.168.10", 57, 58, 8010, data.Command)
+	} else if data.Zone == "art" {
+		protocols.SendUDPBrights("192.168.10", 52, 56, 8010, data.Command)
+	} else if data.Zone == "city" {
+		protocols.SendUDPBrights("192.168.10", 50, 50, 8010, data.Command)
 	} else {
-		command = "f"
-		protocols.SendGet(formater.CustomStr(
-			"http://{ip}:3001/off",
-			map[string]any{"ip": config.FindPC(data.Zone, "ip")}), 2,
-		)
+		if data.Command == "on" {
+			for range 4 {
+				protocols.SendWOL(config.FindPC(data.Zone, "mac"))
+			}
+		} else {
+
+			protocols.SendGet(formater.CustomStr(
+				"http://{ip}:3001/off",
+				map[string]any{"ip": config.FindPC(data.Zone, "ip")}), 2,
+			)
+		}
 	}
 
 	zonePJ := config.FindZonePJ(data.Zone)
 	for _, ip := range zonePJ {
 		protocols.SendPjlink(ip, data.Command)
-	}
-
-	zoneRelay := config.FindRelay(data.Zone)
-	for _, ip := range zoneRelay {
-		protocols.SendGet(formater.CustomStr(
-			"http://admin:admin@{ip}/protect/rb0{command}.cgi",
-			map[string]any{"ip": ip, "command": command},
-		), 2,
-		)
-	}
-
-	if data.Zone == "faces" {
-		protocols.SendUDPBrights("192.168.10", 56, 57, 8010, data.Command)
-	}
-	if data.Zone == "art" {
-		protocols.SendUDPBrights("192.168.10", 51, 55, 8010, data.Command)
-	}
-	if data.Zone == "city" {
-		protocols.SendUDPBrights("192.168.10", 50, 50, 8010, data.Command)
 	}
 
 	c.JSON(200, gin.H{
