@@ -62,8 +62,8 @@ parentsMono:
   ip: 10.1.8.12
   mac: 34:5A:60:C5:D3:BD
 kidsProjection:
-  ip: 10.1.9.11
-  mac: 90:AC:3F:36:E9:2D
+  ip: 10.1.10.11
+  mac: 34:5A:60:C5:D3:E6
 teachTV:
   ip: 10.1.10.11
   mac: 34:5A:60:C5:D3:E6
@@ -110,8 +110,8 @@ memoryTouchRight:
   ip: 10.1.18.13
   mac: 34:5A:60:C5:D3:D4
 memoryTV:
-  ip: 10.1.18.13
-  mac: 34:5A:60:C5:D3:D4
+  ip: 10.1.18.12
+  mac: 34:5A:60:C5:D3:AD
 tableProjection:
   ip: 10.1.19.13
   mac: 34:5A:60:C5:D3:EB
