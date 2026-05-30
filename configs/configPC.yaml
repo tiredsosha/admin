@@ -1,159 +1,126 @@
-# countrymenLeft:
-#   ip: 10.1.0.12
-#   mac: 10:7C:61:B5:70:24
-# countrymenRight:
-#   ip: 10.1.0.13
-#   mac: 10:7C:61:85:60:6F
-# countrymenLeft:
-#   ip: 10.1.0.14
-#   mac: 10:7C:61:B5:6F:39
-oldProjection:
-  ip: 172.16.2.21
-  mac: CC:28:AA:A5:37:D3
-oldMapping:
-  ip: 172.16.2.22
-  mac: CC:28:AA:A6:2A:E0
-oldMappingScreen:
-  ip: 172.16.2.23
-  mac: 34:5A:60:AF:39:5B
-oldMap:
-  ip: 172.16.2.24
-  mac: 34:5A:60:AF:39:11
-oldGames:
-  ip: 172.16.2.25
-  mac: 34:5A:60:AF:39:14
-oldBones:
-  ip: 172.16.2.25
-  mac: 34:5A:60:AF:39:14
-blacksmith:
-  ip: 172.16.2.26
-  mac: 34:5A:60:AF:39:5A
-treasure:
-  ip: 172.16.2.27
-  mac: 34:5A:60:AF:37:C9
-oldMapThings:
-  ip: 172.16.2.28
-  mac: 34:5A:60:AF:35:39
-oldDiorama:
-  ip: 172.16.2.29
-  mac: CC:28:AA:A6:2A:BE
-oldChapel:
-  ip: 172.16.2.30
-  mac: 34:5A:60:AF:39:1C
-oldBirch:
-  ip: 172.16.2.31
-  mac: 34:5A:60:AF:37:EF
-oldPsalm:
-  ip: 172.16.2.32
-  mac: CC:28:AA:A6:2A:E4
-oldGospel:
-  ip: 172.16.2.33
-  mac: 34:5A:60:AF:35:7E
-oldBoots:
-  ip: 172.16.2.34
-  mac: 34:5A:60:AF:38:41
-oldSoundPereyasl:
-  ip: 172.16.2.37
-  mac: 34:5A:60:AF:39:4C
-oldSoundElectro:
-  ip: 172.16.2.36
-  mac: 34:5A:60:AF:39:57
-oldScreen:
-  ip: 172.16.2.35
-  mac: 34:5A:60:AF:37:F8
-oldSloboda:
-  ip: 172.16.2.35
-  mac: 34:5A:60:AF:37:F8
-rotonda:
-  ip: 172.16.3.21
-  mac: 34:5A:60:AF:39:56
-reforms:
-  ip: 172.16.3.22
-  mac: 34:5A:60:AF:39:3A
-napoleonWar:
-  ip: 172.16.3.23
-  mac: 34:5A:60:AF:37:EE
-eastWar:
-  ip: 172.16.3.24
-  mac: 34:5A:60:AF:35:3B
-armyClothes:
-  ip: 172.16.3.25
-  mac: 34:5A:60:AF:38:08
-province:
-  ip: 172.16.3.26
-  mac: 34:5A:60:AF:37:F4
-boudoir:
-  ip: 172.16.3.27
-  mac: 34:5A:60:AF:35:B7
-cottage:
-  ip: 172.16.3.28
-  mac: CC:28:AA:A6:2A:10
-judicial:
-  ip: 172.16.3.29
-  mac: 34:5A:60:AF:38:09
-izba:
-  ip: 172.16.3.30
-  mac: 34:5A:60:AF:37:F5
-pottery:
-  ip: 172.16.3.31
-  mac: 34:5A:60:AF:38:0E
-crafts:
-  ip: 172.16.3.32
-  mac: 34:5A:60:AF:37:F7
-craftsTouch:
-  ip: 172.16.3.33
-  mac: 34:5A:60:AF:39:55
-holidays:
-  ip: 172.16.3.34
-  mac: CC:28:AA:A6:2A:C8
-holidaysStandalone:
-  ip: 172.16.3.35
-  mac: 34:5A:60:AF:35:40
-cabinet:
-  ip: 172.16.3.36
-  mac: 34:5A:60:AF:35:40
-photobooth:
-  ip: 172.16.3.37
-  mac: E8:9C:25:32:88:A8
-medicine:
-  ip: 172.16.3.38
-  mac: 34:5A:60:AF:39:53
-vynil:
-  ip: 172.16.3.39
-  mac: 10:7C:61:B5:6D:85
-apartment:
-  ip: 172.16.3.40
-  mac: CC:28:AA:46:32:15
-magazine:
-  ip: 172.16.3.41
-  mac: 34:5A:60:AF:35:44
-library:
-  ip: 172.16.4.21
-  mac: 10:7C:61:B5:6D:60
-lecture:
-  ip: 172.16.4.22
-  mac: CC:28:AA:A6:2B:DB
-catalogue:
-  ip: 172.16.4.23
-  mac: 34:5A:60:AF:39:16
+reception:
+  ip: 10.1.31.14
+  mac: 34:5A:60:6D:7B:67
+entranceLeft:
+  ip: 10.1.31.11
+  mac: 34:5A:60:6D:7B:76
+entranceRight:
+  ip: 10.1.31.12
+  mac: 34:5A:60:6D:7A:59
+mfc:
+  ip: 10.1.31.13
+  mac: 34:5A:60:6D:7B:AF
+showHall:
+  ip: 10.1.1.11
+  mac: 08:BF:B8:00:03:EE
+captureLeftTop:
+  ip: 10.1.2.11
+  mac: 34:5A:60:6D:7B:25
+captureRightTop:
+  ip: 10.1.2.12
+  mac: 34:5A:60:6D:7A:2D
+captureLeftBottom:
+  ip: 10.1.2.13
+  mac: 34:5A:60:6D:7B:80
+captureRightBottom:
+  ip: 10.1.2.14
+  mac: 34:5A:60:6D:7B:7A
+model:
+  ip: 10.1.3.11
+  mac: 34:5A:60:6D:77:24
 book:
-  ip: 172.16.4.24
-  mac: 34:5A:60:AF:39:1B
-meeting:
-  ip: 172.16.4.25
-  mac: 34:5A:60:AF:39:0E
-rounddelay:
-  ip: 172.16.5.21
-  mac: 34:5A:60:AF:39:18
-mishera:
-  ip: 172.16.5.22
-  mac: 34:5A:60:AF:39:1D
-steppe:
-  ip: 172.16.5.23
-  mac: 34:5A:60:AF:39:13
-ryzan:
-  ip: 172.16.5.24
-  mac: 34:5A:60:AF:33:54
-radiusProjection:
-  ip: 172.16.5.25
-  mac: 60:CF:84:D8:B2:A8
+  ip: 10.1.3.12
+  mac: 34:5A:60:6D:7B:AB
+sports:
+  ip: 10.1.5.11
+  mac: 34:5A:60:6D:7B:B0
+sportsTouchLeft:
+  ip: 10.1.5.12
+  mac: 34:5A:60:6D:71:85
+sportsTouchMiddle:
+  ip: 10.1.5.13
+  mac: 34:5A:60:6D:7B:7C
+sportsTouchRight:
+  ip: 10.1.5.14
+  mac: 34:5A:60:6D:7B:AA
+literature:
+  ip: 10.1.7.11
+  mac: 60:CF:84:9D:E6:05
+literatureTouch:
+  ip: 10.1.7.12
+  mac: 34:5A:60:6D:7A:F1
+terrorProjection:
+  ip: 10.1.4.11
+  mac: 34:5A:60:C5:D3:EA
+helpProjection:
+  ip: 10.1.6.11
+  mac: 34:5A:60:C5:D3:E8
+parentsTouch:
+  ip: 10.1.8.11
+  mac: 34:5A:60:C5:D3:B3
+parentsMono:
+  ip: 10.1.8.12
+  mac: 34:5A:60:C5:D3:BD
+kidsProjection:
+  ip: 10.1.9.11
+  mac: 90:AC:3F:36:E9:2D
+teachTV:
+  ip: 10.1.10.11
+  mac: 34:5A:60:C5:D3:E6
+teachTouch:
+  ip: 10.1.10.11
+  mac: 34:5A:60:C5:D3:E6
+libLeft:
+  ip: 10.1.11.11
+  mac: 34:5A:60:C5:D3:EE
+libRight:
+  ip: 10.1.11.12
+  mac: 34:5A:60:C5:D3:A9
+historyBook:
+  ip: 10.1.12.11
+  mac: 34:5A:60:C5:D3:F0
+operRoom:
+  ip: 10.1.13.11
+  mac: 34:5A:60:C5:D3:D8
+mchs:
+  ip: 10.1.13.12
+  mac: 34:5A:60:C5:D3:B5
+saveProjection:
+  ip: 10.1.14.11
+  mac: 34:5A:60:C5:D3:C1
+bigTV:
+  ip: 10.1.14.11
+  mac: 34:5A:60:C5:D3:C1
+worldProjection:
+  ip: 10.1.16.12
+  mac: 34:5A:60:C5:D3:E9
+worldTouch:
+  ip: 10.1.16.12
+  mac: 34:5A:60:C5:D3:E9
+courtTouch:
+  ip: 10.1.17.11
+  mac: 34:5A:60:C5:D3:B9
+memoryTouchLeft:
+  ip: 10.1.18.11
+  mac: 34:5A:60:C5:D3:D7
+memoryTouchMiddle:
+  ip: 10.1.18.12
+  mac: 34:5A:60:C5:D3:AD
+memoryTouchRight:
+  ip: 10.1.18.13
+  mac: 34:5A:60:C5:D3:D4
+memoryTV:
+  ip: 10.1.18.13
+  mac: 34:5A:60:C5:D3:D4
+tableProjection:
+  ip: 10.1.19.13
+  mac: 34:5A:60:C5:D3:EB
+tableLeft:
+  ip: 10.1.19.11
+  mac: 34:5A:60:C5:D3:D3
+tableRight:
+  ip: 10.1.19.12
+  mac: 34:5A:60:C5:D3:C3
+dining:
+  ip: 10.1.20.12
+  mac: 68:1D:EF:5A:D7:CB
