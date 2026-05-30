@@ -263,7 +263,8 @@ var (
 	statusData Status
 
 	// protects statusData
-	statusMu sync.RWMutex
+	statusMu  sync.RWMutex
+	persistMu sync.Mutex
 
 	// prevents re-entry for same updater
 	pcRunning atomic.Bool
@@ -497,36 +498,34 @@ func ensureInnerStatusMap(zoneIdx, innerIdx int) {
 }
 
 // -------------------- Persistence (atomic files) --------------------
-
 func persistSnapshots() error {
-	// Снимаем снепшот структуры под RLock
+	persistMu.Lock()
+	defer persistMu.Unlock()
+
 	statusMu.RLock()
-	snap := statusData
-	statusMu.RUnlock()
+	defer statusMu.RUnlock()
 
-	yamlBytes, err := yaml.Marshal(snap)
+	yamlBytes, err := yaml.Marshal(statusData)
 	if err != nil {
 		logger.Warn.Println(err)
 		return err
 	}
 
-	jsonBytes, err := json.MarshalIndent(snap, "", "  ")
+	jsonBytes, err := json.MarshalIndent(statusData, "", "  ")
 	if err != nil {
 		logger.Warn.Println(err)
 		return err
 	}
 
-	if err := writeFileAtomic(statusYAMLPath, yamlBytes, 0644); err != nil {
+	if err := os.WriteFile(statusYAMLPath, yamlBytes, 0644); err != nil {
 		logger.Warn.Println(err)
 		return err
 	}
-	logger.Debug.Println("yaml updated, check status.yaml")
 
-	if err := writeFileAtomic(statusJSONPath, jsonBytes, 0644); err != nil {
+	if err := os.WriteFile(statusJSONPath, jsonBytes, 0644); err != nil {
 		logger.Warn.Println(err)
 		return err
 	}
-	logger.Debug.Println("json updated, check status.json")
 
 	return nil
 }
