@@ -1,6 +1,8 @@
 package main
 
 import (
+	"time"
+
 	"github.com/tiredsosha/admin/mosquitto"
 	config "github.com/tiredsosha/admin/tools/configurator"
 	"github.com/tiredsosha/admin/tools/logger"
@@ -43,9 +45,13 @@ func main() {
 	}
 
 	if cfg.StatusOn {
-		// функция которая чекает статусы всего
 		go func() {
-			for {
+			web.UpdateStatues() // первый запуск сразу
+
+			ticker := time.NewTicker(5 * time.Second)
+			defer ticker.Stop()
+
+			for range ticker.C {
 				web.UpdateStatues()
 			}
 		}()
