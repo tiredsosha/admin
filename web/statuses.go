@@ -287,6 +287,7 @@ func persistSnapshots() error {
 
 	if len(statusData.Zones) == 0 {
 		logger.Error.Println("persistSnapshots blocked: statusData.Zones is empty")
+		return nil // не сохраняем пустой статус, но и не возвращаем ошибку, чтобы не спамить лог
 	}
 
 	yamlBytes, err := yaml.Marshal(statusData)
