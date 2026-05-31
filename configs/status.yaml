@@ -2,153 +2,65 @@ zones:
   - id: reception
     status:
       pc_1: 520
-  - id: entrance
+  - id: mascot
+    status:
+      pc_1: 520
+  - id: fossils
     innerZones:
-      - id: entranceLeft
+      - id: fossilsLeft
         status:
           pc_1: 520
-      - id: entranceRight
+      - id: fossilsRight
         status:
           pc_1: 520
-  - id: mfc
-    status:
-      pc_1: 520
-  - id: showHall
-    status:
-      pc_1: 520
-      pj_1: 520
-      pj_2: 520
-      pj_3: 520
-      pj_4: 520
-      pj_5: 520
-      pj_6: 520
-      pj_7: 520
-  - id: capture
+  - id: origin
     innerZones:
-      - id: captureLeftTop
+      - id: originLed
         status:
           pc_1: 520
-      - id: captureRightTop
+      - id: originTouchLeft
         status:
           pc_1: 520
-      - id: captureLeftBottom
+      - id: originTouchRight
         status:
           pc_1: 520
-      - id: captureRightBottom
-        status:
-          pc_1: 520
-  - id: model
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: book
-    status:
-      pc_1: 520
-  - id: sports
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: sportsTouch
+  - id: herbivores
     innerZones:
-      - id: sportsTouchLeft
+      - id: herbivoresLed
         status:
           pc_1: 520
-      - id: sportsTouchMiddle
+      - id: herbivoresTouch
         status:
           pc_1: 520
-      - id: sportsTouchRight
-        status:
-          pc_1: 520
-  - id: literature
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: literatureTouch
-    status:
-      pc_1: 520
-  - id: terrorProjection
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: helpProjection
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: parentsTouch
-    status:
-      pc_1: 520
-  - id: parentsMono
-    status:
-      pc_1: 520
-  - id: kidsProjection
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: teachTV
-    status:
-      pc_1: 520
-  - id: teachTouch
-    status:
-      pc_1: 520
-  - id: libLeft
-    status:
-      pc_1: 520
-  - id: libRight
-    status:
-      pc_1: 520
-  - id: historyBook
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: operRoom
-    status:
-      pc_1: 520
-  - id: mchs
-    status:
-      pc_1: 520
-  - id: saveProjection
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: bigTV
-    status:
-      pc_1: 520
-  - id: worldProjection
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: worldTouch
-    status:
-      pc_1: 520
-  - id: courtTouch
-    status:
-      pc_1: 520
-  - id: memoryTouch
+  - id: predators
     innerZones:
-      - id: memoryTouchLeft
+      - id: predatorsLed
         status:
           pc_1: 520
-      - id: memoryTouchMiddle
+      - id: predatorsTouch
         status:
           pc_1: 520
-      - id: memoryTouchRight
-        status:
-          pc_1: 520
-  - id: memoryTV
+  - id: flying
     status:
       pc_1: 520
-  - id: profilacticTable
+  - id: marine
     innerZones:
-      - id: tableProjection
+      - id: marineLed
+        status:
+          pc_1: 520
+      - id: marineProjection
         status:
           pc_1: 520
           pj_1: 520
-      - id: tableLeft
-        status:
-          pc_1: 520
-      - id: tableRight
-        status:
-          pc_1: 520
-  - id: dining
+  - id: russia
+    status:
+      pc_1: 520
+  - id: descendants
+    status:
+      pc_1: 520
+  - id: photozone
+    status:
+      pc_1: 520
+  - id: facade
     status:
       pc_1: 520
