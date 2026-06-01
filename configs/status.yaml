@@ -1,66 +1,66 @@
 zones:
   - id: reception
     status:
-      pc_1: 200
+      pc_1: 520
   - id: mascot
     status:
-      pc_1: 200
+      pc_1: 520
   - id: fossils
     innerZones:
       - id: fossilsLeft
         status:
-          pc_1: 200
+          pc_1: 520
       - id: fossilsRight
         status:
-          pc_1: 200
+          pc_1: 520
   - id: origin
     innerZones:
       - id: originLed
         status:
-          pc_1: 200
+          pc_1: 520
       - id: originTouchLeft
         status:
-          pc_1: 200
+          pc_1: 520
       - id: originTouchRight
         status:
-          pc_1: 200
+          pc_1: 520
   - id: herbivores
     innerZones:
       - id: herbivoresLed
         status:
-          pc_1: 200
+          pc_1: 520
       - id: herbivoresTouch
         status:
-          pc_1: 200
+          pc_1: 520
   - id: predators
     innerZones:
       - id: predatorsLed
         status:
-          pc_1: 200
+          pc_1: 520
       - id: predatorsTouch
         status:
-          pc_1: 200
+          pc_1: 520
   - id: flying
     status:
-      pc_1: 200
+      pc_1: 520
   - id: marine
     innerZones:
       - id: marineLed
         status:
-          pc_1: 200
+          pc_1: 520
       - id: marineProjection
         status:
-          pc_1: 200
-          pj_1: 0
+          pc_1: 520
+          pj_1: 520
   - id: russia
     status:
-      pc_1: 200
+      pc_1: 520
   - id: descendants
     status:
-      pc_1: 200
+      pc_1: 520
   - id: photozone
     status:
-      pc_1: 521
+      pc_1: 520
   - id: facade
     status:
-      pc_1: 200
+      pc_1: 520
