@@ -3,13 +3,13 @@
     {
       "id": "reception",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "mascot",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
@@ -18,13 +18,13 @@
         {
           "id": "fossilsLeft",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "fossilsRight",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         }
       ]
@@ -35,19 +35,19 @@
         {
           "id": "originLed",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "originTouchLeft",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "originTouchRight",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         }
       ]
@@ -56,15 +56,15 @@
       "id": "herbivores",
       "innerZones": [
         {
-          "id": "originLed",
+          "id": "herbivoresLed",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
-          "id": "originTouch",
+          "id": "herbivoresTouch",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         }
       ]
@@ -75,13 +75,13 @@
         {
           "id": "predatorsLed",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "predatorsTouch",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         }
       ]
@@ -89,7 +89,7 @@
     {
       "id": "flying",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
@@ -98,14 +98,14 @@
         {
           "id": "marineLed",
           "status": {
-            "pc_1": 520
+            "pc_1": 200
           }
         },
         {
           "id": "marineProjection",
           "status": {
-            "pc_1": 520,
-            "pj_1": 520
+            "pc_1": 200,
+            "pj_1": 0
           }
         }
       ]
@@ -113,25 +113,25 @@
     {
       "id": "russia",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "descendants",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
       "id": "photozone",
       "status": {
-        "pc_1": 520
+        "pc_1": 521
       }
     },
     {
       "id": "facade",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     }
   ]
