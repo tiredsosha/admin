@@ -1,66 +1,208 @@
 zones:
-  - id: reception
+  - id: entrance
     status:
       pc_1: 520
-  - id: mascot
+      pj_1: 520
+      pj_2: 520
+      pj_3: 520
+      pj_4: 520
+  - id: germanPlans
     status:
       pc_1: 520
-  - id: fossils
+  - id: germanWar
     innerZones:
-      - id: fossilsLeft
+      - id: germanWarLed
         status:
           pc_1: 520
-      - id: fossilsRight
+      - id: germanWarTouch
         status:
           pc_1: 520
-  - id: origin
-    innerZones:
-      - id: originLed
-        status:
-          pc_1: 520
-      - id: originTouchLeft
-        status:
-          pc_1: 520
-      - id: originTouchRight
-        status:
-          pc_1: 520
-  - id: herbivores
-    innerZones:
-      - id: herbivoresLed
-        status:
-          pc_1: 520
-      - id: herbivoresTouch
-        status:
-          pc_1: 520
-  - id: predators
-    innerZones:
-      - id: predatorsLed
-        status:
-          pc_1: 520
-      - id: predatorsTouch
-        status:
-          pc_1: 520
-  - id: flying
+  - id: statistics
     status:
       pc_1: 520
-  - id: marine
+      pj_1: 520
+  - id: germanTV
+    status:
+      pc_1: 520
+  - id: family
     innerZones:
-      - id: marineLed
+      - id: familyLed
         status:
           pc_1: 520
-      - id: marineProjection
+      - id: familyMother
+        status:
+          pc_1: 520
+      - id: familyFather
+        status:
+          pc_1: 520
+      - id: familyDaugther
+        status:
+          pc_1: 520
+      - id: familySon
+        status:
+          pc_1: 520
+      - id: familyKids
+        status:
+          pc_1: 520
+  - id: hijacking
+    status:
+      pc_1: 520
+      pj_1: 520
+      pj_2: 520
+  - id: gazvagen
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: kids
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: izba
+    status:
+      pc_1: 520
+  - id: burnedLand
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: burnedTouch
+    status:
+      pc_1: 520
+  - id: prisonMap
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: prisonBox
+    status:
+      pc_1: 520
+  - id: nari
+    status:
+      pc_1: 520
+  - id: birds
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: boy
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: boyTouch
+    status:
+      pc_1: 520
+  - id: carriagePlatform
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: carriageCabinet
+    status:
+      pc_1: 520
+  - id: carriageGirl
+    status:
+      pc_1: 520
+  - id: carriageOfficer
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: carriageTranslucent
+    status:
+      pc_1: 520
+  - id: keningMarket
+    status:
+      pc_1: 520
+  - id: keningGirl
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: keningLetters
+    status:
+      pc_1: 520
+  - id: flatDaugher
+    status:
+      pc_1: 520
+  - id: flatWindow
+    status:
+      pc_1: 520
+  - id: flatBox
+    innerZones:
+      - id: flatBoxLeft
+        status:
+          pc_1: 520
+      - id: flatBoxRight
+        status:
+          pc_1: 520
+  - id: leningrad
+    status:
+      pc_1: 520
+      pj_1: 520
+      pj_2: 520
+  - id: culturePiano
+    status:
+      pc_1: 520
+  - id: cultureKhabensky
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: cultureTouch
+    status:
+      pc_1: 520
+  - id: europe
+    status:
+      pc_1: 520
+      pj_1: 520
+      pj_2: 520
+  - id: europeMap
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: europeFather
+    status:
+      pc_1: 520
+  - id: europeScale
+    status:
+      pc_1: 520
+  - id: europeHolo
+    status:
+      pc_1: 520
+  - id: europeCinema
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: japanHologram
+    status:
+      pc_1: 520
+  - id: japanPhotos
+    innerZones:
+      - id: photosLeft
         status:
           pc_1: 520
           pj_1: 520
-  - id: russia
+      - id: photosRight
+        status:
+          pc_1: 520
+          pj_1: 520
+  - id: japanMap
     status:
       pc_1: 520
-  - id: descendants
+      pj_1: 520
+  - id: japanTranslucent
     status:
       pc_1: 520
-  - id: photozone
+  - id: japanSon
     status:
       pc_1: 520
-  - id: facade
+  - id: nur
     status:
       pc_1: 520
+      pj_1: 520
+      pj_2: 520
+  - id: court
+    status:
+      pc_1: 520
+      pj_1: 520
+  - id: nurTouch
+    innerZones:
+      - id: nurTouchLeft
+        status:
+          pc_1: 520
+      - id: nurTouchRight
+        status:
+          pc_1: 520

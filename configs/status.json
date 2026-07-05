@@ -1,138 +1,394 @@
 {
   "zones": [
     {
-      "id": "reception",
+      "id": "entrance",
       "status": {
-        "pc_1": 200
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520,
+        "pj_3": 520,
+        "pj_4": 520
       }
     },
     {
-      "id": "mascot",
+      "id": "germanPlans",
       "status": {
-        "pc_1": 200
+        "pc_1": 520
       }
     },
     {
-      "id": "fossils",
+      "id": "germanWar",
       "innerZones": [
         {
-          "id": "fossilsLeft",
+          "id": "germanWarLed",
           "status": {
-            "pc_1": 200
+            "pc_1": 520
           }
         },
         {
-          "id": "fossilsRight",
+          "id": "germanWarTouch",
           "status": {
-            "pc_1": 200
+            "pc_1": 520
           }
         }
       ]
     },
     {
-      "id": "origin",
+      "id": "statistics",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "germanTV",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "family",
       "innerZones": [
         {
-          "id": "originLed",
+          "id": "familyLed",
           "status": {
-            "pc_1": 200
+            "pc_1": 520
           }
         },
         {
-          "id": "originTouchLeft",
+          "id": "familyMother",
           "status": {
-            "pc_1": 200
+            "pc_1": 520
           }
         },
         {
-          "id": "originTouchRight",
+          "id": "familyFather",
           "status": {
-            "pc_1": 200
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "familyDaugther",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "familySon",
+          "status": {
+            "pc_1": 520
+          }
+        },
+        {
+          "id": "familyKids",
+          "status": {
+            "pc_1": 520
           }
         }
       ]
     },
     {
-      "id": "herbivores",
+      "id": "hijacking",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520
+      }
+    },
+    {
+      "id": "gazvagen",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "kids",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "izba",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "burnedLand",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "burnedTouch",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "prisonMap",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "prisonBox",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "nari",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "birds",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "boy",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "boyTouch",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "carriagePlatform",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "carriageCabinet",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "carriageGirl",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "carriageOfficer",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "carriageTranslucent",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "keningMarket",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "keningGirl",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "keningLetters",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "flatDaugher",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "flatWindow",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "flatBox",
       "innerZones": [
         {
-          "id": "herbivoresLed",
+          "id": "flatBoxLeft",
           "status": {
-            "pc_1": 200
+            "pc_1": 520
           }
         },
         {
-          "id": "herbivoresTouch",
+          "id": "flatBoxRight",
           "status": {
-            "pc_1": 200
+            "pc_1": 520
           }
         }
       ]
     },
     {
-      "id": "predators",
+      "id": "leningrad",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520
+      }
+    },
+    {
+      "id": "culturePiano",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "cultureKhabensky",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "cultureTouch",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "europe",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520
+      }
+    },
+    {
+      "id": "europeMap",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "europeFather",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "europeScale",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "europeHolo",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "europeCinema",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "japanHologram",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "japanPhotos",
       "innerZones": [
         {
-          "id": "predatorsLed",
+          "id": "photosLeft",
           "status": {
-            "pc_1": 200
+            "pc_1": 520,
+            "pj_1": 520
           }
         },
         {
-          "id": "predatorsTouch",
+          "id": "photosRight",
           "status": {
-            "pc_1": 200
+            "pc_1": 520,
+            "pj_1": 520
           }
         }
       ]
     },
     {
-      "id": "flying",
+      "id": "japanMap",
       "status": {
-        "pc_1": 200
+        "pc_1": 520,
+        "pj_1": 520
       }
     },
     {
-      "id": "marine",
+      "id": "japanTranslucent",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "japanSon",
+      "status": {
+        "pc_1": 520
+      }
+    },
+    {
+      "id": "nur",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520,
+        "pj_2": 520
+      }
+    },
+    {
+      "id": "court",
+      "status": {
+        "pc_1": 520,
+        "pj_1": 520
+      }
+    },
+    {
+      "id": "nurTouch",
       "innerZones": [
         {
-          "id": "marineLed",
+          "id": "nurTouchLeft",
           "status": {
-            "pc_1": 200
+            "pc_1": 520
           }
         },
         {
-          "id": "marineProjection",
+          "id": "nurTouchRight",
           "status": {
-            "pc_1": 200,
-            "pj_1": 0
+            "pc_1": 520
           }
         }
       ]
-    },
-    {
-      "id": "russia",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "descendants",
-      "status": {
-        "pc_1": 200
-      }
-    },
-    {
-      "id": "photozone",
-      "status": {
-        "pc_1": 521
-      }
-    },
-    {
-      "id": "facade",
-      "status": {
-        "pc_1": 200
-      }
     }
   ]
 }
