@@ -5,6 +5,7 @@ entrance:
   pj_4: 10.8.2.24
 statistics:
   pj_1: 10.8.3.21
+  pj_2: 10.8.5.21
 hijacking:
   pj_1: 10.8.6.21
   pj_2: 10.8.6.22
