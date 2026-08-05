@@ -129,10 +129,15 @@ func powerFire(c *gin.Context) {
 
 	// Turn off relay after 3 minutes
 	go func() {
-		time.Sleep(3 * time.Minute)
+		time.Sleep(4 * time.Minute)
 		for _, ip := range config.ALLRELAY {
 			protocols.SendGet(formater.CustomStr(
 				"http://admin:admin@{ip}/protect/rb0n.cgi",
+				map[string]any{"ip": ip},
+			), 2,
+			)
+			protocols.SendGet(formater.CustomStr(
+				"http://admin:admin@{ip}/protect/rb1n.cgi",
 				map[string]any{"ip": ip},
 			), 2,
 			)
@@ -267,11 +272,18 @@ func powerPark(c *gin.Context) {
 					map[string]any{"ip": ip},
 				), 2,
 				)
+				protocols.SendGet(formater.CustomStr(
+					"http://admin:admin@{ip}/protect/rb1f.cgi",
+					map[string]any{"ip": ip},
+				), 2,
+				)
 			}
+
 		}()
 
 		// Wake MACs
 		go func() {
+			time.Sleep(5 * time.Minute)
 			for _, mac := range config.ALLMAC {
 				for i := 0; i < 4; i++ {
 					protocols.SendWOL(mac)
@@ -281,13 +293,30 @@ func powerPark(c *gin.Context) {
 
 		// Turn on projectors
 		go func() {
+			time.Sleep(5 * time.Minute)
 			for _, pj := range config.ALLPJ {
-
 				// вот это тока для рязани исключение, в других проектах надо его убирать
 				if pj != "172.16.3.73" {
 					protocols.SendPjlink(pj, "on")
 				}
 			}
+		}()
+
+		// Turn on lidar relay
+		go func() {
+			protocols.SendGet(formater.CustomStr(
+				"http://admin:admin@{ip}/protect/rb0n.cgi",
+				map[string]any{"ip": "10.8.3.62"},
+			), 2,
+			)
+
+			time.Sleep(1 * time.Minute)
+
+			protocols.SendGet(formater.CustomStr(
+				"http://admin:admin@{ip}/protect/rb0f.cgi",
+				map[string]any{"ip": "10.8.3.62"},
+			), 2,
+			)
 		}()
 
 		// // Turn defaults on lights
@@ -315,17 +344,17 @@ func powerPark(c *gin.Context) {
 			}
 		}()
 
-		// // Turn off relay
-		// go func() {
-		// 	time.Sleep(5 * time.Minute)
-		// 	for _, ip := range config.ALLRELAY {
-		// 		protocols.SendGet(formater.CustomStr(
-		// 			"http://admin:admin@{ip}/protect/rb0n.cgi",
-		// 			map[string]any{"ip": ip},
-		// 		), 2,
-		// 		)
-		// 	}
-		// }()
+		// Turn off relay
+		go func() {
+			time.Sleep(5 * time.Minute)
+			for _, ip := range config.ALLRELAY {
+				protocols.SendGet(formater.CustomStr(
+					"http://admin:admin@{ip}/protect/rb0n.cgi",
+					map[string]any{"ip": ip},
+				), 2,
+				)
+			}
+		}()
 
 	case "restart":
 		// Restart PCs by IP
