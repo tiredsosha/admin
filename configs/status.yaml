@@ -1,208 +1,208 @@
 zones:
-  - id: entrance
-    status:
-      pc_1: 520
-      pj_1: 520
-      pj_2: 520
-      pj_3: 520
-      pj_4: 520
-  - id: germanPlans
-    status:
-      pc_1: 520
-  - id: germanWar
-    innerZones:
-      - id: germanWarLed
-        status:
-          pc_1: 520
-      - id: germanWarTouch
-        status:
-          pc_1: 520
-  - id: statistics
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: germanTV
-    status:
-      pc_1: 520
-  - id: family
-    innerZones:
-      - id: familyLed
-        status:
-          pc_1: 520
-      - id: familyMother
-        status:
-          pc_1: 520
-      - id: familyFather
-        status:
-          pc_1: 520
-      - id: familyDaugther
-        status:
-          pc_1: 520
-      - id: familySon
-        status:
-          pc_1: 520
-      - id: familyKids
-        status:
-          pc_1: 520
-  - id: hijacking
-    status:
-      pc_1: 520
-      pj_1: 520
-      pj_2: 520
-  - id: gazvagen
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: kids
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: izba
-    status:
-      pc_1: 520
-  - id: burnedLand
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: burnedTouch
-    status:
-      pc_1: 520
-  - id: prisonMap
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: prisonBox
-    status:
-      pc_1: 520
-  - id: nari
-    status:
-      pc_1: 520
-  - id: birds
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: boy
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: boyTouch
-    status:
-      pc_1: 520
-  - id: carriagePlatform
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: carriageCabinet
-    status:
-      pc_1: 520
-  - id: carriageGirl
-    status:
-      pc_1: 520
-  - id: carriageOfficer
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: carriageTranslucent
-    status:
-      pc_1: 520
-  - id: keningMarket
-    status:
-      pc_1: 520
-  - id: keningGirl
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: keningLetters
-    status:
-      pc_1: 520
-  - id: flatDaugher
-    status:
-      pc_1: 520
-  - id: flatWindow
-    status:
-      pc_1: 520
-  - id: flatBox
-    innerZones:
-      - id: flatBoxLeft
-        status:
-          pc_1: 520
-      - id: flatBoxRight
-        status:
-          pc_1: 520
-  - id: leningrad
-    status:
-      pc_1: 520
-      pj_1: 520
-      pj_2: 520
-  - id: culturePiano
-    status:
-      pc_1: 520
-  - id: cultureKhabensky
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: cultureTouch
-    status:
-      pc_1: 520
-  - id: europe
-    status:
-      pc_1: 520
-      pj_1: 520
-      pj_2: 520
-  - id: europeMap
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: europeFather
-    status:
-      pc_1: 520
-  - id: europeScale
-    status:
-      pc_1: 520
-  - id: europeHolo
-    status:
-      pc_1: 520
-  - id: europeCinema
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: japanHologram
-    status:
-      pc_1: 520
-  - id: japanPhotos
-    innerZones:
-      - id: photosLeft
-        status:
-          pc_1: 520
-          pj_1: 520
-      - id: photosRight
-        status:
-          pc_1: 520
-          pj_1: 520
-  - id: japanMap
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: japanTranslucent
-    status:
-      pc_1: 520
-  - id: japanSon
-    status:
-      pc_1: 520
-  - id: nur
-    status:
-      pc_1: 520
-      pj_1: 520
-      pj_2: 520
-  - id: court
-    status:
-      pc_1: 520
-      pj_1: 520
-  - id: nurTouch
-    innerZones:
-      - id: nurTouchLeft
-        status:
-          pc_1: 520
-      - id: nurTouchRight
-        status:
-          pc_1: 520
+    - id: entrance
+      status:
+        pc_1: 200
+        pj_1: 200
+        pj_2: 200
+        pj_3: 200
+        pj_4: 200
+    - id: germanPlans
+      status:
+        pc_1: 200
+    - id: germanWar
+      innerZones:
+        - id: germanWarLed
+          status:
+            pc_1: 200
+        - id: germanWarTouch
+          status:
+            pc_1: 200
+    - id: statistics
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: germanTV
+      status:
+        pc_1: 200
+    - id: family
+      innerZones:
+        - id: familyLed
+          status:
+            pc_1: 200
+        - id: familyMother
+          status:
+            pc_1: 200
+        - id: familyFather
+          status:
+            pc_1: 200
+        - id: familyDaugther
+          status:
+            pc_1: 200
+        - id: familySon
+          status:
+            pc_1: 200
+        - id: familyKids
+          status:
+            pc_1: 200
+    - id: hijacking
+      status:
+        pc_1: 200
+        pj_1: 200
+        pj_2: 200
+    - id: gazvagen
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: kids
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: izba
+      status:
+        pc_1: 200
+    - id: burnedLand
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: burnedTouch
+      status:
+        pc_1: 200
+    - id: prisonMap
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: prisonBox
+      status:
+        pc_1: 200
+    - id: nari
+      status:
+        pc_1: 200
+    - id: birds
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: boy
+      status:
+        pc_1: 200
+        pj_1: 520
+    - id: boyTouch
+      status:
+        pc_1: 200
+    - id: carriagePlatform
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: carriageCabinet
+      status:
+        pc_1: 200
+    - id: carriageGirl
+      status:
+        pc_1: 200
+    - id: carriageOfficer
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: carriageTranslucent
+      status:
+        pc_1: 200
+    - id: keningMarket
+      status:
+        pc_1: 200
+    - id: keningGirl
+      status:
+        pc_1: 200
+        pj_1: 520
+    - id: keningLetters
+      status:
+        pc_1: 200
+    - id: flatDaugher
+      status:
+        pc_1: 200
+    - id: flatWindow
+      status:
+        pc_1: 200
+    - id: flatBox
+      innerZones:
+        - id: flatBoxLeft
+          status:
+            pc_1: 200
+        - id: flatBoxRight
+          status:
+            pc_1: 200
+    - id: leningrad
+      status:
+        pc_1: 200
+        pj_1: 200
+        pj_2: 200
+    - id: culturePiano
+      status:
+        pc_1: 200
+    - id: cultureKhabensky
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: cultureTouch
+      status:
+        pc_1: 200
+    - id: europe
+      status:
+        pc_1: 200
+        pj_1: 200
+        pj_2: 200
+    - id: europeMap
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: europeFather
+      status:
+        pc_1: 200
+    - id: europeScale
+      status:
+        pc_1: 200
+    - id: europeHolo
+      status:
+        pc_1: 200
+    - id: europeCinema
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: japanHologram
+      status:
+        pc_1: 200
+    - id: japanPhotos
+      innerZones:
+        - id: photosLeft
+          status:
+            pc_1: 200
+            pj_1: 200
+        - id: photosRight
+          status:
+            pc_1: 200
+            pj_1: 200
+    - id: japanMap
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: japanTranslucent
+      status:
+        pc_1: 200
+    - id: japanSon
+      status:
+        pc_1: 200
+    - id: nur
+      status:
+        pc_1: 200
+        pj_1: 200
+        pj_2: 200
+    - id: court
+      status:
+        pc_1: 200
+        pj_1: 200
+    - id: nurTouch
+      innerZones:
+        - id: nurTouchLeft
+          status:
+            pc_1: 200
+        - id: nurTouchRight
+          status:
+            pc_1: 200
