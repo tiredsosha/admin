@@ -112,6 +112,16 @@ func powerRelay(c *gin.Context) {
 func powerFire(c *gin.Context) {
 	logger.Error.Println("!!!!!!!!!!FIRE ALERT!!!!!!!!!!")
 
+	go func() {
+		for _, ip := range config.ALLRELAY {
+			protocols.SendGet(formater.CustomStr(
+				"http://admin:admin@{ip}/protect/rb1n.cgi",
+				map[string]any{"ip": ip},
+			), 2,
+			)
+		}
+	}()
+
 	// Power off PCs by IP
 	go func() {
 		for _, ip := range config.ALLPC {
@@ -133,11 +143,6 @@ func powerFire(c *gin.Context) {
 		for _, ip := range config.ALLRELAY {
 			protocols.SendGet(formater.CustomStr(
 				"http://admin:admin@{ip}/protect/rb0n.cgi",
-				map[string]any{"ip": ip},
-			), 2,
-			)
-			protocols.SendGet(formater.CustomStr(
-				"http://admin:admin@{ip}/protect/rb1n.cgi",
 				map[string]any{"ip": ip},
 			), 2,
 			)
