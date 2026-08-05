@@ -1,24 +1,10 @@
 relayMoscow:
-  controller_1: 10.1.0.120
-  controller_2: 10.1.0.129
+  controller_1: 10.8.1.145
 relayStalin:
-  controller_1: 10.1.0.121
-  controller_2: 10.1.0.130
+  controller_1: 10.8.1.144
 relayLenin:
-  controller_1: 10.1.0.122
-  controller_2: 10.1.0.131
+  controller_1: 10.8.1.143
 relayKursk:
-  controller_1: 10.1.0.123
-  controller_2: 10.1.0.132
+  controller_1: 10.8.1.142
 relayDnepro:
-  controller_1: 10.1.0.124
-  controller_2: 10.1.0.133
-relayBerlin:
-  controller_1: 10.1.0.125
-  controller_2: 10.1.0.134
-relayHallStalin:
-  controller_1: 10.1.0.126
-relayHallKonev:
-  controller_1: 10.1.0.127
-relayHallDnepro:
-  controller_1: 10.1.0.128
+  controller_1: 10.8.1.141

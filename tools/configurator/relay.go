@@ -9,6 +9,7 @@ import (
 )
 
 var Relays map[string]map[string]string
+var ALLRELAY []string
 
 func configRelay() error {
 	// Read the YAML file
@@ -24,6 +25,7 @@ func configRelay() error {
 		logger.Error.Printf("error unmarshaling configRelay.yaml: %v", err)
 		return err
 	}
+	FindAllRelay()
 	return err
 }
 
@@ -55,4 +57,21 @@ func FindRelay(main string) []string {
 	}
 	logger.Debug.Printf("relay ips in zone '%s': %v\n", main, ipList)
 	return ipList
+}
+
+func FindAllRelay() {
+	// Collect all IPs
+	ipSet := make(map[string]struct{}) // use a set to avoid duplicates
+	for _, zone := range Relays {
+		for _, ip := range zone {
+			ipSet[ip] = struct{}{}
+		}
+	}
+
+	// Convert set to list
+	for ip := range ipSet {
+		ALLRELAY = append(ALLRELAY, ip)
+	}
+	logger.Debug.Println("all relay ip listed")
+	// logger.Debug.Printf("all relay ip - '%v'\n", ALLRELAY)
 }

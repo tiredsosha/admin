@@ -17,6 +17,7 @@ func router(server *gin.Engine) {
 		power.POST("/pc", powerPc)
 		power.POST("/projector", powerProjector)
 		power.POST("/relay", powerRelay)
+		power.GET("/fire", powerFire)
 	}
 
 	restart := server.Group("/restart")
