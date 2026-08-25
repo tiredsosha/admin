@@ -1,54 +1,30 @@
-reception:
-  ip: 10.1.1.11
-  mac: 30:C5:99:56:5B:D4
-mascot:
-  ip: 10.1.2.11
-  mac: 30:C5:99:56:5B:8F
-fossilsLeft:
-  ip: 10.1.3.11
-  mac: 10:7C:61:B5:6D:3D
-fossilsRight:
-  ip: 10.1.3.12
-  mac: 30:C5:99:56:5B:37
-originLed:
-  ip: 10.1.4.11
-  mac: 30:C5:99:56:5C:3B
-originTouchLeft:
-  ip: 10.1.4.12
-  mac: 30:C5:99:56:5B:8D
-originTouchRight:
-  ip: 10.1.4.13
-  mac: 30:C5:99:56:5B:E3
-herbivoresLed:
-  ip: 10.1.5.11
-  mac: 30:56:0F:70:D1:03
-herbivoresTouch:
-  ip: 10.1.5.12
-  mac: 30:C5:99:56:5B:9E
-predatorsLed:
-  ip: 10.1.6.11
-  mac: 30:C5:99:56:5C:64
-predatorsTouch:
-  ip: 10.1.6.21
-  mac: A0:AD:9F:DA:50:CD
-flying:
-  ip: 10.1.7.11
-  mac: A0:AD:9F:DA:4F:73
-marineLed:
-  ip: 10.1.8.11
-  mac: 30:56:0F:70:DD:8B
-marineProjection:
-  ip: 10.1.8.12
-  mac: 30:56:0F:70:DD:B0
-russia:
-  ip: 10.1.9.11
-  mac: 30:C5:99:56:5B:98
-descendants:
-  ip: 10.1.10.11
-  mac: 30:C5:99:56:5C:39
-photozone:
-  ip: 10.1.11.11
-  mac: A0:AD:9F:1C:46:7B
+arceology:
+  ip: 10.1.1.21
+  mac: 34:5A:60:FD:03:13
+katerina:
+  ip: 10.1.2.21
+  mac: 34:5A:60:FD:03:14
+empire:
+  ip: 10.1.3.21
+  mac: 34:5A:60:FD:03:11
+mine:
+  ip: 10.1.8.21
+  mac: 30:56:0F:34:0A:8D
+guards:
+  ip: 10.1.8.21
+  mac: 30:56:0F:34:0A:8D
+war:
+  ip: 10.1.5.21
+  mac: 30:56:0F:5C:8B:06
+vov:
+  ip: 10.1.5.22
+  mac: 30-56-0f-56-5b-e3
+map:
+  ip: 10.1.6.22
+  mac: 34:5A:60:FD:03:1B
+ussr:
+  ip: 10.1.8.21
+  mac: 30:56:0F:34:0A:8D
 facade:
-  ip: 10.1.12.11
-  mac: A0:AD:9F:1C:46:89
+  ip: 10.1.7.21
+  mac: 34:5A:60:FD:02:AB
