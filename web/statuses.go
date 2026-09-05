@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"os"
+	"path/filepath"
 	"regexp"
 	"sort"
 	"sync"
@@ -71,16 +72,14 @@ func statusPark(c *gin.Context) {
 // -------------------- Init --------------------
 
 func StatusInit() {
-	data, err := os.ReadFile(statusYAMLPath)
+	loaded, err := loadStatusFromFile(statusYAMLPath)
 	if err != nil {
-		logger.Warn.Println("Error reading YAML:", err)
-		return
-	}
-
-	var loaded Status
-	if err := yaml.Unmarshal(data, &loaded); err != nil {
-		logger.Warn.Println("Error unmarshalling YAML:", err)
-		return
+		logger.Warn.Println("StatusInit: failed to read status YAML, trying defaults:", err)
+		loaded, err = loadStatusFromFile(filepath.Join("configs", "defaults", "statusDefault.yaml"))
+		if err != nil {
+			logger.Error.Println("StatusInit: default status fallback failed:", err)
+			return
+		}
 	}
 
 	if len(loaded.Zones) == 0 {
@@ -93,6 +92,27 @@ func StatusInit() {
 	statusMu.Unlock()
 
 	logger.Info.Printf("StatusInit: loaded %d zones", len(loaded.Zones))
+}
+
+func loadStatusFromFile(path string) (Status, error) {
+	data, err := os.ReadFile(path)
+	if err != nil {
+		return Status{}, err
+	}
+	if len(data) == 0 {
+		return Status{}, os.ErrInvalid
+	}
+
+	var loaded Status
+	if err := yaml.Unmarshal(data, &loaded); err != nil {
+		return Status{}, err
+	}
+
+	if len(loaded.Zones) == 0 {
+		return Status{}, os.ErrInvalid
+	}
+
+	return loaded, nil
 }
 
 // -------------------- Update orchestration --------------------
@@ -302,12 +322,12 @@ func persistSnapshots() error {
 		return err
 	}
 
-	if err := os.WriteFile(statusYAMLPath, yamlBytes, 0644); err != nil {
+	if err := writeFileAtomic(statusYAMLPath, yamlBytes, 0644); err != nil {
 		logger.Warn.Println(err)
 		return err
 	}
 
-	if err := os.WriteFile(statusJSONPath, jsonBytes, 0644); err != nil {
+	if err := writeFileAtomic(statusJSONPath, jsonBytes, 0644); err != nil {
 		logger.Warn.Println(err)
 		return err
 	}
@@ -315,13 +335,39 @@ func persistSnapshots() error {
 	return nil
 }
 
-// func writeFileAtomic(path string, data []byte, perm os.FileMode) error {
-// 	dir := filepath.Dir(path)
-// 	base := filepath.Base(path)
+func writeFileAtomic(path string, data []byte, perm os.FileMode) error {
+	dir := filepath.Dir(path)
+	base := filepath.Base(path)
 
-// 	tmp := filepath.Join(dir, "."+base+".tmp")
-// 	if err := os.WriteFile(tmp, data, perm); err != nil {
-// 		return err
-// 	}
-// 	return os.Rename(tmp, path)
-// }
+	tmpFile, err := os.CreateTemp(dir, "."+base+".*.tmp")
+	if err != nil {
+		return err
+	}
+	tmpName := tmpFile.Name()
+
+	if _, err := tmpFile.Write(data); err != nil {
+		_ = tmpFile.Close()
+		_ = os.Remove(tmpName)
+		return err
+	}
+	if err := tmpFile.Chmod(perm); err != nil {
+		_ = tmpFile.Close()
+		_ = os.Remove(tmpName)
+		return err
+	}
+	if err := tmpFile.Close(); err != nil {
+		_ = os.Remove(tmpName)
+		return err
+	}
+
+	if err := os.Remove(path); err != nil && !os.IsNotExist(err) {
+		_ = os.Remove(tmpName)
+		return err
+	}
+	if err := os.Rename(tmpName, path); err != nil {
+		_ = os.Remove(tmpName)
+		return err
+	}
+
+	return nil
+}

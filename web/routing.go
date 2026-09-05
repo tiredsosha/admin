@@ -40,6 +40,13 @@ func router(server *gin.Engine) {
 		status.GET("/park", statusPark)
 	}
 
+	resolume := server.Group("/resolume")
+	{
+		resolume.POST("/next", resolumeNext)
+		resolume.POST("/prev", resolumePrev)
+		resolume.POST("/blackout", resolumeBlackout)
+	}
+
 	debug := server.Group("/debug")
 	{
 		debug.GET("/getTest", testGet)
