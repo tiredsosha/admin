@@ -1,6 +1,41 @@
 {
   "zones": [
     {
+      "id": "relay",
+      "innerZones": [
+        {
+          "id": "relayMoscow",
+          "status": {
+            "controller_1": 200
+          }
+        },
+        {
+          "id": "relayStalin",
+          "status": {
+            "controller_1": 200
+          }
+        },
+        {
+          "id": "relayLenin",
+          "status": {
+            "controller_1": 200
+          }
+        },
+        {
+          "id": "relayKursk",
+          "status": {
+            "controller_1": 200
+          }
+        },
+        {
+          "id": "relayDnepro",
+          "status": {
+            "controller_1": 200
+          }
+        }
+      ]
+    },
+    {
       "id": "entrance",
       "status": {
         "pc_1": 521,
