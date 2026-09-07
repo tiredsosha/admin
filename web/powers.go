@@ -91,9 +91,9 @@ func powerRelay(c *gin.Context) {
 	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
-		command = "n"
-	} else {
 		command = "f"
+	} else {
+		command = "n"
 	}
 	zoneRelay := config.FindRelay(data.Zone)
 	for _, ip := range zoneRelay {
