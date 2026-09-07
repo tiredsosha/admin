@@ -193,6 +193,12 @@ func GenerateIp() error {
 }
 
 func equipmentIP(zone, equipment string) (string, error) {
+	if relays, ok := Relays[zone]; ok {
+		if ip, ok := relays[equipment]; ok && ip != "" {
+			return ip, nil
+		}
+	}
+
 	if equipment == "pc_1" {
 		if pc, ok := PC[zone]; ok {
 			if ip, ok := pc["ip"]; ok && ip != "" {
