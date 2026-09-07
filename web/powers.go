@@ -168,12 +168,12 @@ func powerZone(c *gin.Context) {
 	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
-		command = "n"
+		command = "f"
 		for range 4 {
 			protocols.SendWOL(config.FindPC(data.Zone, "mac"))
 		}
 	} else {
-		command = "f"
+		command = "n"
 		protocols.SendGet(formater.CustomStr(
 			"http://{ip}:3001/off",
 			map[string]any{"ip": config.FindPC(data.Zone, "ip")}), 2,
