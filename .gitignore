@@ -71,4 +71,4 @@ manifest.xml
 *.lnk
 
 # ipconfig file
-ip.yaml
+/config/ip.yaml
