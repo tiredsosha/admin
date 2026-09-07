@@ -46,8 +46,9 @@ var (
 	persistMu sync.Mutex
 
 	// Не позволяет запустить один и тот же тип обновления повторно.
-	pcRunning atomic.Bool
-	pjRunning atomic.Bool
+	pcRunning    atomic.Bool
+	pjRunning    atomic.Bool
+	relayRunning atomic.Bool
 )
 
 type ipRecord struct {
@@ -119,6 +120,14 @@ func UpdateStatues() {
 		}()
 	}
 
+	if relayRunning.CompareAndSwap(false, true) {
+		go func() {
+			defer relayRunning.Store(false)
+			updateRelay()
+			_ = persistSnapshots()
+		}()
+	}
+
 	// Мгновенную запись здесь не выполняем, чтобы не сохранять устаревшие данные.
 }
 
@@ -135,6 +144,17 @@ type pjJob struct {
 	innerIdx int // -1 означает использование zone.Status.
 	id       string
 	key      string // Например: "pj_1", "pj_2".
+}
+
+type relayJob struct {
+	zoneIdx  int
+	innerIdx int
+	id       string
+}
+
+type relayResult struct {
+	status [2]int
+	count  int
 }
 
 var pjKeyRe = regexp.MustCompile(`^pj_\d+$`)
@@ -201,6 +221,53 @@ func updatePJ() {
 	statusMu.Unlock()
 
 	logger.Debug.Println("pj statuses updated")
+}
+
+func updateRelay() {
+	statusMu.RLock()
+	var jobs []relayJob
+	for zoneIdx, zone := range statusData.Zones {
+		if zone.ID != "relay" {
+			continue
+		}
+		for innerIdx, inner := range zone.InnerZones {
+			jobs = append(jobs, relayJob{zoneIdx: zoneIdx, innerIdx: innerIdx, id: inner.ID})
+		}
+		break
+	}
+	statusMu.RUnlock()
+
+	results := make([]relayResult, len(jobs))
+	for i, job := range jobs {
+		relays := config.FindRelay(job.id)
+		if len(relays) == 0 {
+			logger.Warn.Println("no relay found for inner zone:", job.id)
+			continue
+		}
+
+		results[i].count = len(relays)
+		for controller := 0; controller < len(relays) && controller < 2; controller++ {
+			results[i].status[controller] = protocols.GetRelay(formater.CustomStr(
+				"http://{ip}/pstat.xml",
+				map[string]any{"ip": relays[controller]}), 1,
+			)
+		}
+	}
+
+	statusMu.Lock()
+	for i, job := range jobs {
+		if results[i].count == 0 {
+			continue
+		}
+		ensureInnerStatusMap(job.zoneIdx, job.innerIdx)
+		statusData.Zones[job.zoneIdx].InnerZones[job.innerIdx].Status["controller_1"] = results[i].status[0]
+		if results[i].count > 1 {
+			statusData.Zones[job.zoneIdx].InnerZones[job.innerIdx].Status["controller_2"] = results[i].status[1]
+		}
+	}
+	statusMu.Unlock()
+
+	logger.Debug.Println("relay statuses updated")
 }
 
 // buildPCJobs создаёт задачи обновления ПК по текущей структуре статусов.

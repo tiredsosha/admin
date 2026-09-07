@@ -5,7 +5,7 @@ zones:
         pj_1: 520
         pj_2: 520
         pj_3: 520
-        pj_4: 520
+        pj_4: 0
     - id: germanPlans
       status:
         pc_1: 521
@@ -20,7 +20,7 @@ zones:
     - id: statistics
       status:
         pc_1: 521
-        pj_1: 520
+        pj_1: 0
     - id: germanTV
       status:
         pc_1: 521
@@ -47,16 +47,16 @@ zones:
     - id: hijacking
       status:
         pc_1: 521
-        pj_1: 520
-        pj_2: 520
+        pj_1: 0
+        pj_2: 0
     - id: gazvagen
       status:
         pc_1: 521
-        pj_1: 520
+        pj_1: 0
     - id: kids
       status:
         pc_1: 521
-        pj_1: 520
+        pj_1: 0
     - id: izba
       status:
         pc_1: 521
@@ -70,7 +70,7 @@ zones:
     - id: prisonMap
       status:
         pc_1: 521
-        pj_1: 520
+        pj_1: 0
     - id: prisonBox
       status:
         pc_1: 521
@@ -111,7 +111,7 @@ zones:
     - id: keningGirl
       status:
         pc_1: 521
-        pj_1: 520
+        pj_1: 0
     - id: keningLetters
       status:
         pc_1: 521
@@ -132,8 +132,8 @@ zones:
     - id: leningrad
       status:
         pc_1: 521
-        pj_1: 520
-        pj_2: 520
+        pj_1: 0
+        pj_2: 0
     - id: culturePiano
       status:
         pc_1: 521
@@ -147,12 +147,12 @@ zones:
     - id: europe
       status:
         pc_1: 521
-        pj_1: 520
-        pj_2: 520
+        pj_1: 0
+        pj_2: 0
     - id: europeMap
       status:
         pc_1: 521
-        pj_1: 520
+        pj_1: 0
     - id: europeFather
       status:
         pc_1: 521
@@ -165,7 +165,7 @@ zones:
     - id: europeCinema
       status:
         pc_1: 521
-        pj_1: 520
+        pj_1: 0
     - id: japanHologram
       status:
         pc_1: 521
@@ -174,15 +174,15 @@ zones:
         - id: photosLeft
           status:
             pc_1: 521
-            pj_1: 520
+            pj_1: 0
         - id: photosRight
           status:
             pc_1: 521
-            pj_1: 520
+            pj_1: 0
     - id: japanMap
       status:
         pc_1: 521
-        pj_1: 520
+        pj_1: 0
     - id: japanTranslucent
       status:
         pc_1: 521
@@ -192,8 +192,8 @@ zones:
     - id: nur
       status:
         pc_1: 521
-        pj_1: 520
-        pj_2: 520
+        pj_1: 0
+        pj_2: 0
     - id: court
       status:
         pc_1: 521
