@@ -111,7 +111,7 @@ func SendPost(url string, reqData string, timeout int) {
 // }
 
 func GetRelay(url string, timeout int) int {
-	status := 200
+	status := 521
 	var timeoutDur time.Duration = time.Duration(timeout) * time.Second
 
 	// Create an HTTP client with timeout
@@ -157,7 +157,7 @@ func GetRelay(url string, timeout int) int {
 	}
 
 	if value == 1 {
-		status = 521
+		status = 200
 	}
 	logger.Debug.Println("relay status -", value)
 

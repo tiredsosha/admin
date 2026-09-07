@@ -91,9 +91,9 @@ func powerRelay(c *gin.Context) {
 	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
-		command = "f"
-	} else {
 		command = "n"
+	} else {
+		command = "f"
 	}
 	zoneRelay := config.FindRelay(data.Zone)
 	for _, ip := range zoneRelay {
@@ -168,12 +168,12 @@ func powerZone(c *gin.Context) {
 	logger.Info.Println("request data -", data)
 
 	if data.Command == "on" {
-		command = "f"
+		command = "n"
 		for range 4 {
 			protocols.SendWOL(config.FindPC(data.Zone, "mac"))
 		}
 	} else {
-		command = "n"
+		command = "f"
 		protocols.SendGet(formater.CustomStr(
 			"http://{ip}:3001/off",
 			map[string]any{"ip": config.FindPC(data.Zone, "ip")}), 2,
