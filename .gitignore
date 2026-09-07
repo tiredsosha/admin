@@ -69,3 +69,6 @@ manifest.xml
 
 # Windows shortcuts
 *.lnk
+
+# ipconfig file
+ip.yaml
