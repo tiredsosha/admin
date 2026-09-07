@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 	"os"
+	"path/filepath"
 	"regexp"
 	"sort"
 	"sync"
@@ -17,7 +18,7 @@ import (
 	"gopkg.in/yaml.v3"
 )
 
-// -------------------- Data model --------------------
+// -------------------- Модели данных --------------------
 
 type Status struct {
 	Zones []Zone `yaml:"zones" json:"zones"`
@@ -34,31 +35,37 @@ type InnerZone struct {
 	Status map[string]int `yaml:"status" json:"status"`
 }
 
-// -------------------- Shared state --------------------
+// -------------------- Общее состояние --------------------
 
 var (
-	// shared status data
+	// Общие данные о статусах.
 	statusData Status
 
-	// protects statusData
+	// Защищает statusData от одновременного чтения и изменения.
 	statusMu  sync.RWMutex
 	persistMu sync.Mutex
 
-	// prevents re-entry for same updater
+	// Не позволяет запустить один и тот же тип обновления повторно.
 	pcRunning atomic.Bool
 	pjRunning atomic.Bool
 )
 
-// -------------------- Paths --------------------
+type ipRecord struct {
+	Zone      string `yaml:"zone" json:"zone"`
+	Equipment string `yaml:"equipment" json:"equipment"`
+	IP        string `yaml:"ip" json:"ip"`
+}
+
+// -------------------- Пути к файлам --------------------
 
 const (
 	statusYAMLPath = "./configs/status.yaml"
 	statusJSONPath = "./configs/status.json"
 )
 
-// -------------------- HTTP handler --------------------
+// -------------------- HTTP-обработчики --------------------
 
-// Returns latest JSON snapshot from file (because a separate program reads files too)
+// statusPark возвращает последний JSON-снимок статусов из файла.
 func statusPark(c *gin.Context) {
 	b, err := os.ReadFile(statusJSONPath)
 	if err != nil {
@@ -68,8 +75,7 @@ func statusPark(c *gin.Context) {
 	c.Data(http.StatusOK, "application/json", b)
 }
 
-// -------------------- Init --------------------
-
+// StatusInit загружает начальные данные о статусах из YAML-файла.
 func StatusInit() {
 	data, err := os.ReadFile(statusYAMLPath)
 	if err != nil {
@@ -95,18 +101,13 @@ func StatusInit() {
 	logger.Info.Printf("StatusInit: loaded %d zones", len(loaded.Zones))
 }
 
-// -------------------- Update orchestration --------------------
-
-// запускает обновления независимо:
-// - pc обновление не стартует повторно, пока предыдущее не завершилось
-// - pj обновление не стартует повторно, пока предыдущее не завершилось
-// - pc и pj не блокируют друг друга (нет lock во время сети)
+// UpdateStatues запускает независимое обновление статусов ПК и проекторов.
 func UpdateStatues() {
 	if pcRunning.CompareAndSwap(false, true) {
 		go func() {
 			defer pcRunning.Store(false)
 			updatePC()
-			_ = persistSnapshots() // ошибки уже логируются внутри
+			_ = persistSnapshots() // Ошибки уже логируются внутри.
 		}()
 	}
 
@@ -118,32 +119,32 @@ func UpdateStatues() {
 		}()
 	}
 
-	// Можно оставить мгновенную запись тоже, но обычно не нужно.
-	// Здесь сознательно НЕ вызываем persistSnapshots(), чтобы не писать старые данные.
+	// Мгновенную запись здесь не выполняем, чтобы не сохранять устаревшие данные.
 }
 
-// -------------------- Jobs (no locks while network) --------------------
+// -------------------- Задачи (без блокировок во время сетевых запросов) --------------------
 
 type pcJob struct {
 	zoneIdx  int
-	innerIdx int // -1 => zone.Status
+	innerIdx int // -1 означает использование zone.Status.
 	id       string
 }
 
 type pjJob struct {
 	zoneIdx  int
-	innerIdx int // -1 => zone.Status
+	innerIdx int // -1 означает использование zone.Status.
 	id       string
-	key      string // "pj_1", "pj_2"...
+	key      string // Например: "pj_1", "pj_2".
 }
 
 var pjKeyRe = regexp.MustCompile(`^pj_\d+$`)
 
+// updatePC запрашивает и сохраняет статусы всех настроенных ПК.
 func updatePC() {
-	// 1) Build jobs under RLock (no network)
+	// 1. Формируем задачи под RLock, сетевых запросов здесь нет.
 	jobs := buildPCJobs()
 
-	// 2) Network phase without locks
+	// 2. Выполняем сетевые запросы без блокировок.
 	results := make([]int, len(jobs))
 	for i, job := range jobs {
 		ip := config.FindPC(job.id, "ip")
@@ -151,7 +152,7 @@ func updatePC() {
 		results[i] = protocols.GetPC(url, 1)
 	}
 
-	// 3) Apply results under Lock (short)
+	// 3. Короткое применение результатов под Lock.
 	statusMu.Lock()
 	for i, job := range jobs {
 		v := results[i]
@@ -170,25 +171,26 @@ func updatePC() {
 	logger.Debug.Println("pc statuses updated")
 }
 
+// updatePJ запрашивает и сохраняет статусы всех настроенных проекторов.
 func updatePJ() {
-	// 1) Build jobs under RLock (no network)
+	// 1. Формируем задачи под RLock, сетевых запросов здесь нет.
 	jobs := buildPJJobs()
 
-	// 2) Network phase without locks
+	// 2. Выполняем сетевые запросы без блокировок.
 	results := make([]int, len(jobs))
 	for i, job := range jobs {
-		addr := config.FindPJ(job.id, job.key) // твоя функция ожидает zoneID + "pj_1" и т.п.
+		addr := config.FindPJ(job.id, job.key) // Функция получает ID зоны и ключ "pj_1" и т.п.
 		results[i] = protocols.GetPjlink(addr)
 	}
 
-	// 3) Apply results under Lock (short)
+	// 3. Короткое применение результатов под Lock.
 	statusMu.Lock()
 	for i, job := range jobs {
 		v := results[i]
 
 		if job.innerIdx == -1 {
 			ensureZoneStatusMap(job.zoneIdx)
-			// пишем только если ключ реально существует/нужен
+			// Записываем только нужный ключ оборудования.
 			statusData.Zones[job.zoneIdx].Status[job.key] = v
 			continue
 		}
@@ -201,6 +203,7 @@ func updatePJ() {
 	logger.Debug.Println("pj statuses updated")
 }
 
+// buildPCJobs создаёт задачи обновления ПК по текущей структуре статусов.
 func buildPCJobs() []pcJob {
 	statusMu.RLock()
 	defer statusMu.RUnlock()
@@ -208,17 +211,17 @@ func buildPCJobs() []pcJob {
 	jobs := make([]pcJob, 0, len(statusData.Zones))
 
 	for i, z := range statusData.Zones {
-		// твой хардкод пропуска
+		// Эти зоны не относятся к ПК.
 		if z.ID == "relay" || z.ID == "light" {
 			continue
 		}
 
-		// Обновляем pc_1 для зоны, если у неё вообще есть status-map (как у тебя было)
+		// Добавляем ПК зоны, если у неё есть карта статусов.
 		if z.Status != nil {
 			jobs = append(jobs, pcJob{zoneIdx: i, innerIdx: -1, id: z.ID})
 		}
 
-		// InnerZones — всегда пытаемся обновлять pc_1 (как было раньше)
+		// Для вложенных зон также добавляем задачу обновления ПК.
 		for j := range z.InnerZones {
 			jobs = append(jobs, pcJob{zoneIdx: i, innerIdx: j, id: z.InnerZones[j].ID})
 		}
@@ -227,6 +230,7 @@ func buildPCJobs() []pcJob {
 	return jobs
 }
 
+// buildPJJobs создаёт задачи обновления проекторов по текущей структуре статусов.
 func buildPJJobs() []pjJob {
 	statusMu.RLock()
 	defer statusMu.RUnlock()
@@ -236,14 +240,14 @@ func buildPJJobs() []pjJob {
 	for i := range statusData.Zones {
 		z := statusData.Zones[i]
 
-		// zone level pj_*
+		// Проекторы на уровне основной зоны.
 		for key := range z.Status {
 			if pjKeyRe.MatchString(key) {
 				jobs = append(jobs, pjJob{zoneIdx: i, innerIdx: -1, id: z.ID, key: key})
 			}
 		}
 
-		// inner level pj_*
+		// Проекторы на уровне вложенной зоны.
 		for j := range z.InnerZones {
 			in := z.InnerZones[j]
 			for key := range in.Status {
@@ -254,7 +258,7 @@ func buildPJJobs() []pjJob {
 		}
 	}
 
-	// стабильный порядок (приятно для логов/отладки)
+	// Фиксируем порядок для удобства логирования и отладки.
 	sort.Slice(jobs, func(a, b int) bool {
 		if jobs[a].id == jobs[b].id {
 			return jobs[a].key < jobs[b].key
@@ -265,19 +269,23 @@ func buildPJJobs() []pjJob {
 	return jobs
 }
 
+// ensureZoneStatusMap создаёт карту статусов зоны, если она отсутствует.
 func ensureZoneStatusMap(zoneIdx int) {
 	if statusData.Zones[zoneIdx].Status == nil {
 		statusData.Zones[zoneIdx].Status = map[string]int{}
 	}
 }
 
+// ensureInnerStatusMap создаёт карту статусов вложенной зоны, если она отсутствует.
 func ensureInnerStatusMap(zoneIdx, innerIdx int) {
 	if statusData.Zones[zoneIdx].InnerZones[innerIdx].Status == nil {
 		statusData.Zones[zoneIdx].InnerZones[innerIdx].Status = map[string]int{}
 	}
 }
 
-// -------------------- Persistence (atomic files) --------------------
+// -------------------- Сохранение (атомарная запись файлов) --------------------
+
+// persistSnapshots сериализует текущие статусы и сохраняет оба снимка.
 func persistSnapshots() error {
 	persistMu.Lock()
 	defer persistMu.Unlock()
@@ -287,7 +295,7 @@ func persistSnapshots() error {
 
 	if len(statusData.Zones) == 0 {
 		logger.Error.Println("persistSnapshots blocked: statusData.Zones is empty")
-		return nil // не сохраняем пустой статус, но и не возвращаем ошибку, чтобы не спамить лог
+		return nil // Не сохраняем пустой статус и не создаём лишнюю запись в логе.
 	}
 
 	yamlBytes, err := yaml.Marshal(statusData)
@@ -302,12 +310,12 @@ func persistSnapshots() error {
 		return err
 	}
 
-	if err := os.WriteFile(statusYAMLPath, yamlBytes, 0644); err != nil {
+	if err := writeFileAtomic(statusYAMLPath, yamlBytes, 0644); err != nil {
 		logger.Warn.Println(err)
 		return err
 	}
 
-	if err := os.WriteFile(statusJSONPath, jsonBytes, 0644); err != nil {
+	if err := writeFileAtomic(statusJSONPath, jsonBytes, 0644); err != nil {
 		logger.Warn.Println(err)
 		return err
 	}
@@ -315,13 +323,48 @@ func persistSnapshots() error {
 	return nil
 }
 
-// func writeFileAtomic(path string, data []byte, perm os.FileMode) error {
-// 	dir := filepath.Dir(path)
-// 	base := filepath.Base(path)
+// writeFileAtomic полностью записывает временный файл и заменяет им целевой.
+func writeFileAtomic(path string, data []byte, perm os.FileMode) error {
+	dir := filepath.Dir(path)
+	base := filepath.Base(path)
 
-// 	tmp := filepath.Join(dir, "."+base+".tmp")
-// 	if err := os.WriteFile(tmp, data, perm); err != nil {
-// 		return err
-// 	}
-// 	return os.Rename(tmp, path)
-// }
+	tmpFile, err := os.CreateTemp(dir, "."+base+".tmp-*")
+	if err != nil {
+		return err
+	}
+	tmpPath := tmpFile.Name()
+	defer os.Remove(tmpPath)
+
+	if err := tmpFile.Chmod(perm); err != nil {
+		_ = tmpFile.Close()
+		return err
+	}
+	if _, err := tmpFile.Write(data); err != nil {
+		_ = tmpFile.Close()
+		return err
+	}
+	if err := tmpFile.Close(); err != nil {
+		return err
+	}
+
+	return os.Rename(tmpPath, path)
+}
+
+// statusIp читает YAML с IP-адресами и возвращает его в формате JSON.
+func statusIp(c *gin.Context) {
+	data, err := os.ReadFile("./configs/ip.yaml")
+	if err != nil {
+		logger.Error.Printf("read ip.yaml: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "failed to read ip.yaml"})
+		return
+	}
+
+	var records []ipRecord
+	if err := yaml.Unmarshal(data, &records); err != nil {
+		logger.Error.Printf("unmarshal ip.yaml: %v", err)
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "failed to parse ip.yaml"})
+		return
+	}
+
+	c.JSON(http.StatusOK, records)
+}

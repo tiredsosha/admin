@@ -39,6 +39,7 @@ func router(server *gin.Engine) {
 	status := server.Group("/status")
 	{
 		status.GET("/park", statusPark)
+		status.GET("/ip", statusIp)
 	}
 
 	debug := server.Group("/debug")

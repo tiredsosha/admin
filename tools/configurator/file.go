@@ -4,6 +4,7 @@ import (
 	"errors"
 	"os"
 	"reflect"
+	"sort"
 	"strings"
 
 	"github.com/tiredsosha/admin/tools/logger"
@@ -18,6 +19,27 @@ type conf struct {
 	Port     int    `yaml:"httpPort"`
 	MqttOn   bool   `yaml:"mqttActive"`
 	StatusOn bool   `yaml:"statusActive"`
+}
+
+type ipConfig struct {
+	Zones []ipZone `yaml:"zones"`
+}
+
+type ipZone struct {
+	ID         string         `yaml:"id"`
+	InnerZones []ipInnerZone  `yaml:"innerZones"`
+	Status     map[string]int `yaml:"status"`
+}
+
+type ipInnerZone struct {
+	ID     string         `yaml:"id"`
+	Status map[string]int `yaml:"status"`
+}
+
+type ipRecord struct {
+	Zone      string `yaml:"zone" json:"zone"`
+	Equipment string `yaml:"equipment" json:"equipment"`
+	IP        string `yaml:"ip" json:"ip"`
 }
 
 // поиск конфига на диске
@@ -103,4 +125,86 @@ func ConfSubInit() {
 		logger.Warn.Println(err)
 		logger.Error.Fatal("EXITING")
 	}
+	if err := GenerateIp(); err != nil {
+		logger.Warn.Println(err)
+		logger.Error.Fatal("EXITING")
+	}
+}
+
+// GenerateIp один раз создаёт таблицу IP-адресов при запуске приложения.
+func GenerateIp() error {
+	data, err := os.ReadFile("./configs/status.yaml")
+	if err != nil {
+		logger.Error.Printf("read status.yaml: %v", err)
+		return errors.New("read status.yaml")
+	}
+
+	var status ipConfig
+	if err := yaml.Unmarshal(data, &status); err != nil {
+		logger.Error.Printf("unmarshal status.yaml: %v", err)
+		return errors.New("unmarshal status.yaml")
+	}
+
+	records := make([]ipRecord, 0)
+	addRecords := func(zone string, statuses map[string]int) error {
+		equipmentNames := make([]string, 0, len(statuses))
+		for equipment := range statuses {
+			equipmentNames = append(equipmentNames, equipment)
+		}
+		sort.Strings(equipmentNames)
+
+		for _, equipment := range equipmentNames {
+			ip, err := equipmentIP(zone, equipment)
+			if err != nil {
+				return err
+			}
+			records = append(records, ipRecord{
+				Zone:      zone,
+				Equipment: equipment,
+				IP:        ip,
+			})
+		}
+		return nil
+	}
+
+	for _, zone := range status.Zones {
+		if err := addRecords(zone.ID, zone.Status); err != nil {
+			return err
+		}
+		for _, innerZone := range zone.InnerZones {
+			if err := addRecords(innerZone.ID, innerZone.Status); err != nil {
+				return err
+			}
+		}
+	}
+
+	output, err := yaml.Marshal(records)
+	if err != nil {
+		logger.Error.Printf("marshal ip.yaml: %v", err)
+		return errors.New("marshal ip.yaml")
+	}
+	if err := os.WriteFile("./configs/ip.yaml", output, 0644); err != nil {
+		logger.Error.Printf("write ip.yaml: %v", err)
+		return errors.New("write ip.yaml")
+	}
+
+	logger.Info.Printf("ip.yaml generated: %d records", len(records))
+	return nil
+}
+
+func equipmentIP(zone, equipment string) (string, error) {
+	if equipment == "pc_1" {
+		if pc, ok := PC[zone]; ok {
+			if ip, ok := pc["ip"]; ok && ip != "" {
+				return ip, nil
+			}
+		}
+	} else if projectors, ok := PJ[zone]; ok {
+		if ip, ok := projectors[equipment]; ok && ip != "" {
+			return ip, nil
+		}
+	}
+
+	logger.Error.Printf("IP not found for equipment %q in zone %q", equipment, zone)
+	return "", errors.New("IP not found")
 }
