@@ -5,7 +5,6 @@ go 1.23.0
 toolchain go1.24.3
 
 require (
-	github.com/LightInstruments/pjlink v0.0.0-20180509124124-bdb7c6b2fb68
 	github.com/WqyJh/go-fstring v0.4.1
 	github.com/eclipse/paho.mqtt.golang v1.4.1
 	github.com/linde12/gowol v0.0.0-20180926075039-797e4d01634c
@@ -59,7 +58,8 @@ require (
 	github.com/goburrow/modbus v0.1.0
 	github.com/gorilla/websocket v1.5.0 // indirect
 	github.com/hypebeast/go-osc v0.0.0-20220308234300-cec5a8a1e5f5
-	github.com/tiredsosha/gopjlink v0.0.0-20250525144434-f57a43bc91ad
+	github.com/tiredsosha/gopjlink v0.0.0-20260907134342-010d63a4a4ad
+	github.com/tiredsosha/pjlink v0.0.0-20260907140131-6fde7d026053
 	golang.org/x/net v0.25.0 // indirect
 	golang.org/x/sync v0.14.0 // indirect
 	golang.org/x/sys v0.20.0 // indirect

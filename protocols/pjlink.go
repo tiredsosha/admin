@@ -2,12 +2,11 @@ package protocols
 
 import (
 	"context"
-	"strconv"
 	"time"
 
-	"github.com/LightInstruments/pjlink"
 	"github.com/tiredsosha/admin/tools/logger"
 	"github.com/tiredsosha/gopjlink"
+	"github.com/tiredsosha/pjlink"
 )
 
 // func SendPjlink(ip, command string) {
@@ -77,35 +76,56 @@ func SendPjlink(ip, command string) {
 // 	return response
 // }
 
-func GetPjlink(ip string) int {
+func GetPjlink(ip string) (response int) {
+	response = 520
+
 	defer func() {
 		if r := recover(); r != nil {
-			// Log the panic or handle it as needed
 			logger.Error.Printf("Recovered from panic in GetPjlink: %v", r)
+			response = 520
 		}
 	}()
 
-	response := 520
 	proj := pjlink.NewProjector(ip, "")
+
 	status, err := proj.GetPowerStatus()
 	if err != nil {
-		logger.Error.Printf("couldn't send execute pjlink %v", err)
-	} else {
-		if len(status.Response) > 0 {
-			boolStatus, err := strconv.ParseBool(status.Response[0])
-			if err != nil {
-				logger.Error.Printf("Error parsing bool from response: %v", err)
-			} else {
-				if boolStatus {
-					response = 200
-				} else {
-					response = 521
-				}
-			}
-		} else {
-			logger.Error.Println("Empty response received")
-		}
+		logger.Error.Printf("couldn't execute pjlink for %s: %v", ip, err)
+		return
 	}
-	// logger.Info.Println("pjlink status -", response)
-	return response
+
+	if status == nil || len(status.Response) == 0 {
+		logger.Error.Printf("Empty PJLink response from %s", ip)
+		return
+	}
+
+	switch status.Response[0] {
+	case "1":
+		// ON
+		response = 200
+
+	case "3":
+		// Warming up
+		response = 200
+
+	case "0":
+		// Standby / OFF
+		response = 521
+
+	case "2":
+		// Cooling
+		response = 521
+
+	default:
+		logger.Error.Printf(
+			"Unknown PJLink power status from %s: %q",
+			ip,
+			status.Response[0],
+		)
+		response = 520
+	}
+
+	// logger.Info.Printf("PJLink %s status: %s -> %d", ip, status.Response[0], response)
+
+	return
 }
