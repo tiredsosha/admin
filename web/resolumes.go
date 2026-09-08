@@ -1,0 +1,65 @@
+package web
+
+import (
+	"github.com/gin-gonic/gin"
+	"github.com/tiredsosha/admin/protocols"
+	config "github.com/tiredsosha/admin/tools/configurator"
+	"github.com/tiredsosha/admin/tools/logger"
+)
+
+func resolumeNext(c *gin.Context) {
+	var data JsonID
+
+	// Bind JSON and validate
+	if err := c.ShouldBindJSON(&data); err != nil {
+		logger.Error.Println("Invalid input:", err)
+		c.JSON(400, gin.H{"error": err.Error()})
+		return
+	}
+
+	logger.Info.Println("resolume next -", data)
+
+	protocols.SendOsc(config.FindPC(data.Zone, "ip"), 8010, "/layer/1/clip/1/connect", "1")
+
+	c.JSON(200, gin.H{
+		"message": "OK",
+	})
+}
+
+func resolumePrev(c *gin.Context) {
+	var data JsonID
+
+	// Bind JSON and validate
+	if err := c.ShouldBindJSON(&data); err != nil {
+		logger.Error.Println("Invalid input:", err)
+		c.JSON(400, gin.H{"error": err.Error()})
+		return
+	}
+
+	logger.Info.Println("resolume prev -", data)
+
+	protocols.SendOsc(config.FindPC(data.Zone, "ip"), 8010, "/layer/1/clip/2/connect", "1")
+
+	c.JSON(200, gin.H{
+		"message": "OK",
+	})
+}
+
+func resolumeBlackout(c *gin.Context) {
+	var data JsonID
+
+	// Bind JSON and validate
+	if err := c.ShouldBindJSON(&data); err != nil {
+		logger.Error.Println("Invalid input:", err)
+		c.JSON(400, gin.H{"error": err.Error()})
+		return
+	}
+
+	logger.Info.Println("resolume blackout -", data)
+
+	protocols.SendOsc(config.FindPC(data.Zone, "ip"), 8010, "/layer/1/clip/3/connect", "1")
+
+	c.JSON(200, gin.H{
+		"message": "OK",
+	})
+}
