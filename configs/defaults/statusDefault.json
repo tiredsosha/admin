@@ -1,137 +1,65 @@
 {
   "zones": [
     {
-      "id": "reception",
+      "id": "arceology",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
-      "id": "mascot",
+      "id": "katerina",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
-      "id": "fossils",
-      "innerZones": [
-        {
-          "id": "fossilsLeft",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "fossilsRight",
-          "status": {
-            "pc_1": 520
-          }
-        }
-      ]
-    },
-    {
-      "id": "origin",
-      "innerZones": [
-        {
-          "id": "originLed",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "originTouchLeft",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "originTouchRight",
-          "status": {
-            "pc_1": 520
-          }
-        }
-      ]
-    },
-    {
-      "id": "herbivores",
-      "innerZones": [
-        {
-          "id": "originLed",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "originTouch",
-          "status": {
-            "pc_1": 520
-          }
-        }
-      ]
-    },
-    {
-      "id": "predators",
-      "innerZones": [
-        {
-          "id": "predatorsLed",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "predatorsTouch",
-          "status": {
-            "pc_1": 520
-          }
-        }
-      ]
-    },
-    {
-      "id": "flying",
+      "id": "empire",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
-      "id": "marine",
-      "innerZones": [
-        {
-          "id": "marineLed",
-          "status": {
-            "pc_1": 520
-          }
-        },
-        {
-          "id": "marineProjection",
-          "status": {
-            "pc_1": 520,
-            "pj_1": 520
-          }
-        }
-      ]
-    },
-    {
-      "id": "russia",
+      "id": "mine",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
-      "id": "descendants",
+      "id": "guards",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     },
     {
-      "id": "photozone",
+      "id": "war",
       "status": {
-        "pc_1": 520
+        "pc_1": 200,
+        "pj_1": 0
+      }
+    },
+    {
+      "id": "vov",
+      "status": {
+        "pc_1": 200
+      }
+    },
+    {
+      "id": "map",
+      "status": {
+        "pc_1": 200,
+        "pj_1": 0
+      }
+    },
+    {
+      "id": "ussr",
+      "status": {
+        "pc_1": 200
       }
     },
     {
       "id": "facade",
       "status": {
-        "pc_1": 520
+        "pc_1": 200
       }
     }
   ]
