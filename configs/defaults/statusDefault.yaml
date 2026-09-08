@@ -30,8 +30,4 @@ zones:
       pc_1: 200
   - id: facade
     status:
-<<<<<<< HEAD
       pc_1: 200
-=======
-      pc_1: 200
->>>>>>> 211e20eb4cd0122c054df2e790a932e69d3b7bca
