@@ -3,6 +3,7 @@ package configurator
 import (
 	"errors"
 	"os"
+	"path/filepath"
 	"reflect"
 	"sort"
 	"strings"
@@ -127,7 +128,7 @@ func ConfSubInit() {
 	}
 	if err := GenerateIp(); err != nil {
 		logger.Warn.Println(err)
-		logger.Error.Fatal("EXITING")
+		logger.Warn.Println("ip.yaml не обновлён, используется существующий файл")
 	}
 }
 
@@ -177,19 +178,47 @@ func GenerateIp() error {
 			}
 		}
 	}
+	if len(records) == 0 {
+		logger.Error.Println("не удалось создать IP-таблицу: записи отсутствуют")
+		return errors.New("IP records are empty")
+	}
 
 	output, err := yaml.Marshal(records)
 	if err != nil {
 		logger.Error.Printf("marshal ip.yaml: %v", err)
 		return errors.New("marshal ip.yaml")
 	}
-	if err := os.WriteFile("./configs/ip.yaml", output, 0644); err != nil {
+	if err := writeIpFileAtomic("./configs/ip.yaml", output, 0644); err != nil {
 		logger.Error.Printf("write ip.yaml: %v", err)
 		return errors.New("write ip.yaml")
 	}
 
 	logger.Info.Printf("ip.yaml generated: %d records", len(records))
 	return nil
+}
+
+// writeIpFileAtomic заменяет IP-файл только после полной записи нового содержимого.
+func writeIpFileAtomic(path string, data []byte, perm os.FileMode) error {
+	tmpFile, err := os.CreateTemp(filepath.Dir(path), ".ip.yaml.tmp-*")
+	if err != nil {
+		return err
+	}
+	tmpPath := tmpFile.Name()
+	defer os.Remove(tmpPath)
+
+	if err := tmpFile.Chmod(perm); err != nil {
+		_ = tmpFile.Close()
+		return err
+	}
+	if _, err := tmpFile.Write(data); err != nil {
+		_ = tmpFile.Close()
+		return err
+	}
+	if err := tmpFile.Close(); err != nil {
+		return err
+	}
+
+	return os.Rename(tmpPath, path)
 }
 
 func equipmentIP(zone, equipment string) (string, error) {

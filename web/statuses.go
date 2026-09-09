@@ -70,6 +70,7 @@ const (
 func statusPark(c *gin.Context) {
 	b, err := os.ReadFile(statusJSONPath)
 	if err != nil {
+		logger.Error.Printf("ошибка чтения %s: %v", statusJSONPath, err)
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to read status data"})
 		return
 	}
@@ -80,13 +81,18 @@ func statusPark(c *gin.Context) {
 func StatusInit() {
 	data, err := os.ReadFile(statusYAMLPath)
 	if err != nil {
-		logger.Warn.Println("Error reading YAML:", err)
+		logger.Error.Printf("ошибка чтения %s: %v", statusYAMLPath, err)
+		return
+	}
+	var yamlDocument yaml.Node
+	if err := yaml.Unmarshal(data, &yamlDocument); err != nil {
+		logger.Error.Printf("файл %s повреждён: некорректный YAML: %v", statusYAMLPath, err)
 		return
 	}
 
 	var loaded Status
 	if err := yaml.Unmarshal(data, &loaded); err != nil {
-		logger.Warn.Println("Error unmarshalling YAML:", err)
+		logger.Error.Printf("ошибка структуры %s: %v", statusYAMLPath, err)
 		return
 	}
 
